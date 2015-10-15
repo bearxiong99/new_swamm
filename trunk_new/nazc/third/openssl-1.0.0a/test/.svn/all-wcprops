@@ -1,0 +1,377 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test
+END
+tx509.com
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tx509.com
+END
+cms-examples.pl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/cms-examples.pl
+END
+cms-test.pl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/cms-test.pl
+END
+test_padlock
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/test_padlock
+END
+testssl.com
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testssl.com
+END
+tests.com
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tests.com
+END
+tcrl.com
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tcrl.com
+END
+times
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/times
+END
+testenc.com
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testenc.com
+END
+testca
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testca
+END
+Sssrsa.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/Sssrsa.cnf
+END
+test.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/test.cnf
+END
+v3-cert1.pem
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/v3-cert1.pem
+END
+testx509.pem
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testx509.pem
+END
+v3-cert2.pem
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/v3-cert2.pem
+END
+CAssdsa.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/CAssdsa.cnf
+END
+testreq2.pem
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testreq2.pem
+END
+evptests.txt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/evptests.txt
+END
+CAss.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/CAss.cnf
+END
+testca.com
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testca.com
+END
+testcrl.pem
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testcrl.pem
+END
+CAtsa.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/CAtsa.cnf
+END
+testsslproxy
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testsslproxy
+END
+tsid
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tsid
+END
+VMSca-response.1
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/VMSca-response.1
+END
+CAssrsa.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/CAssrsa.cnf
+END
+VMSca-response.2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/VMSca-response.2
+END
+pkcs7-1.pem
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/pkcs7-1.pem
+END
+testp7.pem
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testp7.pem
+END
+pkcs7.pem
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/pkcs7.pem
+END
+trsa
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/trsa
+END
+testgen
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testgen
+END
+CAssdh.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/CAssdh.cnf
+END
+tpkcs7
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tpkcs7
+END
+treq
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/treq
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/Makefile
+END
+maketests.com
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/maketests.com
+END
+Uss.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/Uss.cnf
+END
+tpkcs7d
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tpkcs7d
+END
+tsid.com
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tsid.com
+END
+pkits-test.pl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/pkits-test.pl
+END
+smcont.txt
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/smcont.txt
+END
+bctest
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/bctest
+END
+testss
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testss
+END
+testgen.com
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testgen.com
+END
+trsa.com
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/trsa.com
+END
+testtsa
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testtsa
+END
+tpkcs7.com
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tpkcs7.com
+END
+treq.com
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/treq.com
+END
+tx509
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tx509
+END
+P1ss.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/P1ss.cnf
+END
+tpkcs7d.com
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tpkcs7d.com
+END
+P2ss.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/P2ss.cnf
+END
+testsid.pem
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testsid.pem
+END
+testssl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testssl
+END
+testss.com
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testss.com
+END
+testtsa.com
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testtsa.com
+END
+tcrl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tcrl
+END
+testenc
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testenc
+END
+testrsa.pem
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/testrsa.pem
+END
+tverify.com
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/tverify.com
+END
+Sssdsa.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/test/Sssdsa.cnf
+END

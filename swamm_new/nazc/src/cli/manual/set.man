@@ -1,0 +1,17 @@
+
+----------------------
+  SET Command Manual
+----------------------
+
+
+
+SYNOPSIS
+    set <entry>
+DESCRIPTION
+
+ENTRY TYPE:  
+    system, sink, mobile, temp, server, ethernet, local, gpio, phone
+
+*** Use 'man set -entry' to find out more about commands in this list.
+    usage : 	man show system
+

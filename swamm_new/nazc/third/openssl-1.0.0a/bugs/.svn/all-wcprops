@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/bugs
+END
+SSLv3
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/bugs/SSLv3
+END
+stream.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/bugs/stream.c
+END
+ultrixcc.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/bugs/ultrixcc.c
+END
+MS
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/bugs/MS
+END
+sslref.dif
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/bugs/sslref.dif
+END
+alpha.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/bugs/alpha.c
+END
+dggccbug.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/bugs/dggccbug.c
+END
+sgiccbug.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/bugs/sgiccbug.c
+END

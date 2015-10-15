@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/server
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/server/common.h
+END
+Utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/server/Utils.cpp
+END
+CommandHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/server/CommandHandler.h
+END
+ServiceController.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/server/ServiceController.cpp
+END
+McuService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/server/McuService.cpp
+END
+Utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/server/Utils.h
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/server/Variable.cpp
+END
+server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/server/server.cpp
+END
+ServiceController.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/server/ServiceController.h
+END
+McuService.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/server/McuService.h
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/server/Variable.h
+END
+CommandHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/server/CommandHandler.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/server/Makefile
+END

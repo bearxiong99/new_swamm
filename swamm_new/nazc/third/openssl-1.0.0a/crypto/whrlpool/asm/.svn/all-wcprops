@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool/asm
+END
+wp-mmx.pl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool/asm/wp-mmx.pl
+END
+wp-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool/asm/wp-x86_64.pl
+END

@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# NURITelecom Data Concentrator User Boot Script
+#
+# Application launcher
+#
+
+start() {
+# Check Boot Parameter : USERBOOT
+if [ `cat /proc/cmdline | grep -c USERBOOT` -eq 0 ]; then
+
+    echo "Starting aimir embedded software..."
+    if [ -f /app/sw/launcher ] ; then
+
+        if [ -f /app/conf/.factoryTestCompleted ] ; then
+            cd /app/sw;./launcher
+        fi
+    fi
+fi
+}
+
+case "$1" in
+  start)
+  	start
+	;;
+  *)
+	echo $"Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+

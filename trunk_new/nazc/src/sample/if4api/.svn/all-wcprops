@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/if4api
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/if4api/Variable.cpp
+END
+server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/if4api/server.cpp
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/if4api/Variable.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/if4api/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/if4api/common.h
+END
+if4CallbackHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/if4api/if4CallbackHandler.cpp
+END
+client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/if4api/client.cpp
+END
+Doxyfile
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/if4api/Doxyfile
+END

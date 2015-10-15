@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# 
+# Reset Meter
+#
+export LD_LIBRARY_PATH=/usr/lib:/lib:/app/lib:/app/sw/lib
+
+/app/sw/sqlite3 /app/sqlite/Agent.db <<EOF
+
+.head on
+SELECT lp.mid, lp.addr, lp.pnum, 
+    dl.baseTime, dl.meterTime, dl.baseValue, dl.lastValue,
+    lp.lpid, lp.stamp, quote(lp.value)
+FROM WaitUploadLpView lp, DayLastPulseTbl dl
+WHERE
+    lp.mid = dl._meterId AND
+    lp.d = dl.baseTime 
+ORDER BY lp.mid, lp.stamp  ;
+
+.quit
+EOF

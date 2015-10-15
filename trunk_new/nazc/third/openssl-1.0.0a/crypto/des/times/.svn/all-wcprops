@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/des/times
+END
+sparc.gcc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/des/times/sparc.gcc
+END
+aix.cc
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/des/times/aix.cc
+END
+hpux.cc
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/des/times/hpux.cc
+END
+alpha.cc
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/des/times/alpha.cc
+END
+686-200.fre
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/des/times/686-200.fre
+END
+486-50.sol
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/des/times/486-50.sol
+END
+586-100.lnx
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/des/times/586-100.lnx
+END
+usparc.cc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/des/times/usparc.cc
+END

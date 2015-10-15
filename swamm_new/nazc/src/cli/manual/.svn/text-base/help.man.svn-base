@@ -1,0 +1,19 @@
+
+----------------------
+  MCU Command Manual
+----------------------
+
+
+
+SYNOPSIS
+    command <entry>
+
+Command TYPE:  
+    show, set, add, delete, enable, disable, help, history, 
+    logout, reset, mcu, download, ondemand, multicast, ls, 
+    ps, kill, ping, shell, metering.
+
+
+*** Use 'man -command' to find out more about commands in this list.
+    usage : 	man show
+

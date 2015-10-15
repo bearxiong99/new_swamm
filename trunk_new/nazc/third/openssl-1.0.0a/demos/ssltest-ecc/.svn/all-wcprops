@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/ssltest-ecc
+END
+RSAcertgen.sh
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/ssltest-ecc/RSAcertgen.sh
+END
+ssltest.sh
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/ssltest-ecc/ssltest.sh
+END
+ECCcertgen.sh
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/ssltest-ecc/ECCcertgen.sh
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/ssltest-ecc/README
+END
+ECC-RSAcertgen.sh
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/ssltest-ecc/ECC-RSAcertgen.sh
+END

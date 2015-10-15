@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice
+END
+loadkeys.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/loadkeys.h
+END
+privkey.pem
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/privkey.pem
+END
+loadkeys.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/loadkeys.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/Makefile
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/README
+END
+cert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/cert.pem
+END
+example1.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/example1.c
+END
+example2.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/example2.c
+END
+example3.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/example3.c
+END
+example4.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/maurice/example4.c
+END

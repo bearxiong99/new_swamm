@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# NURITelecom Data Concentrator User Boot Script
+#
+# Get HW Version Informations
+#
+
+#
+# Default HW Version
+HWVER=0.7
+
+#
+# Variables
+VERSIONFILE=/app/conf/version.hw
+KERNELPARAM=/proc/cmdline
+VERSIONSTR=hwver
+
+CATPARAM=`cat ${KERNELPARAM}`
+if [ `echo ${CATPARAM} | grep -c ${VERSIONSTR}` -gt 0 ]; then
+    HWVER=`echo ${CATPARAM} | sed -e "s/.*${VERSIONSTR}=\([.,a-zA-Z0-9]*\) .*/\1/"`
+fi
+
+#
+# Version Update
+echo ${HWVER} > ${VERSIONFILE}
+
+exit 0
+

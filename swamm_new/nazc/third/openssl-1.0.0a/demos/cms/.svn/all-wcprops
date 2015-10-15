@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms
+END
+comp.txt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/comp.txt
+END
+cakey.pem
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cakey.pem
+END
+sign.txt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/sign.txt
+END
+cms_dec.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cms_dec.c
+END
+cms_ver.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cms_ver.c
+END
+cms_comp.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cms_comp.c
+END
+cacert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cacert.pem
+END
+cms_ddec.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cms_ddec.c
+END
+cms_sign.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cms_sign.c
+END
+cms_uncomp.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cms_uncomp.c
+END
+cms_enc.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cms_enc.c
+END
+signer2.pem
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/signer2.pem
+END
+cms_denc.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cms_denc.c
+END
+encr.txt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/encr.txt
+END
+cms_sign2.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/cms_sign2.c
+END
+signer.pem
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/cms/signer.pem
+END

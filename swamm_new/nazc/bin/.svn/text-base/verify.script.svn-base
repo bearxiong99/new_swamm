@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ ! -f "./checksum.info" ]; 
+then 
+    echo "'checksum.info' not found"
+    exit -2
+fi
+
+DIR=""
+
+cat ./checksum.info | while read checksum file
+do
+    if [ -f ${file} ]; then
+        DIR=""
+    elif [ -f ../conf/${file} ]; then
+        DIR="../conf/"
+    else
+        echo "'${file}' not found"
+        exit -2
+    fi
+    cc=`md5sum ${DIR}${file} | (read c f; echo ${c})`
+    if [ "${checksum}" != "${cc}" ];
+    then
+        echo "${file} ${checksum} ${cc}"
+        exit 1
+    fi
+done

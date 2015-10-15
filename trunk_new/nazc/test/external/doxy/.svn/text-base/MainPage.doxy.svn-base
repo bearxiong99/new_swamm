@@ -1,0 +1,17 @@
+/** @mainpage Nuri AiMiR Unit Test
+
+    @section Intro 소개
+        AiMiR Concentrator Unit Test Set
+
+    @section Developer 개발자
+        참여 개발자들 :
+            - 조규석 (rewriter@nuritelecom.com)
+
+    @section History 역사
+        - 2009/06/04 Doxygen 연결
+
+    @section Links 참고 페이지
+        - Nuri AiMiR Concentrator Interface Specification
+        - Nuri AiMiR Concentrator Data Type & Command Specification
+*/
+

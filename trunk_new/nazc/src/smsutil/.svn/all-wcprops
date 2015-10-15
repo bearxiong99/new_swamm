@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/rep0/mcu/!svn/ver/5317/trunk/nazc/src/smsutil
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5317/trunk/nazc/src/smsutil/Makefile
+END
+CRC16.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5317/trunk/nazc/src/smsutil/CRC16.cpp
+END
+smsutil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5317/trunk/nazc/src/smsutil/smsutil.cpp
+END

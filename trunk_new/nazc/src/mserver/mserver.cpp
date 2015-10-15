@@ -1,0 +1,179 @@
+#include "common.h"
+#include "MobileServer.h"
+#include "DebugUtil.h"
+#include "gpiomap.h"
+#include "CommonUtil.h"
+
+BOOL	m_bExitSignalPending = FALSE;
+BOOL	bGsmMode = FALSE;
+BOOL	bAnswer = FALSE;
+
+void DisconnectModem();
+
+CMobileServer	server;
+
+void SignalCatcher(int nSignal)
+{
+	switch(nSignal) {
+	  case SIGTERM :
+	  case SIGINT :
+		   m_bExitSignalPending = TRUE;
+		   break;
+	}
+}
+
+int Emmulator(CMobileServer *pClient)
+{
+	time_t	start, now;
+
+	time(&start);
+	for(;!m_bExitSignalPending;)
+	{
+		time(&now);
+
+		// DCD가 OFF(1) 이면 종료한다.
+		if (pClient->GetDCD() == 1)
+		{
+			XDEBUG("--------- DCD OFF ---------\r\n");
+			m_bExitSignalPending = TRUE;
+			break;
+		}
+
+		// 1분이내에 접속이 안되는지 확인
+		if (!pClient->IsActive() && ((now-start) > 60))
+		{
+			m_bExitSignalPending = TRUE;
+			break;
+		}
+
+		// 3분이상 통신이 없는지 확인
+		if ((now-pClient->GetLastActive()) > 180)
+		{
+			DisconnectModem();
+			m_bExitSignalPending = TRUE;
+			break;
+		}
+	
+		usleep(3000000);
+	}
+	return 0;
+}
+
+void CheckParameter(int argc, char **argv)
+{
+	int		i;
+
+	for(i=1; i<argc; i++)
+	{
+		if (strcmp(argv[i], "-gsm") == 0)
+			bGsmMode = TRUE;
+		else if (strcmp(argv[i], "-answer") == 0)
+			bAnswer = TRUE;
+	}
+}
+
+void DisconnectModem()
+{
+#if 0
+	int     i, dcd, fd;
+    
+    fd = open("/dev/gpio", O_RDWR | O_NDELAY);
+    if (fd <= 0)
+        return;
+     
+    // GPIO Input Direction Setting
+    ioctl(fd, GPIO_IOCTL_DIR, GPIOSET(GP_GSM_DTR_OUT));		// MOBILE DTR
+    ioctl(fd, GPIO_IOCTL_DIR, GP_GSM_DCD_INPUT);			// MOBILE DCD
+
+    dcd = ioctl(fd, GPIO_IOCTL_IN, GP_GSM_DCD_INPUT);
+	if (dcd != 1)
+	{
+ 	    for(i=0; i<5; i++)
+   	    {
+       	   ioctl(fd, GPIO_IOCTL_OUT, GPIOHIGH(GP_GSM_DTR_OUT));
+           usleep(1000000);        
+           ioctl(fd, GPIO_IOCTL_OUT, GPIOLOW(GP_GSM_DTR_OUT));
+           usleep(1000000);
+        
+           dcd = ioctl(fd, GPIO_IOCTL_IN, GP_GSM_DCD_INPUT);
+           if (dcd == 1) break;
+    	}
+	}
+    
+    close(fd);
+#endif	
+    return;
+}   
+
+void no_cld_wait(void)
+{
+#if     defined(SA_NOCLDWAIT)
+    struct sigaction ac;
+
+    ac.sa_handler = SIG_IGN;
+    sigemptyset(&ac.sa_mask);
+    ac.sa_flags = SA_NOCLDWAIT;
+
+    if(sigaction(SIGCHLD, &ac, NULL)<0) {
+        printf("sigaction fail\r\n");
+    }
+#endif
+}
+
+void update_pid(pid_t pid)
+{
+	FILE	*fp;
+	char	szFileName[128];
+
+    sprintf(szFileName, "/var/run/mserver-aimir.pid");
+
+	if((fp = fopen(szFileName, "wb"))) {
+        fprintf(fp,"%d",pid);
+	    fclose(fp);
+    }
+}
+
+
+int main(int argc, char **argv)
+{
+	struct sigaction handler;
+    int speed=0;
+
+	CheckParameter(argc, argv);
+
+    setsid();
+    //update_pid(getpid());
+
+    // Set Interrrupt Signal Handler
+	memset(&handler, 0, sizeof(struct sigaction));
+    handler.sa_handler = SignalCatcher;
+    sigfillset(&handler.sa_mask);
+    sigaction(SIGINT, &handler, 0);
+    sigaction(SIGTERM, &handler, 0);
+    no_cld_wait();
+
+    // Issue #51 : Mobile Speed read
+    GetFileValue("/app/conf/mobilespeed",&speed);
+    switch(speed)
+    {
+        case 9600:
+            speed = B9600;
+            break;
+        case 115200:
+            speed = B115200;
+            break;
+        default:
+            speed = B9600;
+            break;
+    }
+
+	if (!server.Initialize(bGsmMode, speed, bAnswer))
+		return 0;
+
+	Emmulator(&server);
+	server.Destroy();
+
+	DisconnectModem();
+
+	return 0;
+}

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5413/trunk/codiapi/samples/update
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/samples/update/Makefile
+END
+update.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5413/trunk/codiapi/samples/update/update.cpp
+END

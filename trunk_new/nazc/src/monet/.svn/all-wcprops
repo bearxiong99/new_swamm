@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/monet
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/monet/common.h
+END
+monet.ini
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/monet/monet.ini
+END
+monet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/monet/monet.cpp
+END
+MobileClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/monet/MobileClient.cpp
+END
+MobileClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/monet/MobileClient.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/monet/Makefile
+END

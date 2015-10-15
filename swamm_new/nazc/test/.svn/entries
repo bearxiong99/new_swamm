@@ -1,0 +1,98 @@
+10
+
+dir
+5483
+http://tauran.nuritelecom.com/rep0/mcu/branches/site/swamm/nazc/test
+http://tauran.nuritelecom.com/rep0/mcu
+
+
+
+2013-05-07T06:37:18.707832Z
+5184
+rewriter
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+0c8fb18d-62cf-4f29-9844-4f4e0438761a
+
+include
+dir
+
+main
+dir
+
+UnitTest++
+dir
+
+fixture
+dir
+
+src
+dir
+
+codiapi
+dir
+
+core
+dir
+
+accessory
+dir
+
+action
+dir
+
+Makefile
+file
+
+
+
+
+2015-10-13T01:33:27.297370Z
+0dcea7a5e1e38416c775515b2468e071
+2013-05-07T06:37:18.707832Z
+5184
+rewriter
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2009
+
+tools
+dir
+
+utils
+dir
+
+external
+dir
+

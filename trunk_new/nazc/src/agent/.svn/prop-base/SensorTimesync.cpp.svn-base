@@ -1,0 +1,10 @@
+K 13
+svn:mergeinfo
+V 388
+/branches/i2/0000084/nazc/src/agent/SensorTimesync.cpp:4777-4921
+/branches/issue/1502/nazc/src/agent/SensorTimesync.cpp:1859-2687
+/branches/issue/2033/nazc/src/agent/SensorTimesync.cpp:2440-2530
+/branches/issue/2443/nazc/src/agent/SensorTimesync.cpp:3470-3742
+/branches/issue/2570/nazc/src/agent/SensorTimesync.cpp:3852-3868
+/branches/workspace/nazc/src/agent/SensorTimesync.cpp:1678-5179
+END

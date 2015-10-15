@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor
+END
+CommandHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/CommandHandler.cpp
+END
+BypassMonitor.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/BypassMonitor.h
+END
+Utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/Utils.cpp
+END
+CommandHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/CommandHandler.h
+END
+nzcserver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/nzcserver.cpp
+END
+BypassMonitor.ui
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/BypassMonitor.ui
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/main.cpp
+END
+Utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/Utils.h
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/Variable.cpp
+END
+nzcserver.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/nzcserver.h
+END
+BypassMonitor.pro
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/BypassMonitor.pro
+END
+BypassMonitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/BypassMonitor.cpp
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/Variable.h
+END

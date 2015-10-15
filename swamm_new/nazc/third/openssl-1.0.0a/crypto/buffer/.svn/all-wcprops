@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/buffer
+END
+buffer.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/buffer/buffer.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/buffer/Makefile
+END
+buffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/buffer/buffer.h
+END
+buf_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/buffer/buf_err.c
+END

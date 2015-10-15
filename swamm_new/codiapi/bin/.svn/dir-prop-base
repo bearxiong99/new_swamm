@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 36
+*.exe
+aidon
+enditest
+ge
+init
+update
+
+END

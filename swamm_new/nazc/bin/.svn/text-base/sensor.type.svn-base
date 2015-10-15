@@ -1,0 +1,12 @@
+# Sensor/Model Mapping
+#
+# NodeKind    ModelName   ServiceType
+#
+0 PULSE-BATTERY 0
+1 PULSE-GAS 2
+2 PULSE-WATER 3
+3 ELECTRIC 1
+4 ACD 1
+5 HMU 1
+100 BATTERY-SD 9
+255 BATTERY-REPEATER 0

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/if4api
+END
+if4type.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/if4api/if4type.h
+END
+if4err.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/if4api/if4err.h
+END
+if4api.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/if4api/if4api.h
+END
+if4frame.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/if4api/if4frame.h
+END
+if4invoke.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/if4api/if4invoke.h
+END
+if4cmderr.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/if4api/if4cmderr.h
+END
+if4ver.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/if4api/if4ver.h
+END
+if4def.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/if4api/if4def.h
+END

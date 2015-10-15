@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/osaki
+END
+osakiFunctions.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/osaki/osakiFunctions.h
+END
+osakiError.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/osaki/osakiError.h
+END
+osakiDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/osaki/osakiDefine.h
+END
+osakiFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/osaki/osakiFrame.h
+END

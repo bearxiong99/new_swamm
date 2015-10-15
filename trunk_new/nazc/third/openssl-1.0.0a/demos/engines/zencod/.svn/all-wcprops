@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/engines/zencod
+END
+hw_zencod.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/engines/zencod/hw_zencod.c
+END
+hw_zencod.ec
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/engines/zencod/hw_zencod.ec
+END
+hw_zencod.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/engines/zencod/hw_zencod.h
+END
+hw_zencod_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/engines/zencod/hw_zencod_err.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/engines/zencod/Makefile
+END
+hw_zencod_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/engines/zencod/hw_zencod_err.h
+END

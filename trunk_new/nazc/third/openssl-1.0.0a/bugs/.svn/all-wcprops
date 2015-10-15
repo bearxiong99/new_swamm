@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/bugs
+END
+alpha.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/bugs/alpha.c
+END
+dggccbug.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/bugs/dggccbug.c
+END
+sgiccbug.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/bugs/sgiccbug.c
+END
+SSLv3
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/bugs/SSLv3
+END
+stream.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/bugs/stream.c
+END
+ultrixcc.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/bugs/ultrixcc.c
+END
+MS
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/bugs/MS
+END
+sslref.dif
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/bugs/sslref.dif
+END

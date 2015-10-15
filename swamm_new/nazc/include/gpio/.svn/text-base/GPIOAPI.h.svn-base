@@ -1,0 +1,61 @@
+//////////////////////////////////////////////////////////////////////
+//
+//	GPIOAPI.h: interface for GPIO.
+//
+//	This file is a part of the AIMIR.
+//	(c)Copyright 2005 NURITELECOM Co., Ltd. All Rights Reserved.
+//
+//	This source code can only be used under the terms and conditions 
+//	outlined in the accompanying license agreement.
+//
+//	casir@paran.com
+//	http://www.nuritelecom.com
+//
+//////////////////////////////////////////////////////////////////////
+
+#ifndef __GPIO_API_H__
+#define __GPIO_API_H__
+
+#include "gpiomap.h"
+
+#define GPIONOTIFY_PWR					0x0001
+#define GPIONOTIFY_LOWBAT				0x0002
+#define GPIONOTIFY_HEATER				0x0004
+#define GPIONOTIFY_DOOR					0x0008
+#define GPIONOTIFY_BATTERY				0x0010
+#define GPIONOTIFY_DCD					0x0020
+#define GPIONOTIFY_RING					0x0040
+#define GPIONOTIFY_MEMORY				0x1000
+#define GPIONOTIFY_FLASH				0x2000
+#define GPIONOTIFY_MOBILE				0x4000
+#define GPIONOTIFY_RUNNING				0x8000
+#define GPIONOTIFY_TEMP					0x0800
+#define GPIONOTIFY_COORDINATOR			0x0400
+
+#define GPIOERR_MASK					(GPIONOTIFY_PWR | GPIONOTIFY_LOWBAT | GPIONOTIFY_COORDINATOR |	\
+										 GPIONOTIFY_MEMORY | GPIONOTIFY_FLASH)
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef int (*PFNUSERHOOKER)(int nType, int nValue);
+typedef void (*PFNGPIOCALLBACK)(int nNotify, int nState, void *pParam, void *pArgment);
+
+BOOL GPIOAPI_Initialize(int nMobileType);
+BOOL GPIOAPI_Destroy();
+
+BOOL GPIOAPI_InstallHooker(PFNGPIOCALLBACK pfnCallback, void *pParam, void *pArgment);
+BOOL GPIOAPI_UninstallHooker();
+
+BOOL GPIOAPI_IsEnableHooker();
+BOOL GPIOAPI_EnableGpioHooker(BOOL bEnable);
+
+int	GPIOAPI_ReadGpio(int nPort);
+BOOL GPIOAPI_WriteGpio(int nPort, int nValue);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // __GPIO_API_H__

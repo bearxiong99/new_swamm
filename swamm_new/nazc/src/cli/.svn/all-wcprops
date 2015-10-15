@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5257/branches/site/swamm/nazc/src/cli
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/Variable.cpp
+END
+cmd_ctrl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5257/branches/site/swamm/nazc/src/cli/cmd_ctrl.cpp
+END
+message.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/cli/message.h
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/Variable.h
+END
+cmd_ctrl.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5256/branches/site/swamm/nazc/src/cli/cmd_ctrl.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/common.h
+END
+cmd_util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/cmd_util.cpp
+END
+cmd_emergency.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/cli/cmd_emergency.cpp
+END
+cmd_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/cmd_test.cpp
+END
+cmd_show.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5188/branches/site/swamm/nazc/src/cli/cmd_show.cpp
+END
+cmd_util.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/cmd_util.h
+END
+cmd_emergency.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/cli/cmd_emergency.h
+END
+cmd_message.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/cmd_message.cpp
+END
+cmd_default.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/cmd_default.cpp
+END
+cli.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/cli/cli.cpp
+END
+cmd_test.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/cli/cmd_test.h
+END
+cmd_show.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/cmd_show.h
+END
+cmd_syntax.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/cmd_syntax.cpp
+END
+cmd_table.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5256/branches/site/swamm/nazc/src/cli/cmd_table.cpp
+END
+cli.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/cli/cli.h
+END
+cmd_message.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/cmd_message.h
+END
+cmd_default.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/cli/cmd_default.h
+END
+cmd_set.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5186/branches/site/swamm/nazc/src/cli/cmd_set.cpp
+END
+cmd_syntax.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/cli/cmd_syntax.h
+END
+cmd_table.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/cli/cmd_table.h
+END
+cmd_define.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/cli/cmd_define.h
+END
+cmd_set.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5186/branches/site/swamm/nazc/src/cli/cmd_set.h
+END

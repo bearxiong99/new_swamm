@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/rep0/mcu/!svn/ver/5413/trunk/codiapi/src
+END
+CoordinatorWaitReply.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/4154/trunk/codiapi/src/CoordinatorWaitReply.h
+END
+CoordinatorDataStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/CoordinatorDataStream.cpp
+END
+DeviceClass.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/2286/trunk/codiapi/src/DeviceClass.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/Makefile
+END
+CoordinatorMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/3234/trunk/codiapi/src/CoordinatorMessage.h
+END
+CoordinatorFrame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5413/trunk/codiapi/src/CoordinatorFrame.cpp
+END
+CoordinatorDataStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/CoordinatorDataStream.h
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/stdafx.h
+END
+SerialInterface.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/SerialInterface.cpp
+END
+CoordinatorFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/1550/trunk/codiapi/src/CoordinatorFrame.h
+END
+SerialInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5283/trunk/codiapi/src/SerialInterface.h
+END
+CoordinatorUtility.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/CoordinatorUtility.cpp
+END
+VirtualInterface.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/3234/trunk/codiapi/src/VirtualInterface.cpp
+END
+codiapi.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/codiapi.cpp
+END
+CoordinatorCrcCheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/CoordinatorCrcCheck.cpp
+END
+CoordinatorServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5413/trunk/codiapi/src/CoordinatorServer.cpp
+END
+CoordinatorUtility.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/CoordinatorUtility.h
+END
+VirtualInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/1109/trunk/codiapi/src/VirtualInterface.h
+END
+CoordinatorCrcCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/3234/trunk/codiapi/src/CoordinatorCrcCheck.h
+END
+CoordinatorServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/CoordinatorServer.h
+END
+EndDevicePool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5283/trunk/codiapi/src/EndDevicePool.cpp
+END
+Coordinator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/Coordinator.cpp
+END
+CoordinatorWaitReply.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/4154/trunk/codiapi/src/CoordinatorWaitReply.cpp
+END
+DeviceClass.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/2286/trunk/codiapi/src/DeviceClass.cpp
+END
+EndDevicePool.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/2121/trunk/codiapi/src/EndDevicePool.h
+END
+CoordinatorMessage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5413/trunk/codiapi/src/CoordinatorMessage.cpp
+END
+Coordinator.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/src/Coordinator.h
+END

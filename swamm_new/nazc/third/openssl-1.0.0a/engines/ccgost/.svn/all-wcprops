@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost
+END
+gost.ec
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost.ec
+END
+gost_keywrap.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_keywrap.h
+END
+gost2001_keyx.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost2001_keyx.h
+END
+gost_params.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_params.h
+END
+gosthash.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gosthash.h
+END
+README.gost
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/README.gost
+END
+e_gost_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/e_gost_err.c
+END
+gost94_keyx.c
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost94_keyx.c
+END
+gost_ameth.c
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_ameth.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/Makefile
+END
+gost_md.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_md.c
+END
+gost_sign.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_sign.c
+END
+gost_crypt.c
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_crypt.c
+END
+gost89.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost89.c
+END
+e_gost_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/e_gost_err.h
+END
+gost_asn1.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_asn1.c
+END
+gostsum.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gostsum.c
+END
+gost89.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost89.h
+END
+gost_eng.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_eng.c
+END
+e_gost_err.proto
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/e_gost_err.proto
+END
+gost_pmeth.c
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_pmeth.c
+END
+gost_lcl.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_lcl.h
+END
+Shared.rules
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/Shared.rules
+END
+gost_ctl.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_ctl.c
+END
+gost_keywrap.c
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_keywrap.c
+END
+gost2001_keyx.c
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost2001_keyx.c
+END
+gost2001.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost2001.c
+END
+gost_params.c
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gost_params.c
+END
+gosthash.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/ccgost/gosthash.c
+END

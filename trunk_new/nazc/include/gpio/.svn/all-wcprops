@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/rep0/mcu/!svn/ver/5463/trunk/nazc/include/gpio
+END
+GPIOAPI.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5463/trunk/nazc/include/gpio/GPIOAPI.h
+END
+gpiomap.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/667/trunk/nazc/include/gpio/gpiomap.h
+END
+gpio.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/667/trunk/nazc/include/gpio/gpio.h
+END

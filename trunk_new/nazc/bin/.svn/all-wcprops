@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/rep0/mcu/!svn/ver/5483/trunk/nazc/bin
+END
+load.sh
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/rep0/mcu/!svn/ver/2798/trunk/nazc/bin/load.sh
+END
+freeze.sh
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/rep0/mcu/!svn/ver/5458/trunk/nazc/bin/freeze.sh
+END
+sensor.type
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5406/trunk/nazc/bin/sensor.type
+END
+timezone
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/rep0/mcu/!svn/ver/5/trunk/nazc/bin/timezone
+END
+timesync
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/rep0/mcu/!svn/ver/5338/trunk/nazc/bin/timesync
+END
+mkInstallScript.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/1703/trunk/nazc/bin/mkInstallScript.sh
+END
+ftp.script
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/3696/trunk/nazc/bin/ftp.script
+END
+relaunching
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/relaunching
+END
+mkChecksum.sh
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/mkChecksum.sh
+END
+install
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/rep0/mcu/!svn/ver/5458/trunk/nazc/bin/install
+END
+verify.script
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5471/trunk/nazc/bin/verify.script
+END
+revision.sh
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/3945/trunk/nazc/bin/revision.sh
+END
+pkginstall
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/1497/trunk/nazc/bin/pkginstall
+END
+dump.script
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/3945/trunk/nazc/bin/dump.script
+END
+patch.sh
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/rep0/mcu/!svn/ver/5483/trunk/nazc/bin/patch.sh
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/rep0/mcu/!svn/ver/5471/trunk/nazc/bin/Makefile
+END
+dhcpcd-kill
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5200/trunk/nazc/bin/dhcpcd-kill
+END
+resetRouteTable.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5454/trunk/nazc/bin/resetRouteTable.sh
+END
+dhcpd
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/rep0/mcu/!svn/ver/5/trunk/nazc/bin/dhcpd
+END
+mkSharedRules.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/3237/trunk/nazc/bin/mkSharedRules.sh
+END
+dhcpcd
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/rep0/mcu/!svn/ver/5/trunk/nazc/bin/dhcpcd
+END
+calendar.ini
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/2001/trunk/nazc/bin/calendar.ini
+END

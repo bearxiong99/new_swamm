@@ -1,0 +1,20 @@
+/** @mainpage Nuri AiMiR Concentrator External Interface
+
+    @section Intro 소개
+        NACEI는 Third Party 제품을 통해 Nuritelecom(http://www.nunritelecom.com)의 
+        AiMiR System의 Concentrator에서 정보를 제공 받거나 전달하기 위한 도구로 개발되었다.
+        본 문서에서 기술한 정보는 NAZC v3.0, v3.1 Agent와 호환되는 시스템에서 유효하다.
+
+    @section Developer 개발자
+        참여 개발자들 :
+            - 조규석 (rewriter@nuritelecom.com)
+
+    @section History 역사
+        - 2008/02/26 cmdShowSensorList에 대한 구현
+
+    @section Links 참고 페이지
+        - Nuri AiMiR Concentrator Interface Specification
+        - Nuri AiMiR Concentrator Data Type & Command Specification
+        - @ref sample
+*/
+

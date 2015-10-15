@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/3945/trunk/nazc/core/zlib/contrib/minizip
+END
+iowin32.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/iowin32.h
+END
+minizip.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/minizip.c
+END
+ioapi.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/ioapi.c
+END
+zip.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/zip.c
+END
+unzip.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/unzip.c
+END
+crypt.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/crypt.h
+END
+ioapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/ioapi.h
+END
+zip.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/zip.h
+END
+miniunz.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/miniunz.c
+END
+iowin32.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/iowin32.c
+END
+unzip.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/unzip.h
+END
+ChangeLogUnzip
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/minizip/ChangeLogUnzip
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/3945/trunk/nazc/core/zlib/contrib/minizip/Makefile
+END

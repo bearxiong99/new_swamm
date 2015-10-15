@@ -1,0 +1,83 @@
+10
+
+dir
+5483
+http://tauran.nuritelecom.com/rep0/mcu/trunk/nazc/core/protocol
+http://tauran.nuritelecom.com/rep0/mcu
+
+
+
+2014-12-18T06:47:44.227712Z
+5467
+rewriter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0c8fb18d-62cf-4f29-9844-4f4e0438761a
+
+iec62056_21
+dir
+
+mbus
+dir
+
+osaki
+dir
+
+kmp
+dir
+
+ansi
+dir
+
+code
+dir
+
+Makefile
+file
+
+
+
+
+2015-10-13T01:32:02.657368Z
+240f670c767b48ec89e63230c6189ff3
+2013-05-06T06:36:52.994789Z
+5182
+rewriter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2195
+
+dlms
+dir
+

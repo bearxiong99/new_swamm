@@ -1,0 +1,120 @@
+#!/bin/sh
+#
+# NURITelecom Data Concentrator User Boot Script
+#
+# WAN Network Setting
+#
+
+MOBILEMODULES=/app/conf/mobile.module.type 
+INTERFACES=/app/init/interfaces
+
+if [ -e $MOBILEMODULES ]; then
+    MTYPE=`cat $MOBILEMODULES | head -1`
+    if [ -x /app/ppp/boot/$MTYPE ]; then
+        /app/ppp/boot/$MTYPE start
+        exit 0
+    fi
+fi
+
+# 
+# ETHERTYPE
+#   0 : LAN
+#   1 : DHCP (eth0)
+#   2 : PPPoE
+#   3 : PPP
+ETHERTYPE=3     # default PPP
+
+if [ -f /app/conf/ethernet.type ]; then
+ETHERTYPE=`cat /app/conf/ethernet.type | head -1`
+fi
+
+
+writeInterface() 
+{
+ethtype=$1
+
+cat > $INTERFACES <<EOF
+# /etc/network/interfaces -- configuration file for ifup(8), ifdown(8)
+     
+# The loopback interface
+auto lo
+iface lo inet loopback
+
+EOF
+
+ADDR=192.168.10.5
+NETMASK=255.255.255.0
+GW=192.168.10.1
+
+if [ -f /app/conf/ip0 ]; then
+    ADDR=`cat /app/conf/ip0 | head -1`
+fi
+if [ -f /app/conf/sbnet0 ]; then
+    NETMASK=`cat /app/conf/sbnet0 | head -1`
+fi
+if [ -f /app/conf/gateway ]; then
+    GW=`cat /app/conf/gateway | head -1`
+fi
+
+
+case "$ethtype" in
+  0)    # LAN
+# Write Interface Setting
+cat >> $INTERFACES <<EOF
+# Static Address Setting
+auto eth0
+iface eth0 inet static
+    address $ADDR
+    netmask $NETMASK
+    gateway $GW
+
+EOF
+      # Interface up
+      ifdown eth0 2> /dev/null
+      ifup eth0
+    ;;
+  1)    # DHCP
+# Write Interface Setting
+cat >> $INTERFACES <<EOF
+# DHCP Address Setting
+auto eth0
+iface eth0 inet dhcp
+
+EOF
+      # Interface up
+      ifdown eth0 2> /dev/null
+      ifup eth0
+    ;;
+  2|3)
+# Write Interface Setting
+cat >> $INTERFACES <<EOF
+# Static Address Setting
+auto eth0
+iface eth0 inet static
+    address $ADDR
+    netmask $NETMASK
+    gateway $GW
+EOF
+      # Interface up
+      ifdown eth0 2> /dev/null
+      ifup eth0
+    ;;
+  esac
+
+}
+
+
+case "$1" in
+    start)
+        writeInterface "$ETHERTYPE"
+
+    ;;
+    stop)
+    ;;
+    *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+esac
+
+exit 0
+

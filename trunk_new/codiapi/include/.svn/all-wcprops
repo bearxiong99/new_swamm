@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/rep0/mcu/!svn/ver/5428/trunk/codiapi/include
+END
+codiDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/include/codiDefine.h
+END
+codiFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/include/codiFrame.h
+END
+endiDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5428/trunk/codiapi/include/endiDefine.h
+END
+endiFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5428/trunk/codiapi/include/endiFrame.h
+END
+codiCallback.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5413/trunk/codiapi/include/codiCallback.h
+END
+codiTypedef.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/include/codiTypedef.h
+END
+typedef.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/2830/trunk/codiapi/include/typedef.h
+END
+common
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/171/trunk/codiapi/include/common
+END
+codierr.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/include/codierr.h
+END
+codiapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/include/codiapi.h
+END
+gpio
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/171/trunk/codiapi/include/gpio
+END

@@ -1,0 +1,24 @@
+  
+  
+  사용법은  ioctl 을 이용하시던가..
+        
+       ioctl( fd, GPIO_IOCTL_DIR, 0x8002 );       // 2번 gpio  출력설정
+       ioctl( fd, GPIO_IOCTL_OUT, 0x4002 );       // 2번 gpio  HIGH
+       ioctl( fd, GPIO_IOCTL_OUT, 0x0002 );       // 2번 gpio  LOW
+             
+       입력핀의 상태는
+       ioctl( fd, GPIO_IOCTL_DIR, 0x0003 );       // 3번 gpio  입력설정
+       state = ioctl( fd, GPIO_IOCTL_IN, 0x0003 );
+
+   proc 디렉토리를 이용하세요
+
+       ezboard> cd /proc/driver
+       ezboard> echo 'dir=0x8002' > gpio		// 2번 gpio  출력설정
+	   ezboard> echo 'out=0x4002' > gpio		// 2번 gpio  HIGH
+	   ezboard> echo 'out=0x0002' > gpio		// 2번 gpio  LOW
+	    
+	   입력핀을 읽을때는
+	    ezboard> cat gpio
+	    
+	    
+	    

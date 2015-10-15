@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada
+END
+zlib-streams.ads
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/zlib-streams.ads
+END
+test.adb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/test.adb
+END
+zlib-thin.adb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/zlib-thin.adb
+END
+zlib.adb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/zlib.adb
+END
+zlib-thin.ads
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/zlib-thin.ads
+END
+zlib.ads
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/zlib.ads
+END
+zlib.gpr
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/zlib.gpr
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/readme.txt
+END
+read.adb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/read.adb
+END
+mtest.adb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/mtest.adb
+END
+zlib-streams.adb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/zlib/contrib/ada/zlib-streams.adb
+END

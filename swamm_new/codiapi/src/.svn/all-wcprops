@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src
+END
+CoordinatorMessage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/CoordinatorMessage.cpp
+END
+Coordinator.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/Coordinator.h
+END
+CoordinatorWaitReply.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/CoordinatorWaitReply.h
+END
+CoordinatorDataStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/CoordinatorDataStream.cpp
+END
+DeviceClass.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/DeviceClass.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/Makefile
+END
+CoordinatorMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/CoordinatorMessage.h
+END
+CoordinatorFrame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/CoordinatorFrame.cpp
+END
+CoordinatorDataStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/CoordinatorDataStream.h
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/stdafx.h
+END
+SerialInterface.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/SerialInterface.cpp
+END
+CoordinatorFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/CoordinatorFrame.h
+END
+SerialInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/SerialInterface.h
+END
+CoordinatorUtility.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/CoordinatorUtility.cpp
+END
+VirtualInterface.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/VirtualInterface.cpp
+END
+codiapi.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/codiapi.cpp
+END
+CoordinatorCrcCheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/CoordinatorCrcCheck.cpp
+END
+CoordinatorServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/CoordinatorServer.cpp
+END
+CoordinatorUtility.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/CoordinatorUtility.h
+END
+VirtualInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/VirtualInterface.h
+END
+CoordinatorCrcCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/CoordinatorCrcCheck.h
+END
+CoordinatorServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/CoordinatorServer.h
+END
+EndDevicePool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/EndDevicePool.cpp
+END
+Coordinator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/src/Coordinator.cpp
+END
+CoordinatorWaitReply.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/CoordinatorWaitReply.cpp
+END
+DeviceClass.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/DeviceClass.cpp
+END
+EndDevicePool.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/src/EndDevicePool.h
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/ssl
+END
+cli.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/ssl/cli.cpp
+END
+inetdsrv.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/ssl/inetdsrv.cpp
+END
+serv.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/ssl/serv.cpp
+END

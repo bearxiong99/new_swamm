@@ -1,0 +1,42 @@
+#!/bin/bash
+
+trap "" SIGINT SIGKILL SIGSEGV SIGTERM
+
+# 
+# Check Tesk
+#
+
+DIR=/app/sw/script
+TASKLIST=task.list
+
+while getopts "d:" Option
+do
+    case $Option in
+        d   ) DIR=$OPTARG;;
+    esac
+done
+
+if [ -f $DIR/disable ]
+then
+    exit 2
+fi
+
+while true
+do
+
+sleep 60
+
+if [ -e $DIR/$TASKLIST ] 
+then
+    cat $DIR/$TASKLIST | while read TASK in
+    do
+        RET=`ps | grep $TASK | grep -v grep | wc -l`
+        if [ $RET = 0 ]
+        then
+            $TASK &
+        fi
+    done
+fi
+
+done
+

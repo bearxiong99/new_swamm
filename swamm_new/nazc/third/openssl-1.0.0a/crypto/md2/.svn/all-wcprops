@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/md2
+END
+md2.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/md2/md2.c
+END
+md2test.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/md2/md2test.c
+END
+md2_dgst.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/md2/md2_dgst.c
+END
+md2_one.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/md2/md2_one.c
+END
+md2.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/md2/md2.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/md2/Makefile
+END

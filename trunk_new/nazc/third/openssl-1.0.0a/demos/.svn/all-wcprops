@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos
+END
+b64.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/b64.c
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/README
+END
+spkigen.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/spkigen.c
+END
+b64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/b64.pl
+END
+privkey.pem
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/privkey.pem
+END
+selfsign.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/selfsign.c
+END

@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm
+END
+sha512-s390x.pl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha512-s390x.pl
+END
+sha256-586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha256-586.pl
+END
+sha1-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha1-x86_64.pl
+END
+sha512-sparcv9.pl
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha512-sparcv9.pl
+END
+sha512-armv4.pl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha512-armv4.pl
+END
+sha1-ia64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha1-ia64.pl
+END
+sha256-armv4.pl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha256-armv4.pl
+END
+sha512-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha512-x86_64.pl
+END
+sha512-ia64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha512-ia64.pl
+END
+sha1-thumb.pl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha1-thumb.pl
+END
+sha1-armv4-large.pl
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha1-armv4-large.pl
+END
+sha1-ppc.pl
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha1-ppc.pl
+END
+sha1-586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha1-586.pl
+END
+sha1-s390x.pl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha1-s390x.pl
+END
+sha1-sparcv9.pl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha1-sparcv9.pl
+END
+sha1-sparcv9a.pl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha1-sparcv9a.pl
+END
+sha512-ppc.pl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha512-ppc.pl
+END
+sha512-586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/sha512-586.pl
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/sha/asm/README
+END

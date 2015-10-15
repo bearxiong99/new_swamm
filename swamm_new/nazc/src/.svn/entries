@@ -1,0 +1,122 @@
+10
+
+dir
+5483
+http://tauran.nuritelecom.com/rep0/mcu/branches/site/swamm/nazc/src
+http://tauran.nuritelecom.com/rep0/mcu
+
+
+
+2014-07-17T04:28:49.687037Z
+5445
+rewriter
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+0c8fb18d-62cf-4f29-9844-4f4e0438761a
+
+launcher
+dir
+
+utility
+dir
+
+hwtester
+dir
+
+server
+dir
+
+install
+dir
+
+cli
+dir
+
+pmon
+dir
+
+mibc
+dir
+
+Makefile
+file
+
+
+
+
+2015-10-13T01:33:29.369370Z
+9783be6624c48a2947b273a2832c5a43
+2013-05-10T08:18:56.428740Z
+5186
+rewriter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2367
+
+updator
+dir
+
+sample
+dir
+
+reset
+dir
+
+monet
+dir
+
+external
+dir
+
+mserver
+dir
+
+mterm
+dir
+
+upload
+dir
+
+sysmon
+dir
+
+send
+dir
+
+gsmnet
+dir
+
+agent
+dir
+

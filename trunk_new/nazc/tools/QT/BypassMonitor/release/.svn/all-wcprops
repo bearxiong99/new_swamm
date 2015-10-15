@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/release
+END
+QtGui4.dll
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/release/QtGui4.dll
+END
+QtCore4.dll
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/release/QtCore4.dll
+END
+pthreadGC2.dll
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5182/trunk/nazc/tools/QT/BypassMonitor/release/pthreadGC2.dll
+END

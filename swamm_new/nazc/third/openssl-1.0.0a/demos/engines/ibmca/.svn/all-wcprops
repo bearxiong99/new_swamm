@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/engines/ibmca
+END
+hw_ibmca_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/engines/ibmca/hw_ibmca_err.h
+END
+hw_ibmca.c
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/engines/ibmca/hw_ibmca.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/engines/ibmca/Makefile
+END
+ica_openssl_api.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/engines/ibmca/ica_openssl_api.h
+END
+hw_ibmca.ec
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/engines/ibmca/hw_ibmca.ec
+END
+hw_ibmca_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/demos/engines/ibmca/hw_ibmca_err.c
+END

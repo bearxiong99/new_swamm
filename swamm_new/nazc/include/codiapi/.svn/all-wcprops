@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/codiapi
+END
+codiDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/codiapi/codiDefine.h
+END
+codiFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/codiapi/codiFrame.h
+END
+endiDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/codiapi/endiDefine.h
+END
+endiFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/codiapi/endiFrame.h
+END
+codiCallback.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/codiapi/codiCallback.h
+END
+codiTypedef.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/codiapi/codiTypedef.h
+END
+codierr.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/codiapi/codierr.h
+END
+codiapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/codiapi/codiapi.h
+END

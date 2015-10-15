@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/zlib
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/ChangeLog
+END
+gzio.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/gzio.c
+END
+inflate.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/inflate.c
+END
+uncompr.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/uncompr.c
+END
+FAQ
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/FAQ
+END
+minigzip.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/minigzip.c
+END
+inflate.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/inflate.h
+END
+compress.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/compress.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/zlib/Makefile
+END
+adler32.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/adler32.c
+END
+infback.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/infback.c
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/configure
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/Makefile.in
+END
+deflate.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/deflate.c
+END
+zlib.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/zlib.h
+END
+zutil.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/zutil.c
+END
+deflate.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/deflate.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/README
+END
+crc32.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/crc32.c
+END
+zutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/zutil.h
+END
+inftrees.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/inftrees.c
+END
+zlib.3
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/zlib.3
+END
+crc32.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/crc32.h
+END
+trees.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/trees.c
+END
+algorithm.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/algorithm.txt
+END
+inftrees.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/inftrees.h
+END
+zconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/zconf.h
+END
+INDEX
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/INDEX
+END
+trees.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/trees.h
+END
+zconf.in.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/zconf.in.h
+END
+inffast.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/inffast.c
+END
+example.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/example.c
+END
+inffast.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/inffast.h
+END
+inffixed.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/inffixed.h
+END

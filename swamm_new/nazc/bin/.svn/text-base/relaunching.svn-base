@@ -1,0 +1,109 @@
+#!/bin/bash
+
+trap "" SIGINT SIGKILL SIGSEGV SIGTERM
+
+#if [ $# -gt 0 ] 
+#then
+#    echo "Kill launcher process..." 
+#    kill $1
+#fi
+
+REVISION=0
+
+if [ -d /app/upgrade ]
+then
+    echo "Install Concentrator Firmware..." 
+
+    cd /app/upgrade
+    echo " + Check gzip Install"
+    if [ -f newfirm.tar.gz ]; then
+        gzip -d newfirm.tar.gz
+
+        echo "Reboot System"  
+        sync
+        sleep 1
+        sync
+        sleep 1
+        reboot -f
+    fi
+
+    echo " + Check tar Install"
+    if [ -f newfirm.tar ]; then
+        tar xf newfirm.tar
+        mv newfirm.tar oldfirm.tar
+
+        echo "Reboot System"  
+        sync
+        sleep 1
+        sync
+        sleep 1
+        reboot -f
+    fi
+
+    echo " + Verify Install Files" 
+    if /app/upgrade/verify.script 
+    then
+        if [ -f concentrator.pkg ]; then
+            echo " + Move Firmware Info File" 
+            (cp -f concentrator.pkg /app/fw/concentrator/)
+        fi
+
+        echo " + Read Old Revision" 
+        if [ -f /app/sw/revision.info ]; then
+            mv /app/sw/revision.info /app/conf
+        fi
+        if [ -f /app/conf/revision.old ]; then
+            REVISION=`cat /app/conf/revision.old`
+            REVISION=${REVISION/[MSP]/}
+        fi
+        if [ -f /app/conf/revision.info ]; then
+            cp /app/conf/revision.info /app/conf/revision.old
+        fi
+
+        # delete old cli.ini File (Issue # 2491)
+        if [ "$REVISION" -lt 3796 ]; then
+            echo " + Remove Old cli.ini File" 
+            if [ -f /app/sw/cli.ini ]; then rm -f /app/sw/cli.ini; fi
+        fi
+
+        # delete old passwd (Issue #2494)
+        if [ "$REVISION" -lt 3505 ]; then
+            echo " + Remove Old passwd File" 
+            if [ -f /app/conf/passwd ]; then rm -f /app/conf/passwd; fi
+        fi
+
+        if [ -d /app/sw/lib ]; then
+            echo " + Remove Old Library Files" 
+            (cd /app/sw; rm -rf lib)
+        fi
+
+        echo " + Copy New Firmware Files" 
+        (cd /; cp -rdf /app/upgrade/* /app/sw/)
+
+        echo " + Make Firmware Backup File" 
+        (cd /; rm -rf /app/fw/concentrator/*)
+        (gzip -f oldfirm.tar; mv -f oldfirm.tar.gz /app/fw/concentrator/)
+
+        cd /
+        echo " + Remove Temporary Files" 
+        (rm -rf /app/upgrade/)
+
+        echo " + Install Files"  
+        (cd /app/sw; /app/sw/install)
+        echo "install Done"
+    else
+        echo " + Verify Fail !!!" 
+        echo " + Remove Temporary Files" 
+        echo "Install Fail : Checksum Error" >> /app/sw/install.error
+        (cd /; rm -rf /app/upgrade/)
+    fi
+
+    echo "Reboot System"  
+    sync
+    sleep 1
+    sync
+    sleep 1
+    reboot -f
+fi
+
+

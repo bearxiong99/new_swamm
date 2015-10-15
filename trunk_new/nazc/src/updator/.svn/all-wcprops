@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/updator
+END
+MobileClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/updator/MobileClient.cpp
+END
+UpdateService.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/updator/UpdateService.h
+END
+CrcCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/updator/CrcCheck.h
+END
+MobileClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/updator/MobileClient.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/updator/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/updator/common.h
+END
+updator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/updator/updator.cpp
+END
+UpdateService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/updator/UpdateService.cpp
+END
+CrcCheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/updator/CrcCheck.cpp
+END

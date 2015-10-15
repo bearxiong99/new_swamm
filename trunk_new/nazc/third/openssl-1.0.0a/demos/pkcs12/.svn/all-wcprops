@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/pkcs12
+END
+pkwrite.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/pkcs12/pkwrite.c
+END
+pkread.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/pkcs12/pkread.c
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/pkcs12/README
+END

@@ -1,0 +1,98 @@
+10
+
+dir
+5483
+http://tauran.nuritelecom.com/rep0/mcu/trunk/nazc/test
+http://tauran.nuritelecom.com/rep0/mcu
+
+
+
+2013-05-06T06:36:52.994789Z
+5182
+rewriter
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+0c8fb18d-62cf-4f29-9844-4f4e0438761a
+
+codiapi
+dir
+
+core
+dir
+
+accessory
+dir
+
+action
+dir
+
+Makefile
+file
+
+
+
+
+2015-10-13T01:32:01.169368Z
+0dcea7a5e1e38416c775515b2468e071
+2013-05-06T06:36:52.994789Z
+5182
+rewriter
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2009
+
+tools
+dir
+
+utils
+dir
+
+external
+dir
+
+include
+dir
+
+main
+dir
+
+UnitTest++
+dir
+
+fixture
+dir
+
+src
+dir
+

@@ -1,0 +1,22 @@
+
+본 Script는 dump.exe를 이용해서 Cell planning toolkit 정보를 구축하는데 사용된다.
+
+사용법
+
+ 0) dump.exe가 있는 디렉토리로 이동
+
+ 1) Cell db 생성
+   $ sqlite3 cell.db
+   sqlite> .read cellTableCreate.sql
+   sqlite> .quit
+
+ 2) dump.exe 실행 (/dev/ttyS3에 Cell Codi가 연결되었을 경우)
+   $ ./dump.exe /dev/ttyS3 | ./dumpGPS.sh | sqlite3 cell.db
+
+ 3) 별도의 shell 또는 process에서 DB 확인
+   $ sqlite3 cell.db
+   sqlite> select * from atc_cell_tbl;
+   000D6F0000E4AC03|000D6F0000E4AC03|3722.4784|N|12638.553|E|250411|71039.0|255|-52
+   sqlite> select * from atc_codi_tbl;
+   000D6F0000E4AC03|37.47995|N|126.882584|E
+

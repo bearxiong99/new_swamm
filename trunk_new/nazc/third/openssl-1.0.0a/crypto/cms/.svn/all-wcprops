@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms
+END
+cms_asn1.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_asn1.c
+END
+cms_enc.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_enc.c
+END
+cms_sd.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_sd.c
+END
+cms_lib.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_lib.c
+END
+cms_io.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_io.c
+END
+cms_smime.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_smime.c
+END
+cms_lcl.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_lcl.h
+END
+cms.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms.h
+END
+cms_cd.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_cd.c
+END
+cms_dd.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_dd.c
+END
+cms_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_err.c
+END
+cms_env.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_env.c
+END
+cms_att.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_att.c
+END
+cms_ess.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/cms_ess.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/cms/Makefile
+END

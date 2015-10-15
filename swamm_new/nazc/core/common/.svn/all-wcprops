@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common
+END
+SystemUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/SystemUtil.cpp
+END
+TCPClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/TCPClient.cpp
+END
+CppSQLite3.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/CppSQLite3.cpp
+END
+BCC.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/BCC.cpp
+END
+_WinSerialWriter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/_WinSerialWriter.cpp
+END
+PrivateProfile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/common/PrivateProfile.cpp
+END
+_WinTimeoutThread.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/_WinTimeoutThread.cpp
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/stdafx.h
+END
+IcmpPing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/IcmpPing.cpp
+END
+Chunk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/Chunk.cpp
+END
+MemoryDebug.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/MemoryDebug.cpp
+END
+Locker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/Locker.cpp
+END
+_UnixTimeoutThread.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/_UnixTimeoutThread.cpp
+END
+TCPMultiplexServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/TCPMultiplexServer.cpp
+END
+_WinSerialServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/_WinSerialServer.cpp
+END
+Hash.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/common/Hash.cpp
+END
+Queue.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/common/Queue.cpp
+END
+DebugUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/DebugUtil.cpp
+END
+_UnixEvent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/_UnixEvent.cpp
+END
+MD5.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/common/MD5.cpp
+END
+DataStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/DataStream.cpp
+END
+CommonUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/CommonUtil.cpp
+END
+Options.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/Options.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/Makefile
+END
+_WinMultiThread.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/_WinMultiThread.cpp
+END
+TCPSocket.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/TCPSocket.cpp
+END
+IdleApplication.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/common/IdleApplication.cpp
+END
+ShellCommand.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/ShellCommand.cpp
+END
+Parity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/Parity.cpp
+END
+_UnixSerialServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/common/_UnixSerialServer.cpp
+END
+DebugServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/common/DebugServer.cpp
+END
+CRC16.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/common/CRC16.cpp
+END

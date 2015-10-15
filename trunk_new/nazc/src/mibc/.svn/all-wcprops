@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/mibc
+END
+parse.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/394/trunk/nazc/src/mibc/parse.h
+END
+util.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/394/trunk/nazc/src/mibc/util.h
+END
+oidmib.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/394/trunk/nazc/src/mibc/oidmib.h
+END
+mibc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/rep0/mcu/!svn/ver/394/trunk/nazc/src/mibc/mibc
+END
+mibc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/394/trunk/nazc/src/mibc/mibc.cpp
+END
+parse.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/394/trunk/nazc/src/mibc/parse.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/mibc/Makefile
+END
+util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/394/trunk/nazc/src/mibc/util.cpp
+END

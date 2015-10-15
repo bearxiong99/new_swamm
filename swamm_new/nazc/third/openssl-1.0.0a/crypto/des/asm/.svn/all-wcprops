@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/des/asm
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/des/asm/readme
+END
+crypt586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/des/asm/crypt586.pl
+END
+des_enc.m4
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/des/asm/des_enc.m4
+END
+desboth.pl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/des/asm/desboth.pl
+END
+des-586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/des/asm/des-586.pl
+END

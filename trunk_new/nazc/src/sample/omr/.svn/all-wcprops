@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr/Variable.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr/Makefile
+END
+client.exe
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr/client.exe
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr/common.h
+END
+if4CallbackHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr/if4CallbackHandler.cpp
+END
+client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr/client.cpp
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr/Variable.cpp
+END
+server.exe
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr/server.exe
+END
+server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/sample/omr/server.cpp
+END

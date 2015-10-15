@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS
+END
+VMSify-conf.pl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/VMSify-conf.pl
+END
+tcpip_shr_decc.opt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/tcpip_shr_decc.opt
+END
+ucx_shr_decc.opt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/ucx_shr_decc.opt
+END
+mkshared.com
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/mkshared.com
+END
+ucx_shr_decc_log.opt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/ucx_shr_decc_log.opt
+END
+ucx_shr_vaxc.opt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/ucx_shr_vaxc.opt
+END
+multinet_shr.opt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/multinet_shr.opt
+END
+openssl_utils.com
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/openssl_utils.com
+END
+test-includes.com
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/test-includes.com
+END
+socketshr_shr.opt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/socketshr_shr.opt
+END
+install.com
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/install.com
+END
+WISHLIST.TXT
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/WISHLIST.TXT
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/VMS/TODO
+END

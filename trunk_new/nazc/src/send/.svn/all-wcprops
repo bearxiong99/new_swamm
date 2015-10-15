@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/rep0/mcu/!svn/ver/5309/trunk/nazc/src/send
+END
+Transfer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5280/trunk/nazc/src/send/Transfer.cpp
+END
+MobileClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5280/trunk/nazc/src/send/MobileClient.cpp
+END
+Transfer.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/send/Transfer.h
+END
+send.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/send/send.cpp
+END
+MobileClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/send/MobileClient.h
+END
+IF4DataFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/send/IF4DataFrame.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5309/trunk/nazc/src/send/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/send/common.h
+END

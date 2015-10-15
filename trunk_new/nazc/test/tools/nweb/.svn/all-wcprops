@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/tools/nweb
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/tools/nweb/index.html
+END
+nweb.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/tools/nweb/nweb.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/tools/nweb/Makefile
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/tools/nweb/README
+END
+nigel.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/tools/nweb/nigel.jpg
+END
+client.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/tools/nweb/client.c
+END
+nweb.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/tools/nweb/nweb.sh
+END

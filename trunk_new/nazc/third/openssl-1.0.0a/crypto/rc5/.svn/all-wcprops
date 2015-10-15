@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5
+END
+rc5_locl.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5_locl.h
+END
+rc5test.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5test.c
+END
+rc5ofb64.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5ofb64.c
+END
+rc5speed.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5speed.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/Makefile
+END
+rc5s.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5s.cpp
+END
+rc5.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5.h
+END
+rc5_enc.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5_enc.c
+END
+rc5cfb64.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5cfb64.c
+END
+rc5_ecb.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5_ecb.c
+END
+rc5_skey.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/rc5/rc5_skey.c
+END

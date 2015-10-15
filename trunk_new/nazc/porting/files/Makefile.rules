@@ -1,0 +1,24 @@
+# Configuration File
+
+
+###########################################################
+# PATCH List
+###########################################################
+
+###########################################################
+
+CFLAGS +=-D__RELEASE__
+CFLAGS +=-D__ENABLE_PULSE_METER__
+CFLAGS +=-D__GE_METER_SECURITY__=$(GE_METER_SECURITY)
+#CFLAGS+=-D__ENABLE_SW_BUILD__
+
+###########################################################
+
+LIBS    =-lstdc++ -lpthread 
+
+LDFLAGS +=  
+
+CFLAGS  +=-O2
+CFLAGS  +=-Wall 
+
+

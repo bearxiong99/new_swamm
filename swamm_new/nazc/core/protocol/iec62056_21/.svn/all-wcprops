@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21
+END
+Iec21Functions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/Iec21Functions.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/Makefile
+END
+Iec21DataFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/Iec21DataFrame.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/common.h
+END
+Iec21Code.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/Iec21Code.cpp
+END
+Iec21Code.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/Iec21Code.h
+END
+Iec21Utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/Iec21Utils.cpp
+END
+Iec21DataFrame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/Iec21DataFrame.cpp
+END
+Iec21DataStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/Iec21DataStream.cpp
+END
+Iec21Utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/protocol/iec62056_21/Iec21Utils.h
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/samples/dump/cell
+END
+dumpGPS.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/samples/dump/cell/dumpGPS.sh
+END
+cellTableCreate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/samples/dump/cell/cellTableCreate.sql
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/samples/dump/cell/README
+END
+updatePosition.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/samples/dump/cell/updatePosition.sql
+END

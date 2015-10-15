@@ -1,0 +1,483 @@
+#include "common.h"
+#include "MobileClient.h"
+#include "AgentService.h"
+#include "SystemMonitor.h"
+#include "RealTimeClock.h"
+#include "StatusMonitor.h"
+#include "SystemUtil.h"
+#include "CommonUtil.h"
+#include "MemoryDebug.h"
+#include "DebugUtil.h"
+#include "Utility.h"
+
+#define STATE_INIT              0
+#define STATE_GMI				10
+#define STATE_GMM				11
+#define STATE_GMR				12
+#define STATE_GSN				13
+#define STATE_MDN				14
+#define STATE_TIME				15
+#define STATE_ATI               20
+#define STATE_SBV               21
+#define STATE_ATS               22
+#define STATE_ATS0           	23
+#define STATE_ATW           	24
+#define STATE_CIMI              25
+#define STATE_SCID              26
+#define STATE_CPIN              27
+#define STATE_CCLK              28
+#define STATE_CREG              29
+#define STATE_CSQ               50
+//Isuue_2448
+#define STATE_CNUM              30
+
+#define COMPRESS_OFF			0
+#define COMPRESS_ON				1
+
+//////////////////////////////////////////////////////////////////////
+// Data Definitions
+//////////////////////////////////////////////////////////////////////
+
+extern int      m_nSystemID;
+extern char 	m_szFepServer[];
+extern int	 	m_nFepPort;
+extern BOOL    	m_bEnableAutoUpload;
+extern UINT		m_nUploadTryTime;
+extern int		m_nUploadLogSize;
+
+CLocker			m_BusyLocker;
+CLocker			m_RingLocker;
+BOOL			m_bBusyMobile = FALSE;
+int				m_nCSQ = 0;
+BOOL			m_bRingSignalPending = FALSE;
+
+//////////////////////////////////////////////////////////////////////
+// Utiliti functions
+//////////////////////////////////////////////////////////////////////
+
+BOOL MOBILE_IsBusy()
+{
+	return m_bBusyMobile;
+}
+
+BOOL MOBILE_Lock()
+{
+	m_BusyLocker.Lock();	
+	m_bBusyMobile = TRUE;
+	return TRUE;	
+}
+
+void MOBILE_Unlock()
+{
+	m_bBusyMobile = FALSE;
+	m_BusyLocker.Unlock();	
+}
+
+void MOBILE_Ring()
+{
+	m_RingLocker.Lock();	
+	m_bRingSignalPending = TRUE;
+	m_RingLocker.Unlock();
+}
+
+void StoreValue(int nState, char *pszString)
+{
+    FILE    *fp;
+    char    szBuffer[128];
+
+    sprintf(szBuffer, "%s\n", pszString);
+    fp = fopen("/tmp/mobileinfo", "a+b");
+    if (fp != NULL)
+    {
+        fwrite(szBuffer, 1, strlen(szBuffer), fp);
+        fclose(fp);
+    }
+}
+
+int GetModemProperty(CMobileClient *pClient, int nType, BOOL bTimesync)
+{
+    char    szBuffer[256]={0,};
+    int     nLength, nState, nRetry=0, nNext;
+	int		n, len=0;
+    MIBValue mibValue;
+
+	m_RingLocker.Lock();	
+	m_bRingSignalPending = FALSE;
+	m_RingLocker.Unlock();
+
+    for(nState=STATE_INIT; nState!=STATE_DONE;)
+    {
+		if (m_bRingSignalPending) return 0;
+
+        nNext = nState;
+        switch(nState) {
+          case STATE_INIT :
+    		   unlink("/tmp/mobileinfo");
+               pClient->WriteToModem("ATZ\r\n");
+			   nNext = (nType == MOBILE_TYPE_CDMA) ? STATE_GMI : STATE_ATI;
+               break;
+
+          case STATE_GMI :	// CDMA
+               pClient->WriteToModem("AT+GMI\r\n");
+               nNext = STATE_GMM;
+               break;
+
+          case STATE_GMM :
+               pClient->WriteToModem("AT+GMM\r\n");
+               nNext = STATE_GMR;
+               break;
+
+          case STATE_GMR :
+               pClient->WriteToModem("AT+GMR\r\n");
+               nNext = STATE_GSN;
+               break;
+
+          case STATE_GSN :
+               pClient->WriteToModem("AT+GSN\r\n");
+               nNext = STATE_MDN;
+               break;
+               
+          case STATE_MDN :
+               pClient->WriteToModem("AT+MIN?\r\n");
+               nNext = STATE_CSQ;
+               break;
+
+          case STATE_TIME :
+               pClient->WriteToModem("AT+TIME?\r\n");
+               nNext = STATE_DONE;
+               break;
+
+          case STATE_ATI :	// GSM
+               pClient->WriteToModem("ATI\r\n");
+               nNext = STATE_CNUM;
+               break;
+//Issue_2448
+          case STATE_CNUM :
+               pClient->WriteToModem("AT+CNUM\r\n");
+               nNext = STATE_SBV;
+               break;
+
+          case STATE_SBV :
+               pClient->WriteToModem("AT^SBV\r\n");
+               nNext = STATE_ATS;	// STATE_CIMI;
+               break;
+
+          case STATE_ATS :
+               pClient->WriteToModem("ATS0?\r\n");
+               nNext = STATE_ATS0;
+			   break;
+
+          case STATE_ATS0 :
+               pClient->WriteToModem("ATS0=1\r\n\r\n");
+               nNext = STATE_ATW;
+			   break;
+
+          case STATE_ATW :
+               pClient->WriteToModem("AT&W\r\n");
+               nNext = STATE_CIMI;
+			   break;
+
+          case STATE_CIMI :
+               pClient->WriteToModem("AT+CIMI\r\n");
+               nNext = STATE_SCID;
+               break;
+
+          case STATE_SCID :
+               pClient->WriteToModem("AT^SCID\r\n");
+               nNext = STATE_CPIN;
+               break;
+
+          case STATE_CPIN :
+               pClient->WriteToModem("AT+CPIN?\r\n");
+               nNext = STATE_CCLK;
+               break;
+
+          case STATE_CCLK :
+               pClient->WriteToModem("AT+CCLK?\r\n");
+               nNext = STATE_CREG;
+               break;
+
+          case STATE_CREG :
+               pClient->WriteToModem("AT+CREG?\r\n");
+               nNext = STATE_CSQ;
+               break;
+
+          case STATE_CSQ :
+               if (nType == MOBILE_TYPE_CDMA) {
+                    pClient->WriteToModem("AT+CSQ?\r\n");
+                    nNext = STATE_TIME;
+               } else  {
+                    pClient->WriteToModem("AT+CSQ\r\n");
+                    nNext = STATE_DONE;
+               }
+               break;
+
+          case STATE_DONE :
+			   if (IsExists("/tmp/mobileinfo"))
+               	   system("cp /tmp/mobileinfo /app/sw/mobileinfo");
+               return 1;
+        }
+
+        for(nLength=1; nLength!=0;)
+        {
+            nLength = pClient->ReadLineFromModem(szBuffer, 254, 1000);
+            if (nLength <= 0)
+                break;
+
+			if (m_bRingSignalPending) return 0;
+
+            if (nLength == 1) 
+                continue;
+
+			szBuffer[nLength] = '\0';
+#ifndef __RELEASE__
+			XDEBUG("MODEM: {{%s}}\r\n", szBuffer);
+#endif
+			if ((nState == STATE_CPIN) && (strncmp(szBuffer, "+CPIN: ", 7) == 0))
+			{
+				if (strncmp(&szBuffer[7], "READY", 5) != 0)
+				{
+                	usleep(1000000);
+                	nLength = 0;
+					nState = STATE_INIT;
+                	break;
+				}
+			}
+
+			if (nState == STATE_ATS)
+			{
+				if (strlen(szBuffer) >= 3)
+				{
+					n = atoi(szBuffer);
+					if (n == 1)
+					{
+						XDEBUG("AUTO ANSWER MODE = %d\r\n", n);
+						nNext = STATE_CIMI;	
+					}
+				}
+			}
+
+//Issue_2448
+            /* CDMA 방식 */
+			if ((nState == STATE_MDN) && (strncmp(szBuffer, "+MIN: ", 6) == 0))
+			{
+                char * phoneNum = &szBuffer[6];
+                
+                len = strlen(phoneNum);
+                if(len > 0) 
+                {
+                    memset(&mibValue, 0, sizeof(MIBValue));
+                    /** OID 2.1.10 sysPhoneNumber */
+                    if(VARAPI_StringToOid("2.1.10", &mibValue.oid))
+                    {
+                        mibValue.stream.p = (char *)MALLOC(len + 1);
+                        memset(mibValue.stream.p, 0, len + 1);
+                        memcpy(mibValue.stream.p, phoneNum, len);
+                        mibValue.type = VARSMI_STRING;
+                        mibValue.len = len;
+
+                        VARAPI_SetValue(&mibValue, NULL);
+                        FREE(mibValue.stream.p);
+                    }
+                    else
+                    {
+                        XDEBUG("GetModemProperty : OID Converting Fail : 2.1.10\r\n");
+                    }
+                }
+
+				nRetry = 0;
+			}
+
+            /* GSM 방식 */
+            if ((nState == STATE_CNUM) && (strncmp(szBuffer, "+CNUM: ", 7) == 0))
+            {
+                char *tok[3] = { NULL, NULL, NULL };
+                char *buf = NULL;
+                char *last = NULL;
+                char *phoneNum = NULL;
+                UINT i;
+                
+                /** AT+CNUM Specification
+                  *
+                  * [+CNUM: [<alpha>], <number>, <type>]
+                  * 
+                  * Number를 추출해야 한다.
+                  */
+                buf = &szBuffer[7];
+                for(i=0;i<sizeof(tok);i++)
+                {
+                    if((tok[i] = strtok_r(buf, ",", &last))==NULL) break;
+                    buf = NULL;
+                }
+                if(i>3)
+                {
+                    /** alpha가 optional 하기 때문에 위치를 구해야 한다 */
+                    phoneNum = tok[1];
+                    len = strlen(phoneNum);
+                    memset(&mibValue, 0, sizeof(MIBValue));
+                    /** OID 2.1.10 sysPhoneNumber */
+                    if(VARAPI_StringToOid("2.1.10", &mibValue.oid))
+                    {
+                        mibValue.stream.p = (char *)MALLOC(len + 1);
+                        memset(mibValue.stream.p, 0, len + 1);
+                        memcpy(mibValue.stream.p, phoneNum, len);
+                        mibValue.type = VARSMI_STRING;
+                        mibValue.len = len;
+
+                        VARAPI_SetValue(&mibValue, NULL);
+                        FREE(mibValue.stream.p);
+                    }
+                    else
+                    {
+                        XDEBUG("GetModemProperty : OID Converting Fail : 2.1.10\r\n");
+                    }
+                }
+
+                nRetry = 0;
+            }
+
+			if ((nState == STATE_CSQ) && (strncmp(szBuffer, "+CSQ: ", 6) == 0))
+			{
+				m_nCSQ = atoi(&szBuffer[6]);
+				if (m_nCSQ == 99)
+				{
+					usleep(3000000);
+					pClient->Flush();
+                	nLength = 0;
+                	break;
+				}else nRetry = 0;
+			}
+
+			if (strncmp(szBuffer, "+TIME: ", 7) == 0)
+			{
+				// 시간 동기화
+				if (bTimesync) m_pRealTimeClock->UpdateTime(&szBuffer[7]);
+                nRetry = 0;
+			}
+            else if (strncmp(szBuffer, "OK", 2) == 0)
+            {
+                nRetry = 0;
+                nState = nNext;
+                break;
+            }
+            else if (strncmp(szBuffer, "ERROR", 5) == 0)
+            {
+                nLength = 0;
+                break;
+            }
+
+            StoreValue(nState, szBuffer);
+        }
+
+        if (nLength <= 0) nRetry++;
+        if (nRetry >= 5)
+            break;
+    }
+
+    if (IsExists("/tmp/mobileinfo"))
+    {
+        system("cp -f /tmp/mobileinfo /app/sw/mobileinfo");
+    }
+
+    return 0;
+}
+
+BOOL MOBILE_GetMobileProperty(int nType, BOOL bTimesync)
+{
+	CMobileClient	client;
+	BOOL			bResult = FALSE;
+
+	if (m_pStatusMonitor->GetDcdState() == 0)
+		return FALSE;
+
+	if (client.Initialize(nType))
+	{	
+		bResult = GetModemProperty(&client, nType, bTimesync);
+		client.Destroy();
+	}
+
+	return bResult;	
+}
+
+BOOL UploadFile(const char *pszFileName, int nSeek)
+{
+    char    szCommand[128];
+    int     nMode, nMobile, nType;
+    BOOL    bConnected, bFind = FALSE;
+	BOOL	bResult = FALSE;
+	int		nResult;
+
+	if (!IsExists(pszFileName))
+        return FALSE;
+
+    nType = m_pService->GetEthernetType();
+	if (nType != ETHER_TYPE_PPP)
+	{
+	    sprintf(szCommand, "/app/sw/upload %s -n %d -p %d %s %s", 
+			m_nDebugLevel ? "" : "-d", m_nSystemID, m_nFepPort, m_szFepServer, pszFileName);	
+        nResult = system(szCommand);
+		return (nResult == 0) ? TRUE : FALSE;
+    }
+
+    nMobile = m_pService->GetMobileType();
+    nMode   = m_pService->GetMobileMode();
+
+	MOBILE_Lock();
+	for(;;)
+	{
+		// 전화가 걸려 있는 상태인지 본다.
+		if ((nMode == MOBILE_MODE_CSD) && (m_pStatusMonitor->GetDcdState() == 0))
+		{
+			bFind = TRUE;
+			XDEBUG("SEND-PENDING: DCD active. (WAIT)\r\n");
+			usleep(5000000);
+			continue;
+		}
+		else if (FindProcess("mserver") > 0)
+		{
+			bFind = TRUE;
+			XDEBUG("SEND-PENDING: mserver active. (WAIT)\r\n");
+			usleep(5000000);
+			continue;
+		}
+		else
+		{
+			if (bFind) usleep(3000000);
+			break;
+		}
+	}
+
+	if (nMode != MOBILE_MODE_CSD)
+	{
+		bConnected = m_pSystemMonitor->NewConnection();
+		XDEBUG("MOBILE Status: %s\r\n", bConnected ? "PPP Connected." : "PPP Not connected");
+
+		if (bConnected)
+		{
+	        sprintf(szCommand, "/app/sw/upload %s -n %d -p %d %s %s", 
+			    m_nDebugLevel ? "" : "-d", m_nSystemID, m_nFepPort, m_szFepServer, pszFileName);	
+			nResult = system(szCommand);
+			bResult = (nResult == 0) ? TRUE : FALSE;
+		}
+		else
+		{
+			XDEBUG("MOBILE-CONNECTION-ERROR: Cannot connect mobile network.\r\n");
+		}
+
+		m_pSystemMonitor->DeleteConnection();
+	}
+	else
+	{
+		sprintf(szCommand, "/app/sw/send %s %d %d %s %d %d %d",
+			nMobile == MOBILE_TYPE_CDMA ? "cdma" : "gsm",
+			m_nSystemID, m_nFepPort, pszFileName, m_nUploadTryTime,
+			COMPRESS_ON,
+			(m_nDebugLevel == 0) ? 1 : 0);
+		nResult = system(szCommand);
+		bResult = (nResult == 0) ? TRUE : FALSE;
+	}
+	MOBILE_Unlock();
+
+	return bResult;
+}
+

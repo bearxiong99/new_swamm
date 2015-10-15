@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5413/trunk/codiapi/samples/rfmonitor
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/samples/rfmonitor/README.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/samples/rfmonitor/Makefile
+END
+rfmonitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5413/trunk/codiapi/samples/rfmonitor/rfmonitor.cpp
+END

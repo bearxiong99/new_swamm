@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/3237/trunk/nazc/include/codiapi
+END
+codiTypedef.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/78/trunk/nazc/include/codiapi/codiTypedef.h
+END
+codierr.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/78/trunk/nazc/include/codiapi/codierr.h
+END
+codiapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/78/trunk/nazc/include/codiapi/codiapi.h
+END
+codiDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/78/trunk/nazc/include/codiapi/codiDefine.h
+END
+codiFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/78/trunk/nazc/include/codiapi/codiFrame.h
+END
+endiDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/78/trunk/nazc/include/codiapi/endiDefine.h
+END
+endiFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/78/trunk/nazc/include/codiapi/endiFrame.h
+END
+codiCallback.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/119/trunk/nazc/include/codiapi/codiCallback.h
+END

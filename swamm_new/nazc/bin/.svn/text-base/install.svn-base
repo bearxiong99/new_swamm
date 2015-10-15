@@ -1,0 +1,146 @@
+#!/bin/bash
+
+APP=/app/sw/aimir.tar.gz
+NEWFILE=/app/sw/newfirm.tar
+BASEFILE=/app/sw/oldfirm.tar
+ERRORLOG=/app/sw/install.error
+PPPFILE=/app/sw/ppp.tar.gz
+CONFFILE=/app/conf/conf.tar.gz
+FWFILE=/app/sw/fwPkg.tar.gz
+PKGFILE=
+STEP=0
+
+echo "[$STEP] NZC Firmware Install Start"; let STEP=$STEP+1
+
+cat /dev/null > $ERRORLOG
+
+if [ -n "$1" ] && [ "$1" = "factory" ]  
+then
+    echo -n "[$STEP]  Download Factory Files...."
+        APP=/tmp/aimir.tar.gz
+        if /usr/bin/tftp -g -l $APP -r $PKGFILE 192.168.10.20 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+    echo -n "[$STEP]  Download PPP Info File...."
+        if /usr/bin/tftp -g -l $PPPFILE -r ppp.tar.gz 192.168.10.20 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+    echo -n "[$STEP]  Download Configure File..."
+        if /usr/bin/tftp -g -l $CONFFILE -r conf.tar.gz 192.168.10.20 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+else
+    if [ -f /tmp/aimir.tar.gz ]; then
+        APP=/tmp/aimir.tar.gz
+    fi
+fi
+
+cd /app/sw
+if [ -f /app/sw/driver/gpio_dev.o ]; then
+    echo -n "[$STEP]  Remove GPIO Modules ..........."
+        /sbin/rmmod gpio_dev 2>&1 >> $ERRORLOG
+    let STEP=$STEP+1
+fi
+if [ -f /app/sw/driver/tun.o ]; then
+    echo -n "[$STEP]  Remove TUN/TAP Modules ..........."
+        /sbin/rmmod tun 2>&1 >> $ERRORLOG
+    echo " [Done]"; let STEP=$STEP+1
+fi
+
+if [ -f $APP ]; then
+    echo -n "[$STEP]  Decompress Files.........."
+	    if gzip -dc $APP > $NEWFILE 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+	rm -f $APP
+fi
+
+if [ -f $NEWFILE ]; then
+    echo -n "[$STEP]  Remove Old Files.........."
+	    rm -f /app/lib/*
+    echo " [Done]"; let STEP=$STEP+1
+    echo -n "[$STEP]  Copy Files................"
+        if tar xf $NEWFILE 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+        mv $NEWFILE $BASEFILE
+fi
+
+if [ -f /app/sw/patch.sh ]; then 
+    echo "[$STEP]  Execute Patch Script ............."
+    /app/sw/patch.sh
+    let STEP=$STEP+1
+fi
+
+chown -R root:root * 2> /dev/null
+chmod -R 777 * 2> /dev/null
+
+echo -n "[$STEP]  Load GPIO Modules ............."
+    if /sbin/insmod /app/sw/driver/gpio_dev.o 2>&1 >> $ERRORLOG
+    then
+        echo -n "" 
+    else
+        echo " [Fail]"; 
+    fi
+let STEP=$STEP+1
+
+echo -n "[$STEP]  Load TUN/TAP Modules ............."
+    if /sbin/insmod /app/sw/driver/tun.o 2>&1 >> $ERRORLOG
+    then
+        echo -n "" 
+    else
+        echo " [Fail]"; 
+    fi
+let STEP=$STEP+1
+
+echo -n "[$STEP]  Reallocate Files.........."
+    if [ -f /app/sw/libnrdmif.so.1.0 ]; then mv /app/sw/libnrdmif.so.1.0 /app/lib; fi
+    if [ -f /app/sw/mcusystype ]; then mv /app/sw/mcusystype /app/conf; fi
+    if [ -f /app/sw/mcumodel ]; then mv /app/sw/mcumodel /app/conf; fi
+    if [ -f /app/sw/sensor.type ]; then mv /app/sw/sensor.type /app/conf; fi
+    if [ -f /app/sw/revision.info ]; then mv /app/sw/revision.info /app/conf; fi
+    if [ -f /app/sw/application.info ]; then mv /app/sw/application.info /app/conf; fi
+    if [ -f $PPPFILE ]; then (cd /app/sw; gzip -dc $PPPFILE | tar xf -; rm -f $PPPFILE;) fi
+    if [ -f $CONFFILE ]; then (cd /app/conf; gzip -dc $CONFFILE | tar xf -; rm -f $CONFFILE;) fi
+    if [ ! -f /app/lib/libsqlite3.so ]; then ln -s /app/sw/lib/libsqlite3.so /app/lib/libsqlite3.so; fi
+echo " [Done]"; let STEP=$STEP+1
+
+echo -n "[$STEP]  Decompress FW Files ......"
+    if [ -f $FWFILE ]
+    then 
+        if [ ! -d /app/fw ]
+        then
+            mkdir /app/fw
+        fi
+        (cd /app/fw;gzip -dc $FWFILE | tar xf -; rm -f $FWFILE)
+    fi
+echo " [Done]"; let STEP=$STEP+1
+
+(cd /app/conf; chown -R root:root * 2> /dev/null)
+
+if [ -f /etc/ld.so.conf ]; then
+    echo -n "[$STEP]  Reload library ..........."
+        /sbin/ldconfig /etc/ld.so.conf
+        echo " [Done]"; let STEP=$STEP+1
+fi
+
+# Skip H/W Test
+#touch /app/conf/factoryTestCompleted
+
+echo "[$STEP] MCU Firmware Install DONE"
+exit 0

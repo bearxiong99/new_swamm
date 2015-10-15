@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/ppp
+END
+resolv.conf
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/ppp/resolv.conf
+END
+chat
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/ppp/chat
+END
+chap-secrets
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/ppp/chap-secrets
+END
+connect-errors
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/ppp/connect-errors
+END
+pppd
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/ppp/pppd
+END
+pap-secrets
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/ppp/pap-secrets
+END

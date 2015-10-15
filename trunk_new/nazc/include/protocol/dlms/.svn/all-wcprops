@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5391/trunk/nazc/include/protocol/dlms
+END
+dlmsUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5318/trunk/nazc/include/protocol/dlms/dlmsUtils.h
+END
+dlmsType.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5318/trunk/nazc/include/protocol/dlms/dlmsType.h
+END
+dlmsDataStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/protocol/dlms/dlmsDataStream.h
+END
+dlmsObisDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5391/trunk/nazc/include/protocol/dlms/dlmsObisDefine.h
+END
+dlmsFunctions.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5334/trunk/nazc/include/protocol/dlms/dlmsFunctions.h
+END
+dlmsError.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/protocol/dlms/dlmsError.h
+END
+dlmsDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5303/trunk/nazc/include/protocol/dlms/dlmsDefine.h
+END
+dlmsFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5318/trunk/nazc/include/protocol/dlms/dlmsFrame.h
+END
+dlmsObis.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/4155/trunk/nazc/include/protocol/dlms/dlmsObis.h
+END
+dlmsClasses.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/4155/trunk/nazc/include/protocol/dlms/dlmsClasses.h
+END
+dlmsResult.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/4155/trunk/nazc/include/protocol/dlms/dlmsResult.h
+END

@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5272/trunk/nazc/third/openssl-1.0.0a
+END
+README.ENGINE
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/README.ENGINE
+END
+Makefile.org
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5272/trunk/nazc/third/openssl-1.0.0a/Makefile.org
+END
+openssl.doxy
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/openssl.doxy
+END
+config
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/config
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/INSTALL
+END
+CHANGES.SSLeay
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/CHANGES.SSLeay
+END
+FAQ
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/FAQ
+END
+INSTALL.MacOS
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/INSTALL.MacOS
+END
+CHANGES
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/CHANGES
+END
+INSTALL.OS2
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/INSTALL.OS2
+END
+INSTALL.DJGPP
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/INSTALL.DJGPP
+END
+INSTALL.VMS
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/INSTALL.VMS
+END
+e_os.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/e_os.h
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/NEWS
+END
+openssl.spec
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/openssl.spec
+END
+INSTALL.W32
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/INSTALL.W32
+END
+makevms.com
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/makevms.com
+END
+Configure
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/Configure
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/LICENSE
+END
+Makefile.shared
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/Makefile.shared
+END
+install.com
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/install.com
+END
+INSTALL.WCE
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/INSTALL.WCE
+END
+PROBLEMS
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/PROBLEMS
+END
+INSTALL.W64
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/INSTALL.W64
+END
+INSTALL.NW
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/INSTALL.NW
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/README
+END
+e_os2.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/e_os2.h
+END
+README.ASN1
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/README.ASN1
+END
+Shared.rules
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/Shared.rules
+END

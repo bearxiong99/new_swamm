@@ -1,0 +1,83 @@
+10
+
+dir
+5483
+http://tauran.nuritelecom.com/rep0/mcu/branches/site/swamm/nazc/core
+http://tauran.nuritelecom.com/rep0/mcu
+
+
+
+2015-03-03T01:15:41.111386Z
+5476
+rewriter
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+0c8fb18d-62cf-4f29-9844-4f4e0438761a
+
+if4api
+dir
+
+Makefile
+file
+
+
+
+
+2015-10-13T01:33:31.169370Z
+ac049b22a7577f703da1a6130d5f7620
+2013-05-07T06:37:18.707832Z
+5184
+rewriter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2301
+
+gpio
+dir
+
+zlib
+dir
+
+protocol
+dir
+
+varapi
+dir
+
+cli
+dir
+
+common
+dir
+

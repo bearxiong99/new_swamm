@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+
+pushd /app/sw
+
+if [ -f newfirm.tar ]; then
+	tar xf newfirm.tar 
+	rm -f /app/lib/*
+	mv newfirm.tar oldfirm.tar
+
+	chown -R root:root *
+	chmod -R 777 *
+
+	mv /app/sw/libnrdmif.so.1.0 /app/lib/
+	if [ -f /app/sw/mcusystype ]; then 
+	    mv /app/sw/mcusystype /app/conf; 
+	fi
+	if [ -f /app/sw/localtime ]; then 
+	    mv /app/sw/localtime /app/conf;
+	fi
+
+	rm /tmp/*
+	reboot -f
+else
+	pwd > /app/sw/update.log
+	echo "Cannot find new firmware." >> /app/sw/update.log
+fi
+
+popd
+
+exit 0

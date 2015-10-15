@@ -1,0 +1,39 @@
+Nuritelecom NAZC
+
+* 주의 사항
+ - 제품을 release 하기 위해서는 agent는 반드시 make package를 해야 한다
+ - agent를 package 하면 새로운 revision 번호가 붙게 된다
+
+* Product Release 시 확인 사항
+ - include/version.h
+   * HW_MODEL_INDOOR, HW_MODEL_OUTDOOR : HW Model 정보 확인 
+   * SW_PREFIX_TYPE : Project Name 확인
+ - bin/Makefile
+   * PROJECT : SW_PREFIX_TYPE과 같아야 함
+   * VERSION : UPDATE_VERSION_FIX 와 같아야 함
+   * INDOOR : HW_MODEL_INDOOR 와 같아야 함
+   * OUTDOOR : HW_MODEL_OUTDOOR 와 같아야 함 
+ - bin/localtime
+   * 설치 위치에 맞는 localtime file 확인
+ - 최초 설치를 위해서는 APN info file들이 필요하지만 이후의 Update에서는
+   해당 파일들이 빠져야 한다.
+
+* History Log
+ - Version history log를 HISTORY 파일로 이동되었다.
+
+* Compile Definition
+ - Shared.configure 에 codiapi/nazc에 공통적인 compile option이 들어간다.
+   * ARM : ARM Compile 시 On
+   * DEBUG : Debuging code 추가
+   * SUPPORT_PDA : PDA 지원
+   * ENABLE_ADVANCED_LEAVE : channel/panid 지정 leave 지원 여부
+   * SUPPORT_NZC20 : NZC Board Version 2.x 지원 여부 
+ - Compile 시 필요에 의한 define을 Makefile.rule에 추가하고 이를 관리한다.
+   * RELEASE : Release Version Compile
+   * ENABLE_PULSE_METER : Pulse Meter 기능 추가
+   * ENABLE_SW_BUILD : Version String에 Build Number 추가
+   * ENABLE_METERING_STRATEGY : Metering Strategy 지원 여부
+   * ENABLE_BACKHAUL_TEST : 대규모 데이터 전송 테스트 기능
+   * ENABLE_TIMESYNC_INTERVAL : timesync interval 설정 기능 사용 여부
+   * GE_METER_SECURITY : GE Meter에서 사용되는 Security Key
+ - AMR/DEBUG를 제외한 실제 define 은 __NAME__ 의 형태가 된다.

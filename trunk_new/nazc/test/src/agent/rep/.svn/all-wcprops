@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/src/agent/rep
+END
+TestDbUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/src/agent/rep/TestDbUtil.cpp
+END
+TestDatabaseHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/src/agent/rep/TestDatabaseHelper.cpp
+END
+TestMessageHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/src/agent/rep/TestMessageHelper.cpp
+END
+TestModemHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/src/agent/rep/TestModemHelper.cpp
+END

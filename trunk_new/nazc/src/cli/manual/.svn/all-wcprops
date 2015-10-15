@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/cli/manual
+END
+show.man
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/cli/manual/show.man
+END
+help.man
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/cli/manual/help.man
+END
+set.man
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/cli/manual/set.man
+END

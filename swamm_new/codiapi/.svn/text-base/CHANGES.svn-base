@@ -1,0 +1,152 @@
+CODIAPI CHANGE HISTORY
+
+2010/10/06 rewriter@nuritelecom.com
+    - MBUS Cluster/New MBUS Cluster의 분리 처리 (RF-3)
+
+2010/04/16 rewriter@nuritelecom.com
+    - Link Close에 대한 에러 처리 추가 (#2651)
+
+2010/02/24 rewriter@nuritelecom.com
+    - NAN Frame Cluster ID 변경 (#2443)
+    - Link 절차 없이 통신하는 기능 추가 (#2567)
+
+2009/12/09 rewriter@nuritelecom.com
+    - Sensor Command를 Read/Write로 분리 (#2499)
+
+2009/11/11 rewriter@nuritelecom.com
+    - Coordinator Key Table 관련 Define 및 처리 기능 추가 (#2490)
+
+2009/09/18 rewriter@nuritelecom.com
+    - CoordinatorDataFrame에서 Header처리 관련 오류 수정 (#2442)
+
+2009/09/01 rewriter@nuritelecom.com
+    - Information Frame에 대한 User Handler 추가 (#2421)
+
+2009/06/26 rewriter@nuritelecom.com
+    - D I/O Frame 정보 추가 (#2305)
+
+2009/05/14 casir@paran.com
+    - AddStream에 전달되는 Coordinator Pointer 변경 (#2173)
+
+2009/04/14 casir@paran.com
+    - endiOnUserDefine Callback 함수 추가
+
+2009/04/13 rewriter@nuritelcom.com
+    - Stack Memory에 Software Version 정보 추가 (#2079)
+
+2009/03/19 rewriter@nuritelcom.com
+    - Metering Frame에 Network Type Field 추가 (#2021)
+
+2009/03/19 rewriter@nuritelcom.com
+    - TimeSync Frame에 Type Field 추가 (#2033)
+
+2008/11/12 rewriter@nuritelcom.com
+    - Route Record에 관한 Buffer가 작게 할당된 버그 수정 (#1887)
+
+2008/10/09 rewriter@nuritelcom.com
+    - SOLAR BATTERY LOG 관련 ROM ADDRESS 및 구조체 추가 (#1895)
+
+2008/09/29 rewriter@nuritelcom.com
+    - ENDI_STATE_FRAME에 Repeater Permit, Child Node, Solar 정보 추가 (#1871)
+
+2008/09/23 rewriter@nuritelcom.com
+    - ENDI_METERING_INFO에  Alarm Flag 추가 (#1864)
+
+2008/09/18 rewriter@nuritelcom.com
+    - Super Parent에서 Route Device와 End Device를 구분해서 Connect 하는 기능 추가 (#1791)
+
+2008/09/09 rewriter@nuritelcom.com
+    - Data Frame의 Sequence 오류가 발생했을 때 10보다 작은 차이를 보이면 복구하는 기능 추가 (#1721)
+
+2008/07/21 rewriter@nuritelcom.com
+    - PDA가 Hybrid Network에서 Sleepy End Device와 통신할 수 있도록 Direct Communication 기능 추가 (#1647)
+    - STATE Frame에 Short ID 추가 (#1647)
+
+2008/07/15 rewriter@nuritelcom.com
+    - Route Discovery Option 조절 기능 추가 (#1619)
+    - Multicast HOP 조절 기능 추가 (#1621)
+
+2008/07/11 rewriter@nuritelcom.com
+    - Sleepy End Device의 Delivery Timeout 조정을 위한 CODI_CMD_EXTENDED_TIMEOUT 추가 (#1622)
+
+2008/07/08 rewriter@nuritelcom.com
+    - Link Close의 Read Response를 기다리지 않느다 (#1624)
+
+2008/05/20 rewriter@nuritelcom.com
+    - AMR Frame에서 day mask 의 type을 UNIT에서 BYTE[4]로 변경(#1460)
+
+2008/04/22 rewriter@nuritelcom.com
+    - Coordinator가 boot mode 일 때도 upgrade 명령으로 복구할 수 있도록 수정
+
+2008/04/16 rewriter@nuritelcom.com
+    - Delivery Error 처리 코드 복구
+
+2008/03/28 rewriter@nuritelcom.com
+    - OTA 시 Multicast가 가능하도록 multicastWriteLongRom 추가
+
+2008/03/21 rewriter@nuritelcom.com
+    - Rom Write 시 Multicast가 가능하도록 multicastWriteRom 추가
+
+2008/03/14 rewriter@nuritelcom.com
+    - CODI_MAX_ROUTING_PATH를 10에서 30으로 변경
+
+2008/02/23 rewriter@nuritelcom.com
+    - Link Frame에 대한 Delivery Error 무시 처리
+
+2008/02/19 rewriter@nuritelcom.com
+    - Coordinator 상태 검사 시 버그 수정
+
+2008/01/28 rewriter@nuritelcom.com
+    - Stackup이 안될 때 Reset 하는 코드 수정
+
+2008/01/21 rewriter@nuritelcom.com
+    - ADVANCED_LEAVE를 Compile시에 결정할 수 있도록 수정
+
+2008/01/04 rewriter@nuritelcom.com
+    - Leave시 channel/panid 지정이 가능하도록 수정
+
+2007/12/27 rewriter@nuritelcom.com
+    - Stack Up이 안되어 있을 경우에도 reset이 동작하도록 수정
+
+2007/12/18 rewriter@nuritelcom.com
+    - EndDevice Command Frame 추가
+
+2007/12/14 rewriter@nuritelcom.com
+    - AMR Frame에 alarmflag 추가 
+
+2007/12/11 rewriter@nuritelcom.com
+    - 4byte address를 가지는 ROM Read/Write 함수 추가
+
+2007/12/10 rewriter@nuritelcom.com
+    - AMR Data & Pulse Meter Data에 FW/HW/SW Version 추가된것 반영
+
+2007/12/06 rewriter@nuritelcom.com
+    - PLUSE식 Meter의 검침데이터가 Multi-Frame으로 올 때 처리할 수 있도록 수정
+
+2007/12/01 rewriter@nuritelcom.com
+    - Unbiding 시 Frame에 Short가 전달되도록 수정(Default=0)
+
+2007/11/21 lyj@paran.com
+	- codiBootload 추가 (부트로더로 진입하는 명령)
+	- codiDownload 추가 (펌웨어 다운로드하는 명령)
+	- codiOnRouteRecord callback 추가
+	- codiOnQueryRouteRecord callback 추가
+
+2007/11/14 lyj@paran.com
+	- 매 전송 요청마다 전송전 200ms 쉬는 동작을 제거함
+	- 기존 Binding하고 Link사이의 딜레이 100ms 다시 추가함
+	- codiStartup에서 잘못된 포트 번호를 지정하거나 사용중인 포트를 지정시
+	  오류를 반환하면서 pInterface를 free하지 않아 종료시 Memory leak이
+	  발생하는 문제 수정
+	- endiConnect에서 Binding후 Link 프레임 전송후 Delivery error 또는
+	  Reply timeout이 발생한 경우 3회 재시도 하도록 수정
+	  --> Binding후 Link 프레임이 잘 전달되지 않는 경우가 잦은 문제가 확인됨
+	  --> Delivery error가 발생시에 추가로 1초 딜레이를 가지도록 수정
+
+2007/11/10 lyj@paran.com
+	- 매 전송 요청마다 전송하기전 200ms를 쉬고 전송한다. - 요청사항
+	- 기존 Binding하고 Link사이의 딜레이 100ms는 제거됨.
+
+2007/11/08 lyj@paran.com
+	- codiPlayback 함수 추가
+	- 가스 미터링 데이터 PAYLOAD 수정

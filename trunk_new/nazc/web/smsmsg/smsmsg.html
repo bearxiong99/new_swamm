@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>NURITelecom SMS Command Message Generator</title>
+
+<link rel="stylesheet" type="text/css" media="not screen and (max-device-width: 480px)" href="css/normal-device.css" />
+<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/small-device.css" />
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height"/>
+
+<script src="script/sms.script" type="text/javascript"></script>
+
+</head>
+
+<body>
+<h1>NURITelecom AiMiR Utilities</h1>
+<h3>SMS Command Message Generator</h3>
+
+<form action=""> 
+<p id="PhoneNumBlock">
+<b>DCU Phone Number</b> <input type="text" size=24" name="PhoneNum" id="PhoneNum"/>
+</p>
+
+<div class="tbl_style">
+  <ul class="tbl_header">
+    <li class="col_group">Group</li>
+    <li class="col_cmd">Command</li>
+    <li class="col_param">Parameters</li>
+  </ul>
+  <ul class="tbl_row query_row">
+    <li class="col_group">
+      <select name="Group" id="Group" onchange="selectGroup(this.value)">
+        <option value="">Select a command group</option>
+        <option value="E">Event</option>
+        <option value="F">Fail Recover</option>
+        <option value="M">Metering</option>
+        <option value="N">Network</option>
+        <option value="R">Reset</option>
+        <option value="S">Set</option>
+      </select>
+    </li>
+    <li class="col_cmd">
+      <select name="Cmd" id="Cmd" onchange="selectCmd(this.value)">
+        <option value="">Select a command</option>
+      </select>
+    </li>
+    <li class="col_param">
+      <input type="text" size="24" name="Param" id="Param"/>
+      <button type="button" onclick="addParam()">Add</button>
+      <button type="button" onclick="resetParam()">Reset</button>
+    </li>
+  </ul>
+  <ul class="tbl_row">
+    <li class="col_group"/>
+    <li class="col_cmd"/>
+    <li class="col_param" id="paramOutput"/>
+  </ul>
+  <ul class="tbl_row result_row">
+    <li class="col_group">
+        <button type="button" onclick="requestQuery()">Generate</button>
+    </li>
+    <li class="col_cmd"/>
+    <li class="col_param" id="resultLen">
+        0 Byte
+    </li>
+  </ul>
+  <ul class="tbl_row">
+    <li class="col_cmd" id="resultArea">
+     <span id="smsmsgTxt">SMS Command Message here!</span>
+     <span id="smsmsgSms">SMS Command Message here!</span>
+    </li>
+  </ul>
+</div>
+</form>
+
+</body>
+
+</html>

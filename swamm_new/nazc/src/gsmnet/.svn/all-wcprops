@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/gsmnet
+END
+MobileClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/gsmnet/MobileClient.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/gsmnet/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/gsmnet/common.h
+END
+gsmnet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/gsmnet/gsmnet.cpp
+END
+MobileClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/gsmnet/MobileClient.cpp
+END

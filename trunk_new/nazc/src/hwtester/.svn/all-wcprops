@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/rep0/mcu/!svn/ver/5459/trunk/nazc/src/hwtester
+END
+event.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/hwtester/event.c
+END
+kbhit.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/hwtester/kbhit.c
+END
+gpiodef.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/hwtester/gpiodef.h
+END
+qc.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5282/trunk/nazc/src/hwtester/qc.c
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5459/trunk/nazc/src/hwtester/main.c
+END
+kbhit.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/hwtester/kbhit.h
+END
+proc.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/hwtester/proc.h
+END
+qc.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/hwtester/qc.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5280/trunk/nazc/src/hwtester/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/1317/trunk/nazc/src/hwtester/common.h
+END
+gpio.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/1326/trunk/nazc/src/hwtester/gpio.c
+END

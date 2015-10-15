@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor
+END
+Utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/Utils.cpp
+END
+CommandHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/CommandHandler.h
+END
+nzcserver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/nzcserver.cpp
+END
+BypassMonitor.ui
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/BypassMonitor.ui
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/main.cpp
+END
+Utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/Utils.h
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/Variable.cpp
+END
+nzcserver.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/nzcserver.h
+END
+BypassMonitor.pro
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/BypassMonitor.pro
+END
+BypassMonitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/BypassMonitor.cpp
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/Variable.h
+END
+CommandHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/CommandHandler.cpp
+END
+BypassMonitor.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/tools/QT/BypassMonitor/BypassMonitor.h
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/rep0/mcu/!svn/ver/5460/trunk/nazc/bin/ppp
+END
+connect-errors
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5/trunk/nazc/bin/ppp/connect-errors
+END
+pap-secrets
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/1605/trunk/nazc/bin/ppp/pap-secrets
+END
+resolv.conf
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/806/trunk/nazc/bin/ppp/resolv.conf
+END
+chap-secrets
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5/trunk/nazc/bin/ppp/chap-secrets
+END

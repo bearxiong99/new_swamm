@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# 
+# Reset Meter
+#
+export LD_LIBRARY_PATH=/usr/lib:/lib:/app/lib:/app/sw/lib
+
+/app/sw/sqlite3 /app/sqlite/Agent.db <<EOF
+
+UPDATE MeterTbl SET uploadTime = NULL;
+UPDATE ChannelCfgTbl SET uploadTime = NULL;
+
+.quit
+EOF

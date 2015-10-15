@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/zlib/contrib/masmx86
+END
+gvmat32c.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/masmx86/gvmat32c.c
+END
+inffas32.asm
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/masmx86/inffas32.asm
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/masmx86/readme.txt
+END
+mkasm.bat
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/masmx86/mkasm.bat
+END
+gvmat32.asm
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/masmx86/gvmat32.asm
+END

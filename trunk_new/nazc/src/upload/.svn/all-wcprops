@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/rep0/mcu/!svn/ver/5348/trunk/nazc/src/upload
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5348/trunk/nazc/src/upload/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/upload/common.h
+END
+upload.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/upload/upload.cpp
+END
+UploadService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/upload/UploadService.cpp
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/upload/Variable.cpp
+END
+UploadService.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/upload/UploadService.h
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/upload/Variable.h
+END

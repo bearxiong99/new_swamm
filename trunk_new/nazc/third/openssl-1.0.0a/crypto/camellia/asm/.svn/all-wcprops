@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/camellia/asm
+END
+cmll-x86.pl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/camellia/asm/cmll-x86.pl
+END
+cmll-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/camellia/asm/cmll-x86_64.pl
+END

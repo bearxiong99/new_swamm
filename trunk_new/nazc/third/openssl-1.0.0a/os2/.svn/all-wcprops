@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/os2
+END
+OS2-EMX.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/os2/OS2-EMX.cmd
+END
+backwardify.pl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/os2/backwardify.pl
+END

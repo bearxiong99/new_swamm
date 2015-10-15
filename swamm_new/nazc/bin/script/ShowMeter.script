@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# 
+# Reset Meter
+#
+export LD_LIBRARY_PATH=/usr/lib:/lib:/app/lib:/app/sw/lib
+
+/app/sw/sqlite3 /app/sqlite/Agent.db <<EOF
+
+.head on
+SELECT me._id, mo.address, me.meterSerial, me.period, me.uploadTime FROM MeterTbl me, ModemTbl mo
+  WHERE mo._id = me._modemId;
+
+.quit
+EOF

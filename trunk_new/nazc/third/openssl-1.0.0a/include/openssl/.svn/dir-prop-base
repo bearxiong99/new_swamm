@@ -1,0 +1,37 @@
+K 10
+svn:ignore
+V 252
+bio.h
+bn.h
+camellia.h
+conf.h
+crypto.h
+des_old.h
+dh.h
+dtls1.h
+e_os2.h
+engine.h
+krb5_asn.h
+kssl.h
+obj_mac.h
+ocsp.h
+ossl_typ.h
+pem.h
+pem2.h
+rand.h
+rsa.h
+sha.h
+ssl.h
+ssl2.h
+ssl3.h
+symhacks.h
+tls1.h
+ts.h
+txt_db.h
+ui.h
+ui_compat.h
+x509.h
+x509_vfy.h
+x509v3.h
+
+END

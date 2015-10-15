@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "x$#" = "x" ]; then exit 1; fi
+
+FILE=$1
+
+killall cat 2> /dev/null
+
+cat < /dev/tcp/127.0.0.1/9981 > $FILE 2> /dev/null &
+

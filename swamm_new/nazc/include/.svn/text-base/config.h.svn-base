@@ -1,0 +1,9 @@
+#ifndef __MCU_CONFIG_H__
+#define __MCU_CONFIG_H__
+
+#define SENSOR_FLAG_LINK_ACTIEVE	0x80
+#define SENSOR_FLAG_ERROR			0x40
+#define SENSOR_FLAG_TESTING			0x20
+#define SENSOR_FLAG_NO_METERING		0x10
+
+#endif	// __MCU_CONFIG_H__

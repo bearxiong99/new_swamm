@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/aes/asm
+END
+aes-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/aes/asm/aes-x86_64.pl
+END
+aes-586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/aes/asm/aes-586.pl
+END
+aes-ppc.pl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/aes/asm/aes-ppc.pl
+END
+aes-s390x.pl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/aes/asm/aes-s390x.pl
+END
+aes-sparcv9.pl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/aes/asm/aes-sparcv9.pl
+END
+aes-armv4.pl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/aes/asm/aes-armv4.pl
+END
+aes-ia64.S
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/crypto/aes/asm/aes-ia64.S
+END

@@ -1,0 +1,9 @@
+#ifndef __CLI_MIMETYPE_H__
+#define __CLI_MIMETYPE_H__
+
+#define ATTP_MIMETYPE_PLAIN				0
+#define ATTP_MIMETYPE_VARIABLE			1
+#define ATTP_MIMETYPE_HTML				2
+#define ATTP_MIMETYPE_BINARY			3
+
+#endif	// __CLI_MIMETYPE_H__

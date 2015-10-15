@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/rep0/mcu/!svn/ver/5289/trunk/nazc/core/varapi
+END
+VARService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5289/trunk/nazc/core/varapi/VARService.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5289/trunk/nazc/core/varapi/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/varapi/common.h
+END
+VARService.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/varapi/VARService.h
+END
+VARAPI.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/varapi/VARAPI.cpp
+END

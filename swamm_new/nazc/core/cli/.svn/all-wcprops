@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli
+END
+CLIFiber.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLIFiber.h
+END
+TerminalKeyMap.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/TerminalKeyMap.h
+END
+CLIService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli/CLIService.cpp
+END
+CLIInterface.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli/CLIInterface.cpp
+END
+CLITcpipProtocol.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli/CLITcpipProtocol.cpp
+END
+CLISerialProtocol.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli/CLISerialProtocol.cpp
+END
+CLIProtocol.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLIProtocol.cpp
+END
+CLIUtility.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli/CLIUtility.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli/Makefile
+END
+CLIService.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLIService.h
+END
+CLIInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLIInterface.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli/common.h
+END
+CLITcpipProtocol.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLITcpipProtocol.h
+END
+CLISerialProtocol.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLISerialProtocol.h
+END
+CLIProtocol.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLIProtocol.h
+END
+CLIOption.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli/CLIOption.cpp
+END
+CLIUtility.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLIUtility.h
+END
+CLITerminal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/core/cli/CLITerminal.cpp
+END
+CLIOption.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLIOption.h
+END
+CLITerminal.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLITerminal.h
+END
+Worker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/Worker.cpp
+END
+Worker.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/Worker.h
+END
+CLIFiber.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/core/cli/CLIFiber.cpp
+END

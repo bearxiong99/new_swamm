@@ -1,0 +1,61 @@
+#!/bin/bash
+                           
+SERVER=                    
+DIRECTORY=nazc/firmware
+FILE=coordinator.elb.gz
+
+USER=
+PASS=
+METHOD=download
+                           
+function usage ()
+{
+    echo "$0 -sup[dfmh]"
+    echo "  s : Server Ip Address"
+    echo "  d : Directory (nazc/firmware)"
+    echo "  f : File (coordinator.elb.gz)"
+    echo "  u : User Name"
+    echo "  p : Password"
+    echo "  m : use upload method"
+    echo "  h : Display this message"
+    exit 1
+}
+
+while getopts "s:d:f:u:p:mh" Option
+do
+    case $Option in
+        s   ) SERVER=$OPTARG;;
+        d   ) DIRECTORY=$OPTARG;;
+        f   ) FILE=$OPTARG;;
+        u   ) USER=$OPTARG;;
+        p   ) PASS=$OPTARG;;
+        m   ) METHOD=upload;;
+        *   ) usage;;
+    esac
+done
+                           
+if [ "X$SERVER" == "X" ] || [ "X$USER" == "X" ] || [ "X$PASS" == "X" ]
+then
+    usage
+fi
+
+if [ "$METHOD" == "download" ]; then
+
+ftp -inv $SERVER << EOF
+user $USER $PASS
+bi              
+cd $DIRECTORY
+get $FILE
+EOF
+
+else
+
+ftp -inv $SERVER << EOF
+user $USER $PASS
+bi              
+cd $DIRECTORY
+put $FILE
+
+EOF
+
+fi

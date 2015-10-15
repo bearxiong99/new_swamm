@@ -1,0 +1,18 @@
+** nweb **
+
+nweb은 Nuritelecom에서 개발한 제품/코드가 아니다. 이 코드는 
+
+http://www.ibm.com/developerworks/systems/library/es-nweb.html
+
+에서 다운로드 받았으며 모든 저작권은 해당 페이지에 나와 있는
+정에에 따른다. 
+
+코드를 수정하거나 변경하지 않았으며 Nuritelecom AiMiR 시스템에서
+배포 서비스를 시험하기 위해 사용할 소규모 웹서버로만 사용된다.
+
+
+** nweb.sh **
+
+nweb.sh을 nweb.exe 를 실행시키고 종료시키기 위한 script 코드로
+누리텔레콤에서 제작되었다.
+

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/zlib/contrib/inflate86
+END
+inffas86.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/inflate86/inffas86.c
+END
+inffast.S
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/inflate86/inffast.S
+END

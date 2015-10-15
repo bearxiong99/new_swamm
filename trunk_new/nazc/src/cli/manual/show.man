@@ -1,0 +1,18 @@
+
+----------------------
+  SHOW Command Manual
+----------------------
+
+
+
+SYNOPSIS
+    show <entry>
+DESCRIPTION
+
+ENTRY TYPE:  
+    system, sink, sensor, metering, gpio, memory, flash, ethernet, 
+    ppp, phone, mobile, version, interface
+
+*** Use 'man show -entry' to find out more about commands in this list.
+    usage : 	man show system
+

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/external
+END
+nacei.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/external/nacei.h
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/1451/trunk/nazc/src/external/Variable.cpp
+END
+naceilib.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/external/naceilib.cpp
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/1451/trunk/nazc/src/external/Variable.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/external/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/1451/trunk/nazc/src/external/common.h
+END
+naceierr.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/external/naceierr.h
+END
+sample.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/external/sample.cpp
+END
+Doxyfile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/1454/trunk/nazc/src/external/Doxyfile
+END

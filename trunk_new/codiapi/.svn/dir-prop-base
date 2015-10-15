@@ -1,0 +1,18 @@
+K 15
+reviewboard:url
+V 37
+http://tauran.nuritelecom.com/reviews
+K 10
+svn:ignore
+V 6
+*.exe
+
+K 13
+svn:mergeinfo
+V 193
+/branches/i2/0000084/codiapi:4776-4921
+/branches/issue/1502/codiapi:1860-2687
+/branches/issue/2443/codiapi:3468-3742
+/branches/issue/2570/codiapi:3851-3868
+/branches/workspace/codiapi:1679-5179
+END

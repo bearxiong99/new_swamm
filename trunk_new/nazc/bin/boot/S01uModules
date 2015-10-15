@@ -1,0 +1,51 @@
+#!/bin/sh
+#
+# NURITelecom Data Concentrator User Boot Script
+#
+# Load Kernel Modules
+#
+
+MODULES=/app/modules
+MOBILEMODULES=/app/conf/mobile.module.type 
+
+CORETYPE=`uname -m`
+TYPE=ti
+case "$CORETYPE" in
+    armv5tel)   # PXA255
+        TYPE=pxa
+    ;;
+    armv7l)   # TI AM3352
+        TYPE=ti
+    ;;
+esac
+
+case "$1" in
+    start)
+    for mod in $MODULES/*.ko ; do
+        # Ignore dangling symlinks (if any).
+        [ ! -f "$mod" ] && continue
+
+        /sbin/insmod $mod
+    done
+    # mobile modules
+    if [ -f $MOBILEMODULES ]; then
+        MP=`cat $MOBILEMODULES | head -1`
+        if [ -d /app/sw/specific/$TYPE/mod/$MP ]; then
+            for mod in /app/sw/specific/$TYPE/mod/$MP/*.ko ; do
+                # Ignore dangling symlinks (if any).
+                [ ! -f "$mod" ] && continue
+
+                /sbin/insmod $mod
+            done
+        fi
+    fi
+    ;;
+    stop)
+    ;;
+    *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+esac
+
+exit 0
+

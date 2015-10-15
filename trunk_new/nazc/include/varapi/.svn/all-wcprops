@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/varapi
+END
+vardef.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/varapi/vardef.h
+END
+vartype.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/varapi/vartype.h
+END
+varapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/include/varapi/varapi.h
+END

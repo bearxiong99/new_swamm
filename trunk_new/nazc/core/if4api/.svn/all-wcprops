@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/rep0/mcu/!svn/ver/5454/trunk/nazc/core/if4api
+END
+IF4Service.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4Service.h
+END
+IF4CrcCheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/2798/trunk/nazc/core/if4api/IF4CrcCheck.cpp
+END
+IF4TcpService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4TcpService.cpp
+END
+IF4API.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4API.cpp
+END
+IF4Worker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/if4api/IF4Worker.cpp
+END
+IF4CrcCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/if4api/IF4CrcCheck.h
+END
+IF4TcpService.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4TcpService.h
+END
+IF4Util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5454/trunk/nazc/core/if4api/IF4Util.cpp
+END
+IF4Worker.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/if4api/IF4Worker.h
+END
+IF4Util.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/if4api/IF4Util.h
+END
+IF4DataFrame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4DataFrame.cpp
+END
+IF4TcpClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4TcpClient.cpp
+END
+IF4Fiber.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4Fiber.cpp
+END
+IF4DataFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4DataFrame.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/Makefile
+END
+IF4TcpClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/if4api/IF4TcpClient.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/if4api/common.h
+END
+IF4Stream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4Stream.cpp
+END
+IF4Invoke.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/if4api/IF4Invoke.cpp
+END
+IF4Fiber.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4Fiber.h
+END
+IF4Stream.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/if4api/IF4Stream.h
+END
+IF4Service.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/if4api/IF4Service.cpp
+END

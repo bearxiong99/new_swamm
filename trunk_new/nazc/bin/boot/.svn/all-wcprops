@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/rep0/mcu/!svn/ver/5466/trunk/nazc/bin/boot
+END
+S02uTimeZone
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5308/trunk/nazc/bin/boot/S02uTimeZone
+END
+S70user
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5288/trunk/nazc/bin/boot/S70user
+END
+S99uLauncher
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5458/trunk/nazc/bin/boot/S99uLauncher
+END
+S01uModules
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5454/trunk/nazc/bin/boot/S01uModules
+END
+S05uVersion
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5303/trunk/nazc/bin/boot/S05uVersion
+END
+S10uNetwork
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5466/trunk/nazc/bin/boot/S10uNetwork
+END

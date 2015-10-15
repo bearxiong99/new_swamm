@@ -1,0 +1,287 @@
+#!/bin/bash
+
+APP=/app/sw/aimir.tar.gz
+NEWFILE=/app/sw/newfirm.tar
+BASEFILE=/app/sw/oldfirm.tar
+ERRORLOG=/app/sw/install.error
+PPPFILE=/app/sw/ppp.tar.gz
+CONFFILE=/app/conf/conf.tar.gz
+INITFILE=/app/init/init.tar.gz
+DBFILE=/app/sqlite/db.tar.gz
+FWFILE=/app/sw/fwPkg.tar.gz
+PKGFILE=
+CORETYPE=
+STEP=0
+SERVERIP=192.168.10.20
+
+TFTP=/usr/bin/tftp
+RMMOD=/sbin/rmmod
+INSMOD=/sbin/insmod
+
+echo "[$STEP] NZC Firmware Install Start"; let STEP=$STEP+1
+
+cat /dev/null > $ERRORLOG
+
+CORETYPE=`uname -m`
+
+# Directory Initialize
+if [ ! -e /app/conf ]; then mkdir /app/conf; fi
+if [ ! -e /app/boot ]; then mkdir /app/boot; fi
+if [ ! -e /app/init ]; then mkdir /app/init; fi
+if [ ! -e /app/modules ]; then mkdir /app/modules; fi
+if [ ! -e /app/local ]; then mkdir /app/local; fi
+if [ ! -e /app/local/lib ]; then mkdir /app/local/lib; fi
+if [ ! -e /app/local/bin ]; then mkdir /app/local/bin; fi
+if [ -f /app/crontabs ]; then rm -f /app/crontabs; fi
+if [ ! -e /app/crontabs ]; then mkdir /app/crontabs; fi
+if [ ! -e /app/sqlite ]; then mkdir /app/sqlite; fi
+
+# Factory Setting
+if [ -n "$1" ] && [ "$1" = "factory" ]; then
+    shift 
+    if [ $# -gt 0 ]; then
+        ip=`expr match "$1" '\([1-9][0-9]*\.[1-9][0-9]*\.[1-9][0-9]*\.[1-9][0-9]*\)'`
+        if [ ${#ip} -gt 3 ]; then
+            SERVERIP="$ip"
+        fi
+    fi
+
+    echo -n "[$STEP]  Download Factory Files...."
+        APP=/tmp/aimir.tar.gz
+        if $TFTP -g -l $APP -r $PKGFILE "$SERVERIP" 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+    echo -n "[$STEP]  Download PPP Info File...."
+        if $TFTP -g -l $PPPFILE -r ppp.tar.gz "$SERVERIP" 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+    echo -n "[$STEP]  Download Configure File..."
+        if $TFTP -g -l $CONFFILE -r conf.tar.gz "$SERVERIP" 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+    echo -n "[$STEP]  Download Initialize File..."
+        if $TFTP -g -l $INITFILE -r init.tar.gz "$SERVERIP" 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Skip]"; let STEP=$STEP+1
+        fi
+    echo -n "[$STEP]  Download DB File..."
+        if $TFTP -g -l $DBFILE -r db.tar.gz "$SERVERIP" 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Skip]"; let STEP=$STEP+1
+        fi
+else
+    if [ -f /tmp/aimir.tar.gz ]; then
+        APP=/tmp/aimir.tar.gz
+    fi
+fi
+
+
+# move working directory
+cd /app/sw
+
+#
+# remove kernel modules
+#
+echo -n "[$STEP]  Remove GPIO Modules ..... "
+case "$CORETYPE" in
+    armv5tel)   # PXA255
+        for modpath in /app/sw/driver/*.o; do
+            # Ignore dangling symlinks (if any).
+            [ ! -f "$modpath" ] && continue
+            modfile=`basename $modpath`
+            modname=`expr "$modfile" : '\([^.]*\)'`
+            $RMMOD $modname > /dev/null 2>> $ERRORLOG 
+            echo -n "$modname "
+        done
+    ;;
+    armv7l)   # TI AM3352
+        for modpath in /app/modules/*.ko; do
+            # Ignore dangling symlinks (if any).
+            [ ! -f "$modpath" ] && continue
+            modfile=`basename $modpath`
+            modname=`expr "$modfile" : '\([^.]*\)'`
+            $RMMOD $modname > /dev/null 2>> $ERRORLOG 
+            echo -n "$modname "
+        done
+    ;;
+esac
+echo " [Done]"; let STEP=$STEP+1
+
+#
+# Decompress files
+#
+if [ -f $APP ]; then
+    echo -n "[$STEP]  Decompress Files.........."
+	    if gzip -dc $APP > $NEWFILE 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+	rm -f $APP
+fi
+
+if [ -f $NEWFILE ]; then
+    echo -n "[$STEP]  Remove Old Files.........."
+	    rm -f /app/lib/*
+	    rm -f /app/sw/lib/*
+    echo " [Done]"; let STEP=$STEP+1
+    echo -n "[$STEP]  Copy Files................"
+        if tar xf $NEWFILE 2>> $ERRORLOG
+        then
+            echo " [Done]"; let STEP=$STEP+1
+        else
+            echo " [Fail]"; exit $STEP
+        fi
+        mv $NEWFILE $BASEFILE
+fi
+
+if [ -f /app/sw/patch.sh ]; then 
+    echo "[$STEP]  Execute Patch Script ............."
+    /app/sw/patch.sh
+    let STEP=$STEP+1
+fi
+
+chown -R root:root * 2> /dev/null
+chmod -R 777 * 2> /dev/null
+
+echo -n "[$STEP]  Reallocate Files.........."
+    if [ -f /app/sw/libnrdmif.so.1.0 ]; then mv /app/sw/libnrdmif.so.1.0 /app/lib; fi
+    if [ -f /app/sw/mcusystype ]; then mv /app/sw/mcusystype /app/conf; fi
+    if [ -f /app/sw/mcumodel ]; then mv /app/sw/mcumodel /app/conf; fi
+    if [ -f /app/sw/sensor.type ]; then mv /app/sw/sensor.type /app/conf; fi
+    if [ -f /app/sw/revision.info ]; then mv /app/sw/revision.info /app/conf; fi
+    if [ -f /app/sw/application.info ]; then mv /app/sw/application.info /app/conf; fi
+    if [ -f $PPPFILE ]; then (cd /app/sw; gzip -dc $PPPFILE | tar xf -; rm -f $PPPFILE;) fi
+    if [ -f $CONFFILE ]; then (cd /app/conf; gzip -dc $CONFFILE | tar xf -; rm -f $CONFFILE;) fi
+    if [ -f $INITFILE ]; then (cd /app/init; gzip -dc $INITFILE | tar xf -; rm -f $INITFILE;) fi
+    if [ -f $DBFILE ]; then (cd /app/sqlite; gzip -dc $DBFILE | tar xf -; rm -f $DBFILE;) fi
+
+case "$CORETYPE" in
+    armv5tel)   # PXA255
+        SPECIFIC=/app/sw/specific/pxa
+        rm -f /app/sw/ppp/pppd 2> /dev/null; ln -s $SPECIFIC/bin/pppd /app/sw/ppp/pppd
+        rm -f /app/sw/ppp/chat 2> /dev/null; ln -s $SPECIFIC/bin/chat /app/sw/ppp/chat
+        rm -f /app/sw/bsdiff 2> /dev/null; ln -s $SPECIFIC/bin/bsdiff /app/sw/bsdiff
+        rm -f /app/sw/bspatch 2> /dev/null; ln -s $SPECIFIC/bin/bspatch /app/sw/bspatch
+    ;;
+    armv7l)   # TI AM3352
+        # User Boot Script Update
+        if [ ! -e /app/init ]; then
+            mkdir /app/init
+        fi
+        if [ ! -e /app/boot ]; then
+            mkdir /app/boot
+        fi
+        if [ -f /app/sw/boot/S70user ]; then
+            mv /app/sw/boot/S70user /app/init > /dev/null 2>> $ERRORLOG
+        fi
+        rm -f /app/boot/* > /dev/null 2>> $ERRORLOG
+        mv /app/sw/boot/S* /app/boot > /dev/null 2>> $ERRORLOG
+        chmod +x /app/init/S70user
+        chmod +x /app/boot/S*
+        rm -rf /app/sw/boot > /dev/null 2>> $ERRORLOG
+
+        # Module Update
+        if [ ! -e /app/modules ]; then
+            mkdir /app/modules
+        fi
+        rm -f /app/modules/*.ko > /dev/null 2>> $ERRORLOG
+        if [ -d /app/sw/modules ]; then
+            mv /app/sw/modules/*.ko /app/modules > /dev/null 2>> $ERRORLOG
+        fi
+        rm -rf /app/sw/modules > /dev/null 2>> $ERRORLOG
+
+        # Key Update
+        if [ -d /app/sw/tunnel ]; then
+            rm -rf /app/.key > /dev/null 2>> $ERRORLOG
+            mkdir /app/.key > /dev/null 2>> $ERRORLOG
+            mv /app/sw/tunnel/* /app/.key > /dev/null 2>> $ERRORLOG
+            chmod 600 /app/.key/*
+            chmod 700 /app/.key
+            chown -R nobody /app/.key
+            rm -rf /app/sw/tunnel > /dev/null 2>> $ERRORLOG
+        fi
+
+        # symbolic link
+        if [ ! -e /app/ppp ]; then
+            ln -s /app/sw/ppp /app/ppp
+        fi
+
+        SPECIFIC=/app/sw/specific/ti
+        rm -f /app/sw/ppp/pppd 2> /dev/null; ln -s $SPECIFIC/bin/pppd /app/sw/ppp/pppd
+        rm -f /app/sw/ppp/chat 2> /dev/null; ln -s $SPECIFIC/bin/chat /app/sw/ppp/chat
+        rm -f /app/sw/bsdiff 2> /dev/null; ln -s $SPECIFIC/bin/bsdiff /app/sw/bsdiff
+        rm -f /app/sw/bspatch 2> /dev/null; ln -s $SPECIFIC/bin/bspatch /app/sw/bspatch
+    ;;
+esac
+echo " [Done]"; let STEP=$STEP+1
+
+#
+# load kernel modules
+#
+echo -n "[$STEP]  Load Kernel Modules ........ "
+case "$CORETYPE" in
+    armv5tel)   # PXA255
+        for modpath in /app/sw/driver/*.o; do
+            # Ignore dangling symlinks (if any).
+            [ ! -f "$modpath" ] && continue
+            $INSMOD $modpath > /dev/null 2>> $ERRORLOG 
+            echo -n "`basename $modpath` "
+        done
+    ;;
+    armv7l)   # TI AM3352
+        for modpath in /app/modules/*.ko; do
+            # Ignore dangling symlinks (if any).
+            [ ! -f "$modpath" ] && continue
+            $INSMOD $modpath > /dev/null 2>> $ERRORLOG 
+            echo -n "`basename $modpath` "
+        done
+    ;;
+esac
+echo " [Done]"; let STEP=$STEP+1
+
+echo -n "[$STEP]  Decompress FW Files ......"
+    if [ -f $FWFILE ]
+    then 
+        if [ ! -d /app/fw ]
+        then
+            mkdir /app/fw
+        fi
+        (cd /app/fw;gzip -dc $FWFILE | tar xf -; rm -f $FWFILE)
+    fi
+echo " [Done]"; let STEP=$STEP+1
+
+(cd /app/conf; chown -R root:root * 2> /dev/null)
+
+if [ -f /etc/ld.so.conf ]; then
+    echo -n "[$STEP]  Reload library ..........."
+        /sbin/ldconfig /etc/ld.so.conf 2>> $ERRORLOG
+        echo " [Done]"; let STEP=$STEP+1
+fi
+
+# Database Migration
+if [ -x /app/sw/script/DatabaseMigration.script ]; then
+    echo -n "[$STEP]  Database Migration ......."
+        /app/sw/script/DatabaseMigration.script 2>> $ERRORLOG
+        echo " [Done]"; let STEP=$STEP+1
+fi
+
+# Skip H/W Test
+#touch /app/conf/factoryTestCompleted
+
+echo "[$STEP] MCU Firmware Install DONE"
+exit 0

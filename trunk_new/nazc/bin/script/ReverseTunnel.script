@@ -1,0 +1,92 @@
+#!/bin/bash
+
+# 
+# SSH Reverse Tunneling
+#
+
+
+#
+# ssh 
+SSH=/usr/local/bin/ssh
+
+if [ ! -x $SSH ]; then
+  if [ -x /app/sw/ssh ]; then
+    SSH=/app/sw/ssh
+  else
+    echo "ssh not found!" >&2
+    exit 2
+  fi
+fi
+
+function usage ()
+{
+cat <<EOF
+$0 -rs[DlRSh]
+  D             Delete all tunnel
+  l port        Local listen port (default 8000)
+  r port        Remote forward port 
+  s ip          Remoete server address
+  R             Restart tunnel
+  S port        Remote SSH listen port
+  h             Display this message
+EOF
+
+exit 1
+}
+
+SSHPORT=22              # ssh port
+LPORT=8000              # local listen port
+RPORT=                  # remote port
+RSERVER=                # remote server
+RESTART=                # restart flag
+DELETEALL=              # delete all
+
+while getopts "Dl:Rr:s:S:" Option
+do
+    case $Option in
+        D   ) DELETEALL=TRUE;;
+        l   ) LPORT=$OPTARG;;
+        r   ) RPORT=$OPTARG;;
+        R   ) RESTART=TRUE;;
+        s   ) RSERVER=$OPTARG;;
+        S   ) SSHPORT=$OPTARG;;
+        *   ) usage;;
+    esac
+done
+
+# check delete all flag
+if [ "x$DELETEALL" != "x" ]; then
+    ps -o pid,args | grep -e "ssh -f -N -R .*:localhost:.* -p .*revT@" | grep -v grep | \
+    while read pid args
+    do
+        kill $pid
+    done 
+    # program exit
+    exit 0
+fi
+
+# parameter check
+if [ "x$RPORT" = "x" ]; then usage; fi
+if [ "x$RSERVER" = "x" ]; then usage; fi
+                           
+# check previous tunnel
+ps -o pid,args | grep -e "ssh -f -N -R ${RPORT}:localhost:${LPORT} .* -p ${SSHPORT} revT@${RSERVER}" | grep -v grep | \
+while read pid args
+do
+    if [ "x$RESTART" != "x" ]; then
+        # delete previous tunnel
+        kill $pid
+    else
+        # keep connection
+        exit 100
+    fi
+done 
+
+# keep connection
+if [ "x$?" = "x100" ]; then exit 0; fi
+
+${SSH} -f -N -R ${RPORT}:localhost:${LPORT} -i /app/.key/key \
+        -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
+        -p ${SSHPORT} revT@${RSERVER} 2> /dev/null
+
+exit $?

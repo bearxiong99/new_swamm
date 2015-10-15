@@ -1,0 +1,635 @@
+//////////////////////////////////////////////////////////////////////
+//
+//	MobileServer.cpp: implementation of the CMobileServer class.
+//
+//	This file is a part of the AIMIR-GCP.
+//	(c)Copyright 2004 NETCRA Co., Ltd. All Rights Reserved.
+//
+//	This source code can only be used under the terms and conditions 
+//	outlined in the accompanying license agreement.
+//
+//	casir@com.ne.kr
+//	http://www.netcra.com
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "common.h"
+#include "mcudef.h"
+#include "MobileServer.h"
+#include "CrcCheck.h"
+#include "DebugUtil.h"
+#include "varapi.h"
+#include "if4api.h"
+#include "Variable.h"
+#include "gpiomap.h"
+
+//////////////////////////////////////////////////////////////////////
+// CMobileServer Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+#define MTPERR_INSTALL_START		100
+#define MTPERR_INSTALL_END			101
+#define MTPERR_COMMAND_OK			200
+#define MTPERR_TELNET_ACCEPT		210
+#define MTPERR_TELNET_CONNECT		211
+#define MTPERR_TELNET_DISCONNECT	212
+#define MTPERR_GET_ACCEPT			220
+#define MTPERR_PUT_ACCEPT			230
+#define MTPERR_LIST_ACCEPT			240
+#define MTPERR_NACS_ACCEPT			250
+#define MTPERR_INVALID_REQUEST		300
+#define MTPERR_COMMAND_ERROR		310
+
+#define STATE_HEADER				0
+#define STATE_DATA					1
+
+#define MOBILE_ACK					0x06
+#define MOBILE_NAK					0x15
+
+#define PUT_STATE_WHITE 			0
+#define PUT_STATE_IDENT				1
+#define PUT_STATE_SEQ				2
+#define PUT_STATE_HEADER			3
+#define PUT_STATE_DATA				4
+
+//#define __TEST_ONLY__
+
+typedef struct  _tagMFRAMEHEADER
+{
+        BYTE        ident1;             // '['
+        BYTE        ident2;             // '@'
+        BYTE        seq;                // Sequence
+        WORD        len;                // data length
+}   __attribute__ ((packed)) MFRAMEHEADER, *PMFRAMEHEDER;
+
+typedef struct  _tagMFRAMETAIL
+{
+        WORD        crc;                // Crc16
+}   __attribute__ ((packed)) MFRAMETAIL, *PMFRAMETAIL;
+
+typedef struct  _tagMFRAME
+{
+        MFRAMEHEADER    hdr;
+        BYTE            data[4096];
+        MFRAMETAIL      tail;
+}   __attribute__ ((packed)) MFRAME, *PMFRAME;
+
+CLocker			m_GpLocker;
+CMobileServer	*m_pMobileServer = NULL;
+extern BOOL		m_bExitSignalPending;
+
+extern void 	DisconnectModem();
+
+//////////////////////////////////////////////////////////////////////
+// CMobileServer Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CMobileServer::CMobileServer()
+{
+	m_pMobileServer = this;
+	m_nState = STATE_HEADER;
+	m_bGsmMode	= FALSE;
+	m_bAnswer	= FALSE;
+	m_bLiveSession = FALSE;
+	memset(&m_theHeader, 0, sizeof(MTPHEADER));
+}
+
+CMobileServer::~CMobileServer()
+{
+}
+
+//////////////////////////////////////////////////////////////////////
+// CMobileServer Attribute
+//////////////////////////////////////////////////////////////////////
+
+BOOL CMobileServer::IsActive()
+{
+	return m_bLiveSession;
+}
+
+time_t CMobileServer::GetLastActive()
+{
+	return m_tmLastReceived;
+}
+
+//////////////////////////////////////////////////////////////////////
+// CMobileServer Operations
+//////////////////////////////////////////////////////////////////////
+
+BOOL CMobileServer::Initialize(BOOL bGsmMode, int speed, BOOL bAnswer)
+{
+	m_bGsmMode	= bGsmMode;
+	m_bAnswer	= bAnswer;
+
+	time(&m_tmLastReceived);
+	CSerialServer::DisableSendFail(TRUE);
+	if (!CSerialServer::Startup("/dev/ttyS0", 1, 5*60, speed, NONE_PARITY, HUPCL | CRTSCTS))
+		return FALSE;
+
+	if (bAnswer)
+	{
+		usleep(1000000);
+		XDEBUG("-------- ATA --------\r\n");
+		WriteToModem(const_cast<char *>("ATA\r\n"), 5);
+	}
+#ifdef __TEST_ONLY__
+//	WriteToModem("ATZ\r\n", 5);
+#endif
+	return TRUE;
+}
+
+void CMobileServer::Destroy()
+{
+	if (m_theHeader.fp != NULL)
+		fclose(m_theHeader.fp);
+	unlink("/tmp/upload.tmp");
+
+	m_theClient.DeleteConnection();
+	CSerialServer::DisableSendFail(FALSE);
+	DisconnectModem();
+	CSerialServer::Shutdown();
+}
+
+//////////////////////////////////////////////////////////////////////
+// CMobileServer Override Functions
+//////////////////////////////////////////////////////////////////////
+
+int CMobileServer::WriteToModem(int c)
+{
+	char	szBuffer[2];
+
+	if (m_pSaveSession == NULL)
+		return -1;
+
+	szBuffer[0] = c;
+	szBuffer[1] = 0;	
+	return CSerialServer::AddSendStream(m_pSaveSession, szBuffer, 1);
+}
+
+int CMobileServer::WriteToModem(char *pszBuffer, int nLength)
+{
+	if (m_pSaveSession == NULL)
+		return -1;
+
+	if (nLength == -1) nLength = strlen(pszBuffer);
+	return CSerialServer::AddSendStream(m_pSaveSession, pszBuffer, nLength);
+}
+
+void CMobileServer::TerminateAlert()
+{
+	SendResult(MTPERR_TELNET_DISCONNECT);
+}
+
+//////////////////////////////////////////////////////////////////////
+// CMobileServer Override Functions
+//////////////////////////////////////////////////////////////////////
+
+void CMobileServer::untilcpy(char *dest, char *src)
+{
+	if (!src || !dest)
+		return;
+
+	for(;*src; src++, dest++)
+	{
+		if ((*src == '\r') || (*src == '\n'))
+			break;
+		*dest = *src;
+	}
+	*dest = '\0';	
+}
+
+void CMobileServer::SendResult(int nError)
+{
+	char	szMessage[128];
+	char	p[64];
+
+	switch(nError) {
+	  case MTPERR_INSTALL_START :		sprintf(p, "Install Start"); break;
+	  case MTPERR_INSTALL_END :			sprintf(p, "Install End"); break;
+	  case MTPERR_COMMAND_OK :			sprintf(p, "Command Ok"); break;
+	  case MTPERR_COMMAND_ERROR :		sprintf(p, "Command Error"); break;
+	  case MTPERR_TELNET_CONNECT :		sprintf(p, "Connect"); break;
+	  case MTPERR_TELNET_DISCONNECT :	sprintf(p, "Disconnect"); break;
+	  case MTPERR_TELNET_ACCEPT :		sprintf(p, "Accept (TELNET)"); break;
+	  case MTPERR_GET_ACCEPT :			sprintf(p, "Accept (GET)"); break;
+	  case MTPERR_PUT_ACCEPT :			sprintf(p, "Accept (PUT)"); break;
+	  case MTPERR_LIST_ACCEPT :			sprintf(p, "Accept (LIST)"); break;
+	  case MTPERR_NACS_ACCEPT :			sprintf(p, "Accept (NACS)"); break;
+	  case MTPERR_INVALID_REQUEST :		sprintf(p, "Invalid Request"); break;
+	  default :							sprintf(p, "Unknown Error"); break;
+	}
+
+	sprintf(szMessage, "\r\nNURI/1.0 %03d %s\n\n", nError, p);
+	WriteToModem(szMessage);
+}
+
+int CMobileServer::GetDCD()
+{
+#if defined(__TI_AM335X__)
+    /** TODO : 수정 필요. TI에서는 DCD 값을 얻을 수 있어야 한다  */
+	return 1;
+#endif
+	
+}
+
+void CMobileServer::ResetSystem()
+{
+	system("sync");
+	usleep(1000000);
+	system("sync");
+	usleep(1000000);
+
+    system("reboot");
+}
+
+void CMobileServer::FirmwareUpdate(char *pszFileName)
+{
+	int		nError;
+    VAROBJECT *pObject;
+    UINT    nPort=0;
+
+	VARAPI_Initialize(VARCONF_FILENAME, (VAROBJECT *)m_Root_node, FALSE);
+
+    // Local Port에 대한 설정 값을 얻어온다
+	pObject = VARAPI_GetObjectByName("sysLocalPort");
+	if (pObject != NULL) 
+    {
+        nPort = pObject->var.stream.u32;
+    }
+
+    if(nPort == 0)
+    {
+        nPort = 8000; // Default Port
+    }
+
+	IF4API_Initialize(nPort, NULL);
+
+	CIF4Invoke	invoke("127.0.0.1", nPort, 5*60);
+
+	invoke.AddParam("1.11", "/dev/mobile");
+	invoke.AddParam("1.11", pszFileName);
+	invoke.AddParam("1.4", (BYTE)3);
+    nError = invoke.Command("197.1", IF4_CMDATTR_REQUEST | IF4_CMDATTR_MCUIPC | IF4_CMDATTR_RESPONSE);
+	if (nError != IF4ERR_NOERROR)
+	{
+		XDEBUG("ERROR: Cannot install\r\n");
+	}
+}
+
+BOOL CMobileServer::ExecuteCommand(LPSTR pszCommand)
+{
+	if (strcmp(pszCommand, "Reset") == 0)
+	{
+	    SendResult(MTPERR_COMMAND_OK);
+		ResetSystem();
+	}
+    SendResult(MTPERR_COMMAND_ERROR);
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////
+// CMobileServer Override Functions
+//////////////////////////////////////////////////////////////////////
+
+// NURI/1.0 TELNET 23				- telnet
+// NURI/1.0 GET /app/sw/mdata		- file download
+// NURI/1.0 PUT /app/sw/launcher	- file upload
+// NURI/1.0 CMD Reset				- inline command
+// NURI/1.0 LIST /app/data			- file list
+// NURI/1.0 NACS 8000				- NACS Procotol
+
+BOOL CMobileServer::GetHeader(MTPHEADER *pHeader, char *pszBuffer, int nLength)
+{
+	char	szBuffer[128];
+	char	szVersion[32] = "";
+	char	szMethod[32] = "";
+	char	szUrl[128] = "";
+	char	szOption[32] = "";
+	char	*p, *p1;
+
+//	printf("MSERVER: '%s'\r\n", pszBuffer);
+	p = strstr(pszBuffer, "NO CARRIER");
+	if (p != NULL)
+	{
+		m_bLiveSession = FALSE;
+		m_bExitSignalPending = TRUE;
+		return TRUE;
+	}   
+
+	memset(pHeader, 0, sizeof(MTPHEADER));
+	p = strstr(pszBuffer, "NURI/");
+	if (p == NULL)
+		return FALSE;
+
+	untilcpy(szBuffer, p+5);
+	sscanf(szBuffer, "%s %s %s", szVersion, szMethod, szUrl);
+
+	// Check version
+	pHeader->fVersion = atof(szVersion);
+	if (pHeader->fVersion < (double)1.0)
+		return FALSE;
+
+	// Check method
+	if (strcmp(szMethod, "TELNET") == 0)
+		pHeader->nMethod = MOBILE_METHOD_TELNET;
+	else if (strcmp(szMethod, "GET") == 0)
+		pHeader->nMethod = MOBILE_METHOD_GET;
+	else if (strcmp(szMethod, "PUT") == 0)
+		pHeader->nMethod = MOBILE_METHOD_PUT;
+	else if (strcmp(szMethod, "CMD") == 0)
+		pHeader->nMethod = MOBILE_METHOD_COMMAND;
+	else if (strcmp(szMethod, "LIST") == 0)
+		pHeader->nMethod = MOBILE_METHOD_LIST;
+	else if (strcmp(szMethod, "NACS") == 0)
+		pHeader->nMethod = MOBILE_METHOD_NACS;
+	else return FALSE;
+
+	// 1분내 접속 제한 해제	
+	m_bLiveSession = TRUE;
+
+	// Check URL
+	if (!*szUrl)
+		return FALSE;
+	strcpy(pHeader->szURL, szUrl);
+
+	// Get Length	
+	p1 = strstr(p, "Length: ");
+	if (p1 != NULL) pHeader->nLength = atoi(p1+8);
+
+	// Get Location	
+	p1 = strstr(p, "Location: ");
+	if (p1 != NULL) untilcpy(pHeader->szLocation, p1+10);
+
+	// User
+	p1 = strstr(p, "User: ");
+	if (p1 != NULL) untilcpy(pHeader->szUser, p1+6);
+
+	// Password
+	p1 = strstr(p, "Password: ");
+	if (p1 != NULL) untilcpy(pHeader->szPassword, p1+10);
+
+	// Get install option	
+	p1 = strstr(p, "Install: ");
+	if (p1 != NULL) untilcpy(szOption, p1+9);
+	if ((strcmp(szOption, "YES") == 0) ||
+	    (strcmp(szOption, "yes") == 0))
+		pHeader->bInstall = TRUE;
+	
+	return TRUE;
+}
+
+BOOL CMobileServer::OnReceiveSession(WORKSESSION *pSession, LPSTR pszBuffer, int nLength)
+{
+	char	*p, *p1, *pszHeader;
+	int		i, len;
+
+	time(&m_tmLastReceived);
+//	printf("MobileServer: %d Bytes recv.\r\n", nLength);
+//	DUMPSTRING(pszBuffer, nLength);
+
+#ifdef __TEST_ONLY__
+//  int     nError;
+//	IF4Invoke	*pInvoke;
+//  CIF4Invoke  invoke("192.168.0.23", 8000, 60);
+//
+//	pInvoke = invoke.GetHandle();
+//	pInvoke->bAsync = TRUE;
+//
+//  invoke.AddParam("4.2.1", 5);
+//  invoke.AddParam("4.2.2", 1);
+//  invoke.AddParam("1.9", 0);
+//
+//  nError = invoke.Command("104.12", IF4_CMDATTR_REQUEST | IF4_CMDATTR_MCUIPC | IF4_CMDATTR_RESPONSE);
+//  if (nError != IF4ERR_NOERROR)
+//      printf("ERROR: %s\r\n", IF4API_GetErrorMessage(nError));
+#endif
+
+	if (m_nState != STATE_DATA)
+	{
+		m_Chunk.Add(pszBuffer, nLength);
+		m_Chunk.Close();
+		p   = m_Chunk.GetBuffer();
+		len = m_Chunk.GetSize();
+
+		pszHeader = NULL;
+		for(i=0; i<len; i++)
+		{
+			if (strncmp(p+i, "NURI/", 5) == 0)
+			{
+				pszHeader = p+i;
+				break;
+			}
+		}
+
+		if (len >= 512)
+		{
+			m_Chunk.Flush();
+			return TRUE;
+		}
+		
+		if (pszHeader == NULL)
+			return TRUE;
+		
+		p1 = strstr(pszHeader, "\n\n");
+		if (p1 == NULL)
+			p1 = strstr(pszHeader, "\r\r");
+		if (p1 == NULL)
+			p1 = strstr(pszHeader, "\r\n\r\n");
+		if (p1 == NULL)
+			return TRUE;
+
+		*p1 = '\0';
+		if (GetHeader(&m_theHeader, pszHeader, strlen(pszHeader)))
+		{
+			m_bLiveSession = TRUE;
+			switch(m_theHeader.nMethod) {
+	  		  case MOBILE_METHOD_TELNET :
+				   SendResult(MTPERR_TELNET_ACCEPT);
+				   usleep(1000000);
+				   m_theClient.NewConnection(atoi(m_theHeader.szURL));
+				   m_nState = STATE_DATA;
+				   break;
+
+	  		  case MOBILE_METHOD_NACS :
+				   SendResult(MTPERR_NACS_ACCEPT);
+				   usleep(1000000);
+				   m_theClient.NewConnection(atoi(m_theHeader.szURL));
+				   m_nState = STATE_DATA;
+				   break;
+	
+	  		  case MOBILE_METHOD_COMMAND :
+				   ExecuteCommand(m_theHeader.szURL);
+				   break;
+
+	  		  case MOBILE_METHOD_GET :
+				   SendResult(MTPERR_GET_ACCEPT);
+				   m_nState = STATE_DATA;
+				   break;
+
+	  		  case MOBILE_METHOD_PUT :
+				   SendResult(MTPERR_PUT_ACCEPT);
+				   m_theHeader.fp = fopen("/tmp/upload.tmp", "wb");
+				   m_nState = STATE_DATA;
+				   break;
+
+	  		  case MOBILE_METHOD_LIST :
+				   SendResult(MTPERR_LIST_ACCEPT);
+				   m_nState = STATE_DATA;
+				   break;
+			}
+		}
+		else
+		{
+			// Return to error message
+			SendResult(MTPERR_INVALID_REQUEST);
+		}
+
+		m_Chunk.Flush();
+		return TRUE;
+	}
+
+	switch(m_theHeader.nMethod) {
+	  case MOBILE_METHOD_TELNET :
+	  case MOBILE_METHOD_NACS :
+		   m_theClient.SendToHost(pszBuffer, nLength);
+		   break;
+
+	  case MOBILE_METHOD_GET :
+		   break;
+
+	  case MOBILE_METHOD_PUT :
+		   OnPut(pSession, pszBuffer, nLength);
+		   break;
+
+	  case MOBILE_METHOD_LIST :
+		   break;
+	}
+	return TRUE;
+}
+
+void CMobileServer::OnPut(WORKSESSION *pSession, LPSTR pszBuffer, int nLength)
+{
+	MFRAMEHEADER	*pHeader;
+	MFRAME			*pFrame;
+	WORD	crc, crc1;
+	BOOL	bChecksum;
+	int		i, len, nSeek=1;
+	BYTE	c, *p;
+    char    buffer[1024];
+
+	for(i=0; i<nLength; i+=nSeek)
+	{
+		nSeek = 1;
+		c = pszBuffer[i];
+		switch(m_theHeader.nState) {
+		  case PUT_STATE_WHITE :
+			   if (c != '[')
+			   	   break;
+			   m_Chunk.Add(c);
+			   m_theHeader.nState = PUT_STATE_IDENT;
+			   break;
+
+		  case PUT_STATE_IDENT :
+			   if (c != '@')
+			   {
+				   m_Chunk.Flush();
+				   m_theHeader.nState = PUT_STATE_WHITE;
+			   	   break;
+		       }
+			   m_Chunk.Add(c);
+			   m_theHeader.nState = PUT_STATE_SEQ;
+			   break;
+
+		  case PUT_STATE_SEQ :
+			   if (m_theHeader.nSeq != c)
+			   {
+				   m_Chunk.Flush();
+		   		   WriteToModem(MOBILE_NAK);
+				   m_theHeader.nState = PUT_STATE_WHITE;
+				   break;
+			   }
+			   m_Chunk.Add(c);
+			   m_theHeader.nState = PUT_STATE_HEADER;
+			   break;
+
+		  case PUT_STATE_HEADER :
+			   nSeek = MIN(nLength-i, (int)sizeof(MFRAMEHEADER)-m_Chunk.GetSize());
+			   m_Chunk.Add(pszBuffer+i, nSeek);
+			   if (m_Chunk.GetSize() < (int)sizeof(MFRAMEHEADER))
+				   break;
+			   pHeader = (MFRAMEHEADER *)m_Chunk.GetBuffer();
+			   if (pHeader->len > 4096)
+			   {
+				   m_Chunk.Flush();
+		   		   WriteToModem(MOBILE_NAK);
+				   m_theHeader.nState = PUT_STATE_WHITE;
+				   break;
+			   }
+			   m_theHeader.nFrameSize = pHeader->len;
+			   m_theHeader.nState = PUT_STATE_DATA;
+			   break;
+
+		  case PUT_STATE_DATA :
+			   len   = m_theHeader.nFrameSize + sizeof(MFRAMEHEADER) + sizeof(MFRAMETAIL);
+			   nSeek = MIN(nLength-i, len-m_Chunk.GetSize());
+			   m_Chunk.Add(pszBuffer+i, nSeek);
+			   if (m_Chunk.GetSize() < len)
+				   break;
+
+			   pFrame = (MFRAME *)m_Chunk.GetBuffer();
+		   	   crc  = GetCrc((BYTE *)m_Chunk.GetBuffer(), pFrame->hdr.len+sizeof(MFRAMEHEADER), 0);
+		   	   p    = (BYTE *)(m_Chunk.GetBuffer() + pFrame->hdr.len + sizeof(MFRAMEHEADER));
+			   memcpy(&crc1, p, sizeof(WORD));
+		   	   bChecksum = (crc == crc1) ? TRUE : FALSE;
+
+		   	   // printf("MOBILE-PUT: SEQ=%d, CRC=0x%04X(0x%04X), Checksum=%s\r\n",
+					  // pFrame->hdr.seq, crc1, crc, bChecksum ? "Ok" : "Error");
+
+		  	   if (bChecksum)
+		   	   {
+			   	   m_theHeader.nSeq++;
+		   	   	   fwrite(pFrame->data, 1, m_theHeader.nFrameSize, m_theHeader.fp);
+		   	   	   m_theHeader.nSeek += m_theHeader.nFrameSize;
+			   	   m_theHeader.nErrorCount = 0;
+		   	   	   WriteToModem(MOBILE_ACK);
+		   	   }
+		   	   else
+		   	   {
+			   	   m_theHeader.nErrorCount++;
+		   	   	   WriteToModem(MOBILE_NAK);
+		   	   }
+               /*
+			   printf("Total=%d, Current=%d, Packet=%d\r\n",
+					m_theHeader.nLength, m_theHeader.nSeek, m_theHeader.nFrameSize);
+               printf("szURL=%s, bInstall=%s\r\n", m_theHeader.szURL, m_theHeader.bInstall ? "yes" : "no");
+               */
+
+			   if (m_theHeader.nLength <= m_theHeader.nSeek)
+			   {
+				   // Download Ok
+				   fclose(m_theHeader.fp);
+				   m_theHeader.fp = NULL;
+
+				   if (m_theHeader.bInstall)
+                       SendResult(MTPERR_INSTALL_START);
+                   sprintf(buffer, "mv /tmp/upload.tmp %s", m_theHeader.szURL);
+                   system(buffer);
+				   if (m_theHeader.bInstall)
+					   FirmwareUpdate(m_theHeader.szURL);
+				   if (m_theHeader.bInstall) 
+                       SendResult(MTPERR_INSTALL_END);
+			   }
+			   m_Chunk.Flush();
+			   m_theHeader.nState = PUT_STATE_WHITE;
+			   break;
+		}
+		   
+	}
+}
+
+void CMobileServer::OnSendSession(WORKSESSION *pSession, LPSTR pszBuffer, int nLength)
+{
+//	XDEBUG("MobileServer: %d Bytes send.\r\n", nLength);
+//	DUMPSTRING(pszBuffer, nLength);
+}
+

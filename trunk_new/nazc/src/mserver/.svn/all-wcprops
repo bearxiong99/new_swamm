@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/rep0/mcu/!svn/ver/5309/trunk/nazc/src/mserver
+END
+TelnetClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/mserver/TelnetClient.h
+END
+MobileServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/mserver/MobileServer.h
+END
+mserver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5280/trunk/nazc/src/mserver/mserver.cpp
+END
+CrcCheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/mserver/CrcCheck.cpp
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/mserver/Variable.cpp
+END
+CrcCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/mserver/CrcCheck.h
+END
+TelnetClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/mserver/TelnetClient.cpp
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/mserver/Variable.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5309/trunk/nazc/src/mserver/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/mserver/common.h
+END
+MobileServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5280/trunk/nazc/src/mserver/MobileServer.cpp
+END

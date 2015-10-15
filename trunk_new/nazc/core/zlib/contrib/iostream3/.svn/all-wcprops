@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/zlib/contrib/iostream3
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/iostream3/TODO
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/iostream3/README
+END
+zfstream.cc
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/iostream3/zfstream.cc
+END
+zfstream.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/iostream3/zfstream.h
+END
+test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/iostream3/test.cc
+END

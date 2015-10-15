@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5318/trunk/nazc/core/protocol/dlms
+END
+DlmsDataFrame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5303/trunk/nazc/core/protocol/dlms/DlmsDataFrame.cpp
+END
+DlmsCrcCheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/dlms/DlmsCrcCheck.cpp
+END
+DlmsDataStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/dlms/DlmsDataStream.cpp
+END
+DlmsFunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5303/trunk/nazc/core/protocol/dlms/DlmsFunctions.cpp
+END
+DlmsDataFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5303/trunk/nazc/core/protocol/dlms/DlmsDataFrame.h
+END
+DlmsCrcCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/dlms/DlmsCrcCheck.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/dlms/Makefile
+END
+DlmsUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5318/trunk/nazc/core/protocol/dlms/DlmsUtil.cpp
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/dlms/common.h
+END
+DlmsUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/dlms/DlmsUtil.h
+END

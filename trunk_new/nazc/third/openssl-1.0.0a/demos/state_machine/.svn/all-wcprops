@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/state_machine
+END
+state_machine.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/state_machine/state_machine.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/demos/state_machine/Makefile
+END

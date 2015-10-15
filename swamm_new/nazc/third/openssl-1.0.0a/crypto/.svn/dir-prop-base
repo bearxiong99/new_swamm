@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 47
+buildinf.h
+lib
+opensslconf.h
+opensslconf.h.bak
+
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/rep0/mcu/!svn/ver/5442/trunk/nazc/bin/script
+END
+DatabaseCleaner.do
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/script/DatabaseCleaner.do
+END
+ShowLp.script
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/script/ShowLp.script
+END
+MobileInterfaceUp.script
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5442/trunk/nazc/bin/script/MobileInterfaceUp.script
+END
+ShowMeter.script
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/script/ShowMeter.script
+END
+DatabaseMigration.script
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5272/trunk/nazc/bin/script/DatabaseMigration.script
+END
+ResetLp.script
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/script/ResetLp.script
+END
+MeteringProperty.script
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5272/trunk/nazc/bin/script/MeteringProperty.script
+END
+ResetMeter.script
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/script/ResetMeter.script
+END
+CheckTask.script
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5187/trunk/nazc/bin/script/CheckTask.script
+END
+RunAllTask.script
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/script/RunAllTask.script
+END
+ReverseTunnel.script
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5329/trunk/nazc/bin/script/ReverseTunnel.script
+END
+UploadScheduler.do
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5408/trunk/nazc/bin/script/UploadScheduler.do
+END
+DeleteInvalidMeter.do
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/script/DeleteInvalidMeter.do
+END

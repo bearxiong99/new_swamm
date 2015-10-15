@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/zlib/as400
+END
+compile.clp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/as400/compile.clp
+END
+zlib.inc
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/as400/zlib.inc
+END
+bndsrc
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/as400/bndsrc
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/as400/readme.txt
+END

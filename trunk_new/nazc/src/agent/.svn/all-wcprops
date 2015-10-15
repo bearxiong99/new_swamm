@@ -1,0 +1,737 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent
+END
+MeteringService.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/MeteringService.h
+END
+Watchdog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5303/trunk/nazc/src/agent/Watchdog.cpp
+END
+PowerOutage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/PowerOutage.cpp
+END
+MeterReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/2798/trunk/nazc/src/agent/MeterReader.h
+END
+Polling.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5408/trunk/nazc/src/agent/Polling.cpp
+END
+TempManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/736/trunk/nazc/src/agent/TempManager.h
+END
+InventoryHash.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/InventoryHash.h
+END
+JobObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/JobObject.h
+END
+DbGroup.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/DbGroup.h
+END
+EventInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5463/trunk/nazc/src/agent/EventInterface.h
+END
+dlmsParserUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5334/trunk/nazc/src/agent/dlmsParserUtil.cpp
+END
+MeterUploader.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/MeterUploader.h
+END
+UserManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3945/trunk/nazc/src/agent/UserManager.h
+END
+Distributor.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/agent/Distributor.h
+END
+dlmsParserDefines.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5391/trunk/nazc/src/agent/dlmsParserDefines.h
+END
+MeterParserFactory.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/agent/MeterParserFactory.cpp
+END
+CommandHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/agent/CommandHandler.h
+END
+BatchJob.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/BatchJob.h
+END
+EventManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/agent/EventManager.h
+END
+EndDeviceList.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5480/trunk/nazc/src/agent/EndDeviceList.cpp
+END
+OtaWorker.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/agent/OtaWorker.h
+END
+CoordinatorEvent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/agent/CoordinatorEvent.cpp
+END
+SensorTimesync.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/SensorTimesync.cpp
+END
+MeterParser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/MeterParser.cpp
+END
+MeteringService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/MeteringService.cpp
+END
+MalfMonitor.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/agent/MalfMonitor.h
+END
+SmsWorker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/SmsWorker.cpp
+END
+SystemMonitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/SystemMonitor.cpp
+END
+ZigbeeServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/ZigbeeServer.cpp
+END
+MeterDeviceList.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/agent/MeterDeviceList.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5280/trunk/nazc/src/agent/common.h
+END
+MeterReader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5434/trunk/nazc/src/agent/MeterReader.cpp
+END
+MobileUtility.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5454/trunk/nazc/src/agent/MobileUtility.h
+END
+Operation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/Operation.cpp
+END
+InventoryHash.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/3945/trunk/nazc/src/agent/InventoryHash.cpp
+END
+JobObject.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/JobObject.cpp
+END
+Recovery.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/Recovery.h
+END
+Watchdog.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/1030/trunk/nazc/src/agent/Watchdog.h
+END
+MobileClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/MobileClient.cpp
+END
+BypassQueue.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/BypassQueue.cpp
+END
+LpWriter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/LpWriter.cpp
+END
+Utility.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/agent/Utility.h
+END
+Polling.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/355/trunk/nazc/src/agent/Polling.h
+END
+UserManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/3945/trunk/nazc/src/agent/UserManager.cpp
+END
+Metering.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5423/trunk/nazc/src/agent/Metering.cpp
+END
+Ondemander.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/agent/Ondemander.cpp
+END
+InventoryScanner.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/InventoryScanner.h
+END
+OtaWorker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/OtaWorker.cpp
+END
+dlmsParserUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5334/trunk/nazc/src/agent/dlmsParserUtil.h
+END
+TransactionManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5288/trunk/nazc/src/agent/TransactionManager.cpp
+END
+DbMeter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/DbMeter.cpp
+END
+AgentService.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/AgentService.h
+END
+MeterDbWriter.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/MeterDbWriter.h
+END
+MalfMonitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5314/trunk/nazc/src/agent/MalfMonitor.cpp
+END
+EndDeviceList.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5480/trunk/nazc/src/agent/EndDeviceList.h
+END
+TelnetClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/TelnetClient.cpp
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5454/trunk/nazc/src/agent/Variable.h
+END
+TimeoutHash.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/TimeoutHash.cpp
+END
+MobileUtility.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/MobileUtility.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/agent/Makefile
+END
+PingClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/agent/PingClient.cpp
+END
+AgentLog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/AgentLog.cpp
+END
+ZigbeeServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/3945/trunk/nazc/src/agent/ZigbeeServer.h
+END
+SmsWorker.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/SmsWorker.h
+END
+SystemMonitor.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5454/trunk/nazc/src/agent/SystemMonitor.h
+END
+ansiParserTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/ansiParserTypes.h
+END
+Utility.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/Utility.cpp
+END
+ZigbeeWorker.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/355/trunk/nazc/src/agent/ZigbeeWorker.h
+END
+ServiceController.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/585/trunk/nazc/src/agent/ServiceController.cpp
+END
+Operation.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/Operation.h
+END
+dlmsParserTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/agent/dlmsParserTypes.h
+END
+InventoryScanner.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5408/trunk/nazc/src/agent/InventoryScanner.cpp
+END
+ansiParserDefines.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/ansiParserDefines.h
+END
+MobileClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/MobileClient.h
+END
+BypassQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/BypassQueue.h
+END
+LpWriter.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/LpWriter.h
+END
+MeterWriter.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/MeterWriter.h
+END
+MeterFileWriter.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/MeterFileWriter.h
+END
+RealTimeClock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5454/trunk/nazc/src/agent/RealTimeClock.cpp
+END
+Metering.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/2798/trunk/nazc/src/agent/Metering.h
+END
+AgentService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/AgentService.cpp
+END
+MeterDbWriter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5348/trunk/nazc/src/agent/MeterDbWriter.cpp
+END
+AutoReset.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/1031/trunk/nazc/src/agent/AutoReset.h
+END
+Ondemander.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/agent/Ondemander.h
+END
+TransactionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/2798/trunk/nazc/src/agent/TransactionManager.h
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5463/trunk/nazc/src/agent/Variable.cpp
+END
+DbMeter.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/DbMeter.h
+END
+ScheduleJob.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/ScheduleJob.h
+END
+PackageUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/4155/trunk/nazc/src/agent/PackageUtil.h
+END
+TimeoutHash.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/TimeoutHash.h
+END
+TelnetClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/TelnetClient.h
+END
+ZigbeeWorker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/ZigbeeWorker.cpp
+END
+StatusMonitor.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5463/trunk/nazc/src/agent/StatusMonitor.h
+END
+TempManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/TempManager.cpp
+END
+PingClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/1222/trunk/nazc/src/agent/PingClient.h
+END
+DbGroup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/DbGroup.cpp
+END
+EventInterface.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5468/trunk/nazc/src/agent/EventInterface.cpp
+END
+Keti_3Party.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3945/trunk/nazc/src/agent/Keti_3Party.h
+END
+Patch.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5328/trunk/nazc/src/agent/Patch.h
+END
+AgentLog.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/AgentLog.h
+END
+PowerOutage.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/PowerOutage.h
+END
+GpsMonitor.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/agent/GpsMonitor.h
+END
+MeterUploader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5348/trunk/nazc/src/agent/MeterUploader.cpp
+END
+MeterWriter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/MeterWriter.cpp
+END
+MeterFileWriter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5348/trunk/nazc/src/agent/MeterFileWriter.cpp
+END
+ServiceController.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/agent/ServiceController.h
+END
+Distributor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5348/trunk/nazc/src/agent/Distributor.cpp
+END
+AutoReset.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5463/trunk/nazc/src/agent/AutoReset.cpp
+END
+CommandHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5483/trunk/nazc/src/agent/CommandHandler.cpp
+END
+BatchJob.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/BatchJob.cpp
+END
+EventManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5463/trunk/nazc/src/agent/EventManager.cpp
+END
+RealTimeClock.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5454/trunk/nazc/src/agent/RealTimeClock.h
+END
+MeterParserFactory.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/agent/MeterParserFactory.h
+END
+ScheduleJob.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/agent/ScheduleJob.cpp
+END
+MeterDeviceList.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5348/trunk/nazc/src/agent/MeterDeviceList.cpp
+END
+PackageUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5348/trunk/nazc/src/agent/PackageUtil.cpp
+END
+SensorTimesync.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/2798/trunk/nazc/src/agent/SensorTimesync.h
+END
+StatusMonitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5464/trunk/nazc/src/agent/StatusMonitor.cpp
+END
+MeterParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5408/trunk/nazc/src/agent/MeterParser.h
+END
+agent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5452/trunk/nazc/src/agent/agent.cpp
+END
+Recovery.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5423/trunk/nazc/src/agent/Recovery.cpp
+END
+Patch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5463/trunk/nazc/src/agent/Patch.cpp
+END

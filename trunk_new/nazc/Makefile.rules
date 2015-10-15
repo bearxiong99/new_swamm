@@ -1,0 +1,80 @@
+# Configuration File
+
+GE_METER_SECURITY =  "{ 'P','L','A','T','F','O','R','M',0,0,0,0,0,0,0,0,0,0,0,0 }"
+
+###########################################################
+# PATCH List
+###########################################################
+
+#CFLAGS +=-D__PATCH_1_1540__     # 진해 수도 센서 버그 회피
+CFLAGS +=-D__PATCH_2_1565__     # 센서 목록 삭제
+CFLAGS +=-D__PATCH_3_1573__     # Disable Keepalive Time Protection
+CFLAGS +=-D__PATCH_4_1647__     # ShortID를 이용한 DirectCommunication Mode
+CFLAGS +=-D__PATCH_5_1949__     # Debuging을 위한 Always Monitoring Mode
+CFLAGS +=-D__PATCH_6_2084__     # Hidden Command 보기 조절
+CFLAGS +=-D__PATCH_7_2097__     # 중복검침데이터 Skip 기능을 Disable 시킴
+CFLAGS +=-D__PATCH_8_2305__     # Fire alaram에 대한 Broadcasting 기능
+CFLAGS +=-D__PATCH_9_2567__     # Link 절차 생략 기능
+CFLAGS +=-D__PATCH_10_2808__    # DLMS를 시간단위로 검침
+CFLAGS +=-D__PATCH_11_65__      # 한전 실증단지 DR Level 적용
+CFLAGS +=-D__PATCH_12_969__     # Reverse SSH Tunneling
+CFLAGS +=-D__PATCH_13_1266__    # SIGSEGV reboot handler
+CFLAGS +=-D__PATCH_14_1286__    # Power fail 상태에서 Fixed reset이 발생하지 않게 한다
+
+###########################################################
+
+CFLAGS +=-D__RELEASE__
+CFLAGS +=-D__GE_METER_SECURITY__=$(GE_METER_SECURITY)
+CFLAGS +=-D__KEPCO_DLMS_METER__
+
+###########################################################
+
+###########################################################
+
+CFLAGS +=-D__SUPPORT_I210C__
+
+###########################################################
+
+LIBS    =-lstdc++ 
+
+#all: CFLAGS +=-D__DEBUG_MEMORY__ -D__DEBUG_PTHREAD__
+all: CFLAGS +=-D__DEBUG_MEMORY__ 
+
+ifeq ($(DISABLE_SQLITE3),TRUE)
+CFLAGS   +=-D__DISABLE_SQLITE3__
+endif
+ifeq ($(DISABLE_SSL),TRUE)
+CFLAGS   +=-D__DISABLE_SSL__
+endif
+
+ifeq ($(WINDOWS_FLAG),)
+CLIBS   +=-lcrypt
+CLIBS   +=-lpthread
+CLIBS   +=-ldl
+
+#
+# malloc이 thread_safe 하게 동작하도록 반듯이 -pthread Option을 추가해 줘야 한다
+# (주의: 이항목을 지우기 전에 반듯이 관련 정보를 확인해야 한다. )
+# 
+# Ref : Issue #12 Memo ~34
+# Ref : Issue #400
+# Ref : http://stackoverflow.com/questions/987444/about-thread-safety-in-malloc-and-free
+# Ref : http://stackoverflow.com/questions/855763/malloc-thread-safe
+LDFLAGS += -O -pthread
+CFLAGS  += -O2 -pthread
+
+CFLAGS  += -Wall 
+CFLAGS  += -fPIC
+
+CXXFLAGS +=  
+
+else
+
+#CFLAGS   += -D_WIN32 
+#LIBS     +=-lpthread
+CFLAGS   += -DBN_ASM
+LDFLAGS  += -static
+
+endif
+
+

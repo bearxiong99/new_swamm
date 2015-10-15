@@ -1,0 +1,52 @@
+
+/** Normal Page CSS */
+
+p#PhoneNumBlock {
+    display: none;
+}
+.tbl_style {
+    width: 50em;
+}
+.tbl_style ul {
+    clear: left;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.tbl_style .tbl_header {
+    font-weight: bold;
+    text-align: left;
+    /*border-top: 1px solid #000;*/
+}
+.tbl_style ul li {
+    float: left;
+    margin: 0;
+    padding: 2px 1px;
+    text-align: left;
+}
+.tbl_style ul .col_group {
+    width: 180px;
+}
+.tbl_style ul .col_cmd {
+    width: 240px;
+}
+.tbl_style ul .col_param {
+    width: 300px;
+}
+.tbl_style ul li#paramOutput {
+    height: auto;
+}
+.tbl_style ul li#resultLen {
+    text-align: right;
+}
+.tbl_style ul li#resultArea { 
+    border:1px solid #FFA0A0; 
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    word-break: break-all;
+}
+.tbl_style ul li#resultArea span#smsmsgSms{ 
+    display: none;
+}
+

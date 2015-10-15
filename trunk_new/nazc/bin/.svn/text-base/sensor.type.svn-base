@@ -1,0 +1,20 @@
+# Sensor/Model Mapping
+#
+# NodeKind    ModelName   ServiceType
+#
+# Service Type : 0 Default, 1 Electricity, 2 Gas, 3 Water
+#   4 Hot Water, 5 Colling, 6 Heating, 
+#   8 Cold Water, 9 Smoke detector
+#   10 Interface device
+#   
+0 PULSE-BATTERY 0
+1 PULSE-GAS 2
+2 PULSE-WATER 3
+3 ELECTRICITY 1
+4 ACD 1
+5 HMU 1
+6 KEUKDONG-WATER 3
+7 BEACON 1
+8 KEUKDONG-GAS 2
+100 BATTERY-SD 9
+255 BATTERY-REPEATER 0

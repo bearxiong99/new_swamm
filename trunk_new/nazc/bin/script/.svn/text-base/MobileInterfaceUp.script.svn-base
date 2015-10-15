@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# 
+# Mobile Interface Up (called by agent)
+#
+
+MODULESERIAL=/dev/ttyACM0
+ETH2=/sys/class/net/eth2
+OPERSTATE=$ETH2/operstate
+GPIO=/sys/class/gpio/gpio
+GPIOVALUE=value
+MOBILERESET=88
+
+
+function resetMobile()
+{
+    /app/boot/S10uNetwork start
+    exit 0
+}
+
+# Kernel module check
+GOBICNT=`/sbin/lsmod | grep GobiNet | wc -l`
+if [ "x$GOBICNT" = "x0" ]; then
+  /sbin/insmod /app/modules/GobiNet.ko
+  sleep 5
+fi
+
+# ModuleSerial Check
+if [ ! -e "/dev/ttyACM0" ]; then
+  if [ ! -e /dev/ttyACM1 ]; then
+    resetMobile
+  fi
+fi
+
+if [ ! -e "$ETH2" ]; then
+  resetMobile
+fi
+
+if [ -f $OPERSTATE ]; then
+    IFSTATE=`cat $OPERSTATE`
+    case "$IFSTATE" in
+        up )
+        ;;
+        * )
+            /sbin/ifdown -f eth2 > /dev/null 2>&1
+            /sbin/ifup -f eth2 > /dev/null 2>&1
+        ;;
+    esac
+fi
+
+exit 0

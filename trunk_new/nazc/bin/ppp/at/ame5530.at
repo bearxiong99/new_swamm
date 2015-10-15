@@ -1,0 +1,10 @@
+INIT        ATE0
+MANF        AT+CGMI
+MODEL       AT+CGMM
+REV         AT+CGMR
+SERIAL      AT+CGSN
+NUMBER      AT+CNUM
+IMSI        AT+CIMI
+PIN         AT+CPIN?
+NET         AT+CREG?
+CSQ         AT+CSQ

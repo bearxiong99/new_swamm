@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5453/trunk/nazc/bin/specific/ti/bin
+END
+bsdiff
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5453/trunk/nazc/bin/specific/ti/bin/bsdiff
+END
+chat
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5453/trunk/nazc/bin/specific/ti/bin/chat
+END
+pppd
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5453/trunk/nazc/bin/specific/ti/bin/pppd
+END
+bspatch
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5453/trunk/nazc/bin/specific/ti/bin/bspatch
+END

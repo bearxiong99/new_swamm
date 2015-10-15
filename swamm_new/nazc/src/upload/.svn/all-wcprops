@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/upload
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/upload/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/upload/common.h
+END
+upload.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/upload/upload.cpp
+END
+UploadService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/upload/UploadService.cpp
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/upload/Variable.cpp
+END
+UploadService.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/upload/UploadService.h
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/upload/Variable.h
+END

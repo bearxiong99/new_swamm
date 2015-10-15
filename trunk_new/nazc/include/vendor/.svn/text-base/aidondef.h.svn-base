@@ -1,0 +1,10 @@
+#ifndef __AIDONTYPEDEF_H__
+#define __AIDONTYPEDEF_H__
+
+#include "pollmiu.h"
+
+typedef ENDI_LP_ENTRY AIDON_LPENTRY;
+typedef POLLBASED_METERING_DATA AIDON_METERING_DATA;
+
+#endif // __AIDONTYPEDEF_H__
+

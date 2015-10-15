@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/rep0/mcu/!svn/ver/5462/trunk/nazc/src/gpio
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5289/trunk/nazc/src/gpio/Makefile
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5284/trunk/nazc/src/gpio/README
+END
+gpio.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5462/trunk/nazc/src/gpio/gpio.c
+END

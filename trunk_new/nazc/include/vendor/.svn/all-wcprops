@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5429/trunk/nazc/include/vendor
+END
+kamstrup.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5429/trunk/nazc/include/vendor/kamstrup.h
+END
+aidondef.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/vendor/aidondef.h
+END
+ansi.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/vendor/ansi.h
+END
+firealarmdef.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/vendor/firealarmdef.h
+END
+pollmiu.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/vendor/pollmiu.h
+END
+ihddef.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/include/vendor/ihddef.h
+END
+mccb.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/4155/trunk/nazc/include/vendor/mccb.h
+END
+repdef.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/4155/trunk/nazc/include/vendor/repdef.h
+END

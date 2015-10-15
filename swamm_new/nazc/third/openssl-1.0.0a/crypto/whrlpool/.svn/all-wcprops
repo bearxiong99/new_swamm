@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool
+END
+wp_dgst.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool/wp_dgst.c
+END
+whrlpool.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool/whrlpool.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool/Makefile
+END
+wp_block.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool/wp_block.c
+END
+wp_locl.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool/wp_locl.h
+END
+wp_test.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/crypto/whrlpool/wp_test.c
+END

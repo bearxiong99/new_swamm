@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/rep0/mcu/!svn/ver/5463/trunk/nazc/src/cli
+END
+cmd_set.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/cli/cmd_set.cpp
+END
+cmd_syntax.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/cli/cmd_syntax.h
+END
+cmd_table.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/cli/cmd_table.h
+END
+cmd_define.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/1894/trunk/nazc/src/cli/cmd_define.h
+END
+cmd_set.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5454/trunk/nazc/src/cli/cmd_set.h
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5463/trunk/nazc/src/cli/Variable.cpp
+END
+cmd_ctrl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/cli/cmd_ctrl.cpp
+END
+message.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/cli/message.h
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5454/trunk/nazc/src/cli/Variable.h
+END
+cmd_ctrl.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/cli/cmd_ctrl.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/cli/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/cli/common.h
+END
+cmd_util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/cli/cmd_util.cpp
+END
+cmd_emergency.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/cli/cmd_emergency.cpp
+END
+cmd_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/cli/cmd_test.cpp
+END
+cmd_show.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/cli/cmd_show.cpp
+END
+cmd_util.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/cli/cmd_util.h
+END
+cmd_emergency.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/cli/cmd_emergency.h
+END
+cmd_message.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5463/trunk/nazc/src/cli/cmd_message.cpp
+END
+cmd_default.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5331/trunk/nazc/src/cli/cmd_default.cpp
+END
+cli.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5429/trunk/nazc/src/cli/cli.cpp
+END
+cmd_test.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/cli/cmd_test.h
+END
+cmd_show.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/cli/cmd_show.h
+END
+cmd_syntax.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5454/trunk/nazc/src/cli/cmd_syntax.cpp
+END
+cmd_table.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5460/trunk/nazc/src/cli/cmd_table.cpp
+END
+cli.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/rep0/mcu/!svn/ver/3945/trunk/nazc/src/cli/cli.h
+END
+cmd_message.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/5406/trunk/nazc/src/cli/cmd_message.h
+END
+cmd_default.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/3345/trunk/nazc/src/cli/cmd_default.h
+END

@@ -1,0 +1,61 @@
+# Nuritelecom AiMiR System
+# Zigbee Concentrator
+# Shared Configuration File
+
+CFLAGS  +=-D__TI_AM335X__
+CFLAGS  +=-D__LITTLE_ENDIAN_SYSTEM__
+CFLAGS  +=-D__PTR32__
+CFLAGS  +=-D__INCLUDE_GPIO__
+
+CFLAGS  +=-Wno-unused-result
+CFLAGS  +=-D__COORDINATOR__
+CFLAGS  +=
+CFLAGS  +=
+CFLAGS  +=
+
+NO_BATTERY=
+LIB_EXT=a
+
+DISABLE_GPIO=
+DISABLE_SSL=-D__DISABLE_SSL__
+
+#
+# Functions
+#
+
+# Old Issue
+CFLAGS  +=-D__SUPPORT_ADVANCED_LEAVE__      # Issue #1286
+CFLAGS  +=-D__SUPPORT_ENDDEVICE__           # Issue #1131
+CFLAGS  +=-D__SUPPORT_SOURCE_ROUTING__      # Issue #1151
+CFLAGS  +=-D__SUPPORT_SUPER_PARENT__        # Issue #1638
+CFLAGS  +=-D__SUPPORT_ASYNCHRONOUS__        # Issue #1502
+CFLAGS  +=-D__SUPPORT_IF4_V11__             # Issue #2049
+CFLAGS  +=-D__SUPPORT_SOLAR_NAZC__          # Issue #2421
+CFLAGS  +=-D__SUPPORT_HASH_KEY_TABLE__      # Issue #2490
+CFLAGS  +=-D__SUPPORT_ENCRYPTED_PASSWD__    # Issue #2479
+CFLAGS  +=-D__SUPPORT_DEVICE_NODE__         # Issue #2443
+CFLAGS  +=-D__SUPPORT_REMOTE_DEBUG__        # Issue #1426
+CFLAGS  +=-D__SUPPORT_SENSOR_LAST_VALUE__   # Issue #2571
+#CFLAGS  +=-D__SUPPORT_SITE_KETI__          # Issue #2570
+
+# Jira Issue
+CFLAGS  +=-D__SUPPORT_KEPCO_DLMS__          # RF-2
+
+# New Issue
+CFLAGS  +=-D__SUPPORT_PUSH_METERING__       # Issue #84
+CFLAGS  +=-D__SUPPORT_KUKDONG_METER__       # Issue #1037
+
+# SSL
+CFLAGS  +=-D__DISABLE_SSL__
+
+NZC_TYPE        = NZC4
+CROSS_NAME      = -arm-linux-gnueabihf
+CROSS_COMPILE   = arm-linux-gnueabihf-
+CC              = ${CROSS_COMPILE}gcc
+CPP             = ${CROSS_COMPILE}g++
+LD              = ${CROSS_COMPILE}ld
+AR              = ${CROSS_COMPILE_AR}ar
+RANLIB          = ${CROSS_COMPILE}ranlib
+STRIP           = ${CROSS_COMPILE}strip
+ECHO            = /bin/echo
+

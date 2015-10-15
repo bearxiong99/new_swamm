@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/mbus
+END
+MbusDataFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/mbus/MbusDataFrame.h
+END
+MbusUtils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/mbus/MbusUtils.cpp
+END
+MbusChecksum.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/mbus/MbusChecksum.cpp
+END
+MbusDataFrame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/mbus/MbusDataFrame.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/mbus/Makefile
+END
+MbusDataStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/mbus/MbusDataStream.cpp
+END
+MbusUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/mbus/MbusUtils.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/mbus/common.h
+END
+MbusChecksum.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/mbus/MbusChecksum.h
+END
+MbusFunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/mbus/MbusFunctions.cpp
+END

@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# NURITelecom Data Concentrator User Boot Script
+#
+# Zoneinfo Setup
+#
+
+
+if [ ! -e /usr/share/zoneinfo ]; then
+    # create zone info link
+    ln -s /app/sw/zoneinfo /usr/share/zoneinfo
+fi
+
+exit 0
+

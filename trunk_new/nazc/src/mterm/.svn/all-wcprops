@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/rep0/mcu/!svn/ver/5321/trunk/nazc/src/mterm
+END
+MobileClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/mterm/MobileClient.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5321/trunk/nazc/src/mterm/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/mterm/common.h
+END
+mterm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5321/trunk/nazc/src/mterm/mterm.cpp
+END
+MobileClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/mterm/MobileClient.cpp
+END

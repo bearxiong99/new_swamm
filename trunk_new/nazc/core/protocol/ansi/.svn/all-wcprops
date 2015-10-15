@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5408/trunk/nazc/core/protocol/ansi
+END
+AnsiDataFrame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/AnsiDataFrame.cpp
+END
+AnsiCrcCheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/AnsiCrcCheck.cpp
+END
+AnsiDataStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/AnsiDataStream.cpp
+END
+AnsiFunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5408/trunk/nazc/core/protocol/ansi/AnsiFunctions.cpp
+END
+AnsiSession.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/AnsiSession.h
+END
+AnsiDataFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/AnsiDataFrame.h
+END
+AnsiCrcCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/AnsiCrcCheck.h
+END
+AnsiUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/AnsiUtil.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/Makefile
+END
+AnsiUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/AnsiUtil.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/common.h
+END
+AnsiSession.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/ansi/AnsiSession.cpp
+END

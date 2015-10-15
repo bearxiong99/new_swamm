@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/test
+END
+runUnitTests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5182/trunk/nazc/bin/test/runUnitTests.sh
+END
+mkConcentrator.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/bin/test/mkConcentrator.sh
+END
+fixture
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/3237/trunk/nazc/bin/test/fixture
+END
+runAllTests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/bin/test/runAllTests.sh
+END

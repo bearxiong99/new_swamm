@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ -f /etc/dhcpc/dhcpcd-eth0.pid ]; then
+        DHCP_PID=$(cat /etc/dhcpc/dhcpcd-eth0.pid)
+        kill -9 $DHCP_PID
+        rm -rf /etc/dhcpc/dhcpcd-eth0.pid
+fi
+
+killall -9 udhcpc 2> /dev/null
+
+exit 0

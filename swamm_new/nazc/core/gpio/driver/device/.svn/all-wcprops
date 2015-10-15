@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3945/trunk/nazc/core/gpio/driver/device
+END
+usage.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/gpio/driver/device/usage.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/3945/trunk/nazc/core/gpio/driver/device/Makefile
+END
+gpio.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/gpio/driver/device/gpio.c
+END

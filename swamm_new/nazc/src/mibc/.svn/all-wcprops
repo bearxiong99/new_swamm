@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/mibc
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/mibc/Makefile
+END
+util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/mibc/util.cpp
+END
+parse.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/mibc/parse.h
+END
+util.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/mibc/util.h
+END
+oidmib.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/mibc/oidmib.h
+END
+mibc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/mibc/mibc
+END
+mibc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/mibc/mibc.cpp
+END
+parse.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/src/mibc/parse.cpp
+END

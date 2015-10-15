@@ -1,0 +1,26 @@
+   Source Tree : branches/site/swamm
+      Revision : 5476MS
+    Build Date : Thu Oct 15 16:43:35 2015 +09
+ Build Machine : Linux ubuntu 3.2.0-29-generic-pae #46-Ubuntu SMP Fri Jul 27 17:25:43 UTC 2012 i686 i686 i386 GNU/Linux
+      Compiler : arm-linux-gnueabihf-g++ (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03) 4.7.3 20130226 (prerelease)
+Compile Option : -D__TI_AM335X__
+                 -D__LITTLE_ENDIAN_SYSTEM__
+                 -D__PTR32__
+                 -D__INCLUDE_GPIO__
+                 -D__COORDINATOR__
+                 -D__SUPPORT_ADVANCED_LEAVE__
+                 -D__SUPPORT_ENDDEVICE__
+                 -D__SUPPORT_SOURCE_ROUTING__
+                 -D__SUPPORT_SUPER_PARENT__
+                 -D__SUPPORT_ASYNCHRONOUS__
+                 -D__SUPPORT_IF4_V11__
+                 -D__SUPPORT_SOLAR_NAZC__
+                 -D__SUPPORT_HASH_KEY_TABLE__
+                 -D__SUPPORT_ENCRYPTED_PASSWD__
+                 -D__SUPPORT_DEVICE_NODE__
+                 -D__SUPPORT_REMOTE_DEBUG__
+                 -D__SUPPORT_SENSOR_LAST_VALUE__
+                 -D__SUPPORT_KEPCO_DLMS__
+                 -D__SUPPORT_PUSH_METERING__
+                 -D__SUPPORT_KUKDONG_METER__
+                 -D__DISABLE_SSL__

@@ -1,0 +1,6 @@
+INIT        ATE0
+MANF        AT+CGMI
+MODEL       AT+CGMM
+REV         AT+CGMR
+NUMBER      AT+MIN?
+CSQ         AT+CSQ

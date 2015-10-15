@@ -1,0 +1,21 @@
+K 15
+reviewboard:url
+V 37
+http://tauran.nuritelecom.com/reviews
+K 10
+svn:ignore
+V 11
+cscope.out
+
+K 13
+svn:mergeinfo
+V 327
+/branches/i2/0000084/nazc:4777-4921
+/branches/issue/1502/nazc:1859-2687
+/branches/issue/2443/nazc:3470-3742
+/branches/issue/2570/nazc:3852-3868
+/branches/site/edm_dcu/nazc:5261-5270
+/branches/site/japan_dcu/nazc:5250-5254
+/branches/site/swamm/nazc:5190,5192-5193,5199,5201,5215,5217,5238,5242
+/branches/workspace/nazc:1678-5179
+END

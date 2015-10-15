@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/test/external
+END
+TestUpgrade.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/TestUpgrade.cpp
+END
+aimirTestReporter.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/aimirTestReporter.h
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/Variable.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/test/external/Makefile
+END
+AidonMeter.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/AidonMeter.h
+END
+GeMeter.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/GeMeter.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/test/external/common.h
+END
+TestOperation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/test/external/TestOperation.cpp
+END
+Utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/test/external/Utils.cpp
+END
+Doxyfile
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/Doxyfile
+END
+Utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/Utils.h
+END
+TestSensor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/test/external/TestSensor.cpp
+END
+TestMetering.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/test/external/TestMetering.cpp
+END
+TestIf4Api.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/TestIf4Api.cpp
+END
+CommandHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/CommandHandler.cpp
+END
+TestSetting.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/TestSetting.cpp
+END
+TestShow.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/TestShow.cpp
+END
+CommandHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/CommandHandler.h
+END
+TestCoordinator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/TestCoordinator.cpp
+END
+aimirTestReporter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/aimirTestReporter.cpp
+END
+testMain.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/test/external/testMain.cpp
+END
+TestOndemand.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/test/external/TestOndemand.cpp
+END
+TestVersion.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/TestVersion.cpp
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/test/external/Variable.cpp
+END

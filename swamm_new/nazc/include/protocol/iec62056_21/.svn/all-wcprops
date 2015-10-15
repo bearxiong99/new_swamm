@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/iec62056_21
+END
+iecError.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/iec62056_21/iecError.h
+END
+iec62056_21DataStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/iec62056_21/iec62056_21DataStream.h
+END
+iec62056_21Functions.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/iec62056_21/iec62056_21Functions.h
+END
+iec62056_21Define.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/iec62056_21/iec62056_21Define.h
+END
+iec62056_21Frame.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/iec62056_21/iec62056_21Frame.h
+END

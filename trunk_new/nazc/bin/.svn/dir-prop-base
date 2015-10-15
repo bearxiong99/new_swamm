@@ -1,0 +1,22 @@
+K 10
+svn:ignore
+V 136
+*.gz
+*.info
+NZC_I211-v3.1-3836M.tar.gz
+agent
+cli
+example
+gsmnet
+hwtest
+launcher
+mcumodel
+mserver
+mterm
+pmon
+receiver
+send
+sysmon
+upload
+
+END

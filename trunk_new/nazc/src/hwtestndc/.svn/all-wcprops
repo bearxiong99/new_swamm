@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc
+END
+TestGpio.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc/TestGpio.cpp
+END
+Utility.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc/Utility.cpp
+END
+TestGpio.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/hwtestndc/TestGpio.h
+END
+TestZigbee.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc/TestZigbee.cpp
+END
+MobileClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/hwtestndc/MobileClient.cpp
+END
+TestMobile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc/TestMobile.cpp
+END
+Utility.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc/Utility.h
+END
+TestZigbee.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/hwtestndc/TestZigbee.h
+END
+MobileClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/hwtestndc/MobileClient.h
+END
+TestMobile.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/hwtestndc/TestMobile.h
+END
+TestControl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc/TestControl.cpp
+END
+Test.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/hwtestndc/Test.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc/main.cpp
+END
+TestControl.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5464/trunk/nazc/src/hwtestndc/TestControl.h
+END
+CoordinatorEvent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5455/trunk/nazc/src/hwtestndc/CoordinatorEvent.cpp
+END
+TestResource.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc/TestResource.cpp
+END
+TestResource.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5456/trunk/nazc/src/hwtestndc/TestResource.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5457/trunk/nazc/src/hwtestndc/Makefile
+END
+hwtest_fake.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5478/trunk/nazc/src/hwtestndc/hwtest_fake.sh
+END

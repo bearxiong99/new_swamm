@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/rep0/mcu/!svn/ver/5428/trunk/codiapi
+END
+CHANGES
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/rep0/mcu/!svn/ver/4154/trunk/codiapi/CHANGES
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/rep0/mcu/!svn/ver/5181/trunk/codiapi/Makefile
+END
+Shared.rules
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/1350/trunk/codiapi/Shared.rules
+END
+doxygen.conf
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/rep0/mcu/!svn/ver/175/trunk/codiapi/doxygen.conf
+END
+Makefile.rules
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/3234/trunk/codiapi/Makefile.rules
+END

@@ -1,0 +1,5 @@
+본 디렉토리는 Compile또는 Running을 위해 필요한 Host 관련 파일을 관리한다.
+
+ - MinGW
+  . pthreadGC2.dll : running을 위해 필요
+

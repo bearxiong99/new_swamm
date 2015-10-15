@@ -1,0 +1,440 @@
+
+Nuritelecom NAZC
+
+*4.2.0
+ - Mobile module reset code 수정 (#1264)
+ - TI AM3352 NZC4에서 Power control 및 Case open 감지 기능 추가 (#1286)
+   + Patch 14-1286 추가 (Power Fail 상태에서 Fixed reset 방지)
+ - Kamstrup Omnipower meter 검침 기능 추가 (#853)
+ - 극동 미터 검침 코드 추가 (#1037)
+ - G-Type Meter의 Sag/Swell/Instantaneous 값 수집 (#1049)
+ - SMS Command 추가 (#991)
+ - TI AM3352 NZC4 에 Porting (#959)
+ - NZC4에 Telit 2G, 3G GSM Module 기능 지원 (#1264)
+
+*3.0.8/3.1.2
+ - 한전 G-Type 미터 검침 기능 추가 (#930)
+ - Ramdisk v1.3, v2.2 에 따라 다른 timesync 설정 반영 (#857)
+ - OS Watchdog 기능 Enable (#843)
+ - Kamstrup M Type Meter 검침 기능 추가 (#768)
+ - OTA 명령 시 fw,fw,build 정보 확인 안하는 버그 수정 (#834)
+ - 집중기 시간 오류 시 Sensor 시간 동기화가 수행 되는 버그 수정 (#402)
+ - CDMA 환경에서 원격 콘솔 연결 오류 수정 (#51)
+ - GE Fuji Meter 검침 기능 추가 (#303)
+ - Meter Security 기능 확장 (#320)
+   + OID
+     . cmdGetMeterSecurity(105.9)
+     . cmdSetMeterSecurity(105.10)
+   + CLI
+     . add meter security (Hidden)
+     . delete meter security (Hidden)
+     . show meter security (Hidden)
+ - Energy Level 기능 지원 (#55)
+   + CLI
+     . show dr list
+     . show dr level
+     . set dr level
+     - Push Metering 지원 (#84)
+   + SQLite3 DB 이용
+   + /app/script 에서 DB 관련 script 가 동작 함 
+   + /app/script/disable 이 존재할 경우 DB script 동작 안함
+ - Ondemand Bypass 기능 추가 (#63)
+ - SX Meter Parser 추가 (#47)
+ - Osaki Meter Parser 추가 (#44)
+ - Kamstrup KMP Register ID 13 추가 수집 (RF-8)
+ - HMU Parser 추가 (RF-6)
+ - MBUS Parser 추가 (RF-3)
+ - DLMS Parser 추가 (RF-2)
+ - SMOKE DETECTOR Parser를 찾지 못하는 버그 수정 (#2650)
+ - Pulse식 센서에서 LP Choice 변경 시 당일 검침 오류 수정 (#2581)
+ - Sensor Last Value 조회 기능 추가 (#2571)
+ - Application 정보 조회 기능 추가 (#2566)
+ - Debug Log를 저장할 수 있는 방법 제공 (#1426)
+ - Meter Ping 관련 버그 수정 (#2563)
+ - SMOKE DTECTOR관련 기능 추가 (#2305)
+ - Alarm Port를 사용하지 않는 버그 수정 (#2552)
+ - GSM Phone Number 자동 수집 기능 수정 (#1948)
+ - Key Table 관리 기능 추가 (show coordinator register, delete register, add register) (#2490) 
+ - Agent Port 변경 시 CLI도 해당 포트를 사용하도록 수정 (#2532)
+
+3.0.7/3.1.1
+ - ACD Parser 추가 (#2499)
+ - Recovery시 잘못된 Option 사용 버그 수정 (#2498)
+ - 배포를 위한 Package file을 만들 수 있는 mkPkgInfo.exe 추가 (#2497)
+ - ftp.script에 관한 보안 패치 (#2496)
+ - Plan Text를 사용하는 비밀번호 저장 버그 수정 (#2479)
+ - IHD Parser 추가 (#2476)
+ - Solar System을 이용하는 집중기를 위한 전원 제어 정보 수집 기능 추가 (#2421)
+ - MBUS Type 검침 지원 (#1775)
+ - Meter parser의 Name을 복수개 지정할 수 있게 수정 (#2402)
+ - IF4 Protocol v1.1 지원 (#2049)
+ - 배포 기능 지원 (#1923)
+ - Pulse 검침데이터에 LP BasePulse 값이 잘 못 설정되는 버그 수정 (#2319)
+ - Concentrator Encoding을 UTF-8 으로 변경 (#2313)
+ - CLI에서 잘못된 Severity 설정 버그 수정 (#2205)
+ - Coordinator GPIO 초기화 코드 추가 (#2174)
+ - IF4API Rollback - r2527 (#2165)
+ - 실패검침 시 동일한 Meter를 반복 검침하는 문제 수정 (#2167)
+ - Solar Repater가 실패검침되지 않는 문제 수정 (#2145)
+ - SIM Card 미실장 시 Watchdog Reset 이 걸리는 문제 수정 (#2120)
+ - Sleepy Mesh Network의 경우 Discovery On 상태에서 통신하도록 수정 (#2101)
+ - Pulse MIU의 Ondemand 결과에 NetworkType, AlarmFlag 값 포함 (#2102)
+ - NTP Timesync가 되지 않던 문제 수정 (#2099)
+ - Sensor Battery Log를 읽는 'show sensor battery' 명령어 추가 (#1502)
+ - Sensor Event에 Optical Command 관련 정보 처리 코드 추가 (#2094)
+ - Pulse 검침 데이터 처리 오류 수정 (#2089)
+ - set sensor testmode 명령어 수행시 오류 발생 문제 수정 (#2088)
+ - ondemand timesync 명령어 수행시 잘못된 CLI 출력 문제 수정 (#2064)
+ - UserDefine Message Handler 지원 (#2086)
+ - Asynchronous Call 지원 (#1502)
+ - Coordinator Version 정보에 SOFTWARE_VERSION 정보 사용 (#2079)
+ - show sensor event 성능 향상 (#1927)
+ - CLI Hidden Command 조절을 위한 Patch 6-2084 추가 (#2084)
+ - MIU에 대한 Metering Fail Count 설정 기능 추가 (#2072)
+ - MIU에 대한 NetworkType 조회/설정 기능 추가 (#2071)
+ - GPIO Driver에 Poll 함수 추가 (#2069)
+ - Pulse Sensor를 FFD/RFD로 구분해서 처리할 수 있도록 수정 (#2021)
+ - TimeSync Strategy 추가 (#2020)
+ - 잘못된 Packing으로 인해 SIGSEGV가 발생할 수 있는 문제 수정 (#2036)
+ - Kamstrup Meter의 Current Pulse가 잘 못 계산되는 문제 수정 (#2031)
+ - GE Meter Procedure Table 관련 데이터 처리 오류 수정 (#2052)
+ - GE Meter Ondemand Option 3(Relay Status)에 대한 버그 수정 (#2037)
+ - BIG-Endian System을 위해 IF4API 수정 (#2036)
+ - Kamstrup Metering Data 표현 오류 수정 (#2027)
+ - CDMA용 O201 집중기를 위한 H/W Test Program 수정 (#2024)
+ - Checksum file을 제공해서 binary 무결성 검사를 할 수 있게 한다 (#2022)
+ - Sensor List 자동 정리 기능 추가 (#1964)
+ - Aidon 검침 시 전일 데이터를 못 가지고 오는 오류 수정 (#2013)
+ - CDMA 제어 코드 오류 수정 (#2001)
+ - LQI/RSSI 값 오류 수정 (#1999)
+ - Hybrid Network에서 install 당일 RFD의 Path 정보가 표시 안될 수 있는 버그 수정 (#1988)
+ - MAX Process 수를 524에서 unlimited로 수정 (#1981)
+ - Shell Command 기능 개선 (#1242)
+ - Recovery 시 센서 수가 부족한 버그 수정 (#1982)
+ - CLI Command 수정 (recovery previous, recovery current -> recovery metering, recovery sensor) (#1982)
+ - Sysmon에서 검사 조건 수정 3회 오류 발생에서 10회 오류발생으로 (#1981)
+ - CDMA 환경에서 잘못된 시간동기화 오류 수정 (#1980)
+ - Route Record를 10HOP으로 가정한 코드 수정 (#1887)
+ - Super Parent Network에서 End Device의 Path 정보가 잘 못 나오는 경우 수정 (#1973)
+ - HIGH RAM Coordinator 지원 (#1965)
+ - 검침데이터가 잘 못 저장되는 버그 수정 (#1893)
+ - Patch_5_1949 추가 (#1949)
+ - EndDevice의 Route Path가 Parent Device의 Path 변경에 연동되도록 수정 (#1926)
+ - mcuAlert Event를 추가해서 내부 자료구조 변경 이력을 남김 (#1935)
+ - Sensor Event Log 조회기능 'show sensor event' 추가 (#1927)
+ - Pulse Sensor에 대한 'ondemand metering' 기능 추가 (#1633)
+ - Event 구조체 탐색에 있던 버그 수정 - 처리 안되는 이벤트 문제 (#1879)
+ - CLI에서 'ondemand metering' 결과와 'show metering info' 결과를 일치 시킴 (#1916)
+ - Repeater 정기 검침 기능 추가 (#1895)
+ - FFD 정보를 조회하는 'show ffd list' 명령어 추가 (#1894)
+ - Sensor에 대한 Control Function 추가 (#1885)
+ - Sensor에 대한 Rom Info 정보 확대 (#1883)
+ - cmdGetSensorROM 명령에 복수개의 영역을 지정하는 기능 추가 (#1884)
+ - STATE Frame 전송 시 Solar Repeater 정보 추가 전송 처리 (#1871)
+ - Pulse센서의 전류값 표시 방식 변경 (#1867)
+ - Pulse Sensor Info Frame에 Alarm Flag 추가 (#1864)
+ - Super Parent에서 End Device와 Route Device를 구분하여 Connect 하는 기능 추가 (#1791)
+ - GE Meter에서 재전송되는 중복 Frame을 제거하는 기능 추가 (#1766)
+ - Sequence가 뒤집힌 Frame을 복구하는 기능 추가 (#1721)
+ - Lazy Scanning일 경우 Extended Timeout을 Disable 하는 로직 추가 (#1730)
+ - Coordinator Stack 3.2 지원 (#1726)
+ - set sensor mquarter의 설명 수정 (#1693)
+ - EndDeviceList에 parent 노드 추가
+ - InventoryHash추가 (Join인 정보를 임시 보관하여 주는 루틴)
+ - show metering summary에 결과가 나오지 않는 버그 수정 (#1687)
+ - Metering을 수행 후 동 시간대 결과를 삭제하는 버그 수정 (#1684)
+ - DemandReset 방식에서 Ondemand 시 무한 검침 오류 수정 (#1679)
+ - GE Meter에서 SelfRead/DemandReset 두가지 방식으로 정기 검침을 할 수 있도록 수정 (#1678)
+ - show metering summary 명령어 추가 (#1538)
+ - Old Type의 Metering Info Frame을 처리할 수 있도록 수정 (#1477)
+ - 중복 검침 데이터 무시 기능 추가 (#1538)
+ - set sensor command 명령 전송 시 잘못된 데이터 사이즈 전송 문제 수정 (#1664)
+ - Patch_4_1647 추가 (#1647)
+ - Pulse Sensor가 잘못된 Build 번호를 가지는 오류 수정 (#1665)
+ - STATE Frame 전송 시 ShortID가 추가 전송되었을 때 처리할 수 있도록 수정 (#1647)
+ - Scanning Strategy 변경 시 자동으로 Route Discovery Option 조절 기능 추가 (#1648)
+ - Multicast Frame HOP 수를 조회/설정 하는 기능 추가 (#1621)
+ - Route Discovery 정보를 조회/설정 하는 기능 추가 (#1619)
+ - Test Mode 시 0,15,30분에 Timesync를 전송 못하는 문제 수정 (#1441)
+ - Metering Day/Hour를 설정할 수 있는 명령어 추가 (#1620)
+ - Sleepy End Device의 Delivery Timeout 조정 기능 처리를 위해 Connect 관련 코드 수정 (#1622)
+ - show sensor path가 동작하지 않는 오류 수정 (#1593)
+ - GE Meter에서 발생하는 ER002 Error Reset 기능 추가(#1529)
+ - Patch_3_1573 추가 (#1573)
+ - EndDeviceList의 Size가 변경될 경우 목록 삭제 기능 추가(#1565)
+ - Patch_2_1565 추가 (#1565)
+ - Pulse Sensor Install Event 전송 시 Service Type 오류 수정 (#1556)
+ - monet을 GSM/CDMA에서 모두 가능하도록 수정 (#1553)
+ - LP Period가 0인 Battery Node의 Info Frame은 DATA_RECV 상태가 되지 않도록 수정 (#1552)
+ - Battery Node의 Inventory 등록 시 Info Frame 이외의 Frame은 무시하도록 수정 (#1547)
+ - CLI상에 Hidden Command 속성 추가 (#1549)
+ - Patch_1_1540 추가 (#1540)
+ - 집중기에 적용되는 Patch를 조회하고 설정하는 기능 추가 (#1548)
+ - Pulse Mesh Network에서 Inventory Scanning을 하지 않도록 수정 (#1541)
+ - 수동 timesync 시 MTOR를 하지 않는 버그 수정 (#1515)
+ - AMR Reading 시 잘못된 Day/Hour Mask 표시 오류 수정 (#1460)
+ - CDMA에서 Diff 시스템을 이용한 Upgrade만 가능하도록 수정(#1506)
+ - CDMA 사용시 시간 동기화 및 circuit 방식의 Firmware Upgrade 기능 수정 (#1506)
+ - Pulse Mesh Network에서 Join 시 Sensor 시간 동기화 기능 추가(#1486)
+ - Pulse Mesh Network 구조 지원 (#1477)
+ - Factory Install 수정 (#1480)
+ - Package 명명법 변경 (#1478)
+ - 'set system tzone' 명령으로 NAZC timezone 설정 기능 추가 (#1231)
+ - Log 저장 옵션 변경 (#1472)
+ - Coordinator Upgrade 실패로 Boot mode 전환 시에도 Upgrade 명령으로 복구할 수 있도록 처리 (#1437)
+ - show sensor path tree 명령어 지원 (#1461)
+ - Delivery Error 처리 코드 복원 (#1450)
+ - Sensor F/W Build 정보 관리 (#1455)
+ - Concentrator Test Mode 지원 (enable/disable testmod) (#1441)
+ - 기본 Timeout 변경 - Link 3000ms -> 4500ms, Data 3000ms -> 6000ms
+ - OTA 중에 Timesync를 전송하지 않도록 수정 (#1352)
+ - Disk 공간이 부족할 때 검침 데이터를 지우도록 수정 (#1420)
+ - Unknown Parser 추가 (#1417)
+ - Sensor Communication Communication timeout을 parser 값을 이용할 수 있도록 수정
+ - Event Severity/Notification 정보를 조회/수정하는 기능 추가 (#1399)
+ - Power Down/Up Event 발생 시 3초간의 Delay 적용 (#1396)
+ - Rom Write 시 Mutilcast를 이용한 Write 가능하도록 기능 추가 (#1387)
+ - Metering/Recovery Timeout을 Retry 단위에서 Meter 단위로 변경 (#1370)
+ - MAX_HOP 변경 반영 (10->30) (#1338)
+ - NZC2 H/W 버전 정보 변경 2.4 -> 2.0 
+ - SensorLimit 초과 시 permit 0로 변경하는 코드 추가 (#1136)
+ - 잘못된 RTC 시간에 timesync 안하는 로직 추가 (#1182)
+ - Meter timesync가 enable 되면 다시 disable 안되는 문제 수정 (#1304)
+ - hourly upload일 경우 upload 문제 수정 (#1244)
+ - Heater Event 발생 로직 수정 (#1296)
+ - Scanning Strategy 기능 추가 (#1286)
+ - NTP 설정 시 Default 서버가 실패할 경우 FEP 서버를 시도하도록 수정 (#1285)
+ - linkkey, networkkey setting 기능 삭제
+ - Coordinator RF Power 유효 범위 변경 (#1255)
+ - timesync interval default 값을 15분으로 변경 (#1225)
+ - OTA시 validation timeout 발생 수정 (#1247)
+ - delete sensor all 일 때 multicast로 메시지 전송 (#1229)
+ - Coodinator Unknown Status 감지 루틴 수정 (#1197)
+
+3.0.6/3.1.0
+ - GE Meter Security를 Makefile.rules 에서 Default 값을 결정할 수 있도록 수정
+ - 대량 복전 발생 시 type 정보 오류 수정 (#1238)
+ - Line Missing 관련 버그 수정 (#1239)
+ - 2.x Board 용 H/W Test Program 추가 (#1232)
+ - Coordinator Stack 버전 정보 수정 (#1237)
+ - mterm을 수정해서 coordinator io를 console로 전송 (#1233)
+ - 45, 46분 두번에 걸처 timesync가 발송되는 문제 수정 (#1225)
+ - Coordinator F/W Build 정보 표시 기능 추가(#1228)
+ - MCU Startup Event에 빠져 있던 sysHwVersion, sysSwVersion 추가(#1227)
+ - 2.x Board 지원을 위한 GPIO 수정 (#1220)
+ - Sensor Leave 시 Channel/PanID를 지정할 수 있도록 수정 (#1224)
+ - Sensor Timesync를 Default로 enable 시킨다.
+ - LINK 처리를 위하여 LINK Delivery ack는 무시하고 센서의 Read/Response만 유효한
+   접속으로 인정하도록 변경
+ - 미터 종류별로 Retry 횟수를 다르게 설정할 수 있도록 변경
+   Ondemander 내부에 모든 함수에 적용됨
+ - UploadWatchdog 버그 수정 (#1215)
+ - Upload 결과가 항상 0개 성공으로 나오는 문제 해결 (#1216)
+ - AMR Frame을 이용한 Set을 SensorCommand 로 변경 (#1212)
+ - Ondemand 에서 GE Meter 과거 LP 정보 수집 오류 수정 (#1213)
+ - OTA Frame이 HOP에 따라 size가 변경되도록 수정 (#1212)
+ - cmdSensorCommand 추가 (#1186)
+ - Source routing 경로를 조회할 수 있는 명령 추가 (show sensor path)
+ - MeterUpload에서 마지막 전송한 파일의 정보를 /app/conf/lastUpload 라는 파일에 저장
+ - MeterUpload에서 복수 파일 전송시 현재 파일 전송이 실패하면 전송 중지 하고 파일 전송
+   순위를 파일명으로 Sort하여 순차적으로 전송하도록 수정
+ - Upload에서 파일을 Seek 하는 파라메터를 마지막에 추가
+ - AMR Frame에 Alarm Flag 추가
+ - ROM Read시 요청한 데이터 길이와 수신된 길이가 달라서 집중기가 죽는
+   문제를 막기위하여 CODIAPI와 AIDON 검침 루틴을 길이 검사하도록 수정 (#1194)
+ - 가스 검침기가 LINK ACK에 대한 응답을 Coordinator의 ID로 응답하는 경우
+   예외 처리하도록 수정
+ - ICMP 포트가 막힌 경우 FEP로 SOCKET Ping하는 기능 추가
+   show option에서 ICMP/SOCKET/ICMP+SOCKET으로 표시됨
+   PingClient 추가
+ - set option pingmethod 명령 추가
+ - 센서 가스 추가에 따른 ROM Address 및 구조체 변경사항 반영
+ - Sensor OTA 기능 추가 (#1186)
+ - CLI에서 AMR Data Set 기능 추가
+ - ENDISTATE_DATA_RECEIVE 추가(검침데이터 전송 시작할 때 설정됨)
+ - CLI에서 show sensor amr 기능 추가 (PULSE Support 일 때만 Enable)
+ - Windows CODIAPI에서 Downlaod 지원을 위한 수정
+ - 시간동기화 메세지를 쏘지 않토록 옵션을 조정해도 Many to one netowk은
+   쏘도록 변경
+ - CLI에 sensor timesync 기능 추가 (#1184)
+ - pppd를 실행 시키고 wait 하도록 수정 (#1183)
+ - download coordinator 명령 추가 (코디네이터 펌웨어 업그레이드)
+ - PULSE식 Meter Multi-Frame 검침 데이터 저장 기능 추가
+ - Process Check 시 Zombie 는 무시하도록 수정 (#1183)
+ - SystemMonitor에서 GSM이 10분간 Hangup 이면 Watchdog reset 하도록 수정
+ - codiAPI unbinding 수정 반영
+ - 44분이후 수동 Metering/Recovery 실행되지 않토록 수정
+ - Backhaul Test시 자동리셋, 검침, 실패 검침이 동작하지 않토록 수정
+ - Ping start되면 자동리셋, 검침, 실패 검침이 동작하지 않토록 수정
+ - 쓰레드수, Period, Retry를 0으로 줄때 최소값 으로 동작하도록 수정
+   검침, 실패검침, 폴링에 반영
+ - 기존 endiConnect 함수를 호출하면 자동으로 codiOnQueryRouteRecord를 호출하여
+   기존 API와 호환성을 가지도록 변경
+ - INDOOR에서 초기 LED 상태 처리 수정 (외부 집중기 상태 LED)
+ - 콘솔을 통한 설정/데이터 백업 기능 구현
+ - Ping start/stop시 센서가 등록되지 않았을때 오류 정정
+ - 디버깅 메세지에 색상 표시 기능 추가 (터미널에서 ANSI Color를 선택하여야함)
+ - Keepalive를 수신하여도 ShortID가 0인 경우 Inventory scanning을 하지 않는다.
+   -> Many to one을 수신하지 못한 노드가 새로 등록된 경우
+ - 검침 로그에 Routing 정보 저장 하도록 수정
+ - 공장생산 절차 개선 (#1179)
+ - Inventory Scanning 처리시 시간 대기 부분이 sleep 없이 반복되는 구조가
+   부하기 많이 생겨 sleep 구조로 변경
+ - Route record 정보가 Keepalive 프레임 이전에 전송되어 EndDeviceList에 등록되지
+   않은 상태에서 해당 정보를 저장할 수 없는 문제를 해결하기 위하여 Inventory
+   Scanner에서 가장 최근에 수신된 Route record 정보 20개를 Cache 하여 사용하도록
+   변경 (Cache는 순환 구조의 Cache이며, 센서별로 하나의 Cache 항목이 생성된다.)
+ - EndDeviceList 관리시 빠른 검색을 위하여 Hash를 이용해서 이진 검색 하도록 변경
+ - common에 CHash 추가 (이진 Sort, 이진 검색을 통한 Hash)
+ - codiBootload 추가
+ - codiDownload 추가
+ - codiOnRouteRecord callback 추가
+ - codiOnQueryRouteRecord callback 추가
+ - ENDIENTRY에 Route record 정보 저장하도록 변경
+ - EndDeviceList에 UpdateRouteRecord, QueryRouteRecord 함수 추가
+   -> 기존 센서 목록은 삭제하고 다시 등록하여야 함.
+ - 센서가 Join할때는 Inventory scanning을 수행하지 않토록 수정
+ - timesyncTheshold 지원 (#1178)
+ - 환경파일 backup시 DMAgent 정보 및 ppp/chatscript, ppp/peers 하위정보도
+   같이 저장하도록 변경
+ - repeater는 검침데이터를 저장하지 않토록 수정
+ - repeater도 검침 시간에 검침 시간이 업데이트 되도록 수정
+ - repeater에 대한 parser 추가
+ - timesync 에서 ntpdate가 실패할 경우 RTC 동기화 안하도록 수정 (#1177)
+ - GMT9 timezone 추가
+ - 검침 및 실패 검침 시작전 리셋 기능 제거
+ - 검침과 실패 검침의 Watchdog 타임을 2시간으로 변경
+ - Recovery 시 nSuccess Count 오류 수정
+ - 삭제됐던 검침 시 SW Reset을 다시 복구한다. (#1151)
+ - Serial Speed를 38400으로 down 시킨다 (#1151)
+ - codiAPI에서 매 전송 요청시 마다 150ms delay를 두도록 한다 (#1151)
+ - SensorTimeSync를 매시 45분 9초에 한번만 전송하도록 변경 (#1151)
+ - endiOnKeepAlive 수신시 자동 등록 모드가 아니면 SKIP하도록 수정
+ - 가스 검침데이터가 수신되면 등록되지 않은 센서의 경우 등록하도록 적용
+ - 가스 검침데이터를 MeterWriter에서 저장하도록 적용
+ - 가스 테스트용 Playback.cpp 추가
+ - codiPlayback API 함수 추가 - 자신이 원하는 프레임이 마치 coordinator에서
+   전송되어온것처럼 시뮬레이션 해준다.
+ - Distribute Metering시 Watchdog Timeout 오류 수정 (#1176)
+
+3.0.5
+ - send에서 printf로 출력하던 에러 메시지를 XDEBUG로 변경
+ - Binding후 Link를 맺기 까지 100ms의 interval을 둔다 (#1151)
+ - Metering Thread Default 값을 2->1로 변경 (#1151)
+ - Metering Strategy를 지원 (serial/distribute) (#1169)
+ - Join 후 Inventory Scan 이 될 때 까지 최소 10초를 기다린다 (#1170)
+ - LQI, RSSI 추가
+ - 모든 데이터 프레임 callback function에 대하여 LQI, RSSI가
+   반환되도록 callback 함수가 변경
+ - agent의 Shutdown 동작에서 BATTERY disable후 Reset은 하지 않토록 변경
+ - SITE_KEY, SITE_SUPERKEY를 MD5로 Encoding 처리
+   . common에 MD5.cpp, MD5.h 추가 -> 사용시 GetString 함수를 사용
+     CMD5 md5; md5.GetString("변환할내용", "변환된값");
+   . ZigbeeServer에서 Encoding 처리하여 비교
+ - Watchdog 대상 추가
+   . SystemMonitor
+   . AutoReset
+   . EventManager
+   . MeterUploader
+   . Metering
+   . Recovery
+ - Software Watchdog 추가 (#1163)
+   . Watchdog추가
+   . JobObject 추가
+   . Watchdog 이벤트 추가 (204.8)
+ - 시간 차이 구한값을 unsigned long으로 치환 (#1162)
+ - codiSync에서 Interval 0이면 무조건 동기화 하도록 수정
+ - 검침/실패검침/복구 시에는 Sensor Timesync를 하지 않는다 (#1151)
+ - CLI sysSwRevision 누락된것 추가
+ - 집중기와 PDA간 통신 기능 구현
+   . PDA에서 IF4 통신 가능하도록 적용 - NURI/1.0 NACS 8000 지원
+   . PDA에서 텔넷 접속이 가능하도록 적용 - NURI/1.0 TELNET 23 지원
+ - 집중기도 센서 처럼 ROM Read 기능 지원
+ - codiapi 함수 추가
+   int endiBind(HANDLE codi, EUI64 *id, BYTE type, int nTimeout);
+   int endiLink(HANDLE codi, EUI64 *id, BYTE seq, BYTE type, int nTimeout);
+   int endiWrite(HANDLE codi, EUI64 *id, BYTE seq, BYTE type, BYTE *data, int nLength, int nTimeout);
+ - ZigbeeServer 추가
+ - Delete Binding시 Binding Error가 15초 이상 지속될때 리셋 되도록 수정
+ - Delete Binding시 Binding is active 상태인 경우 15초 동안 대기하여 Delivery error
+   가 발생되는것을 확인 하도록 수정 (Reset은 하지 않음)
+ - SITE_KEY define
+ - MeterTimeSync가 Disable 안되는 문제 수정 (#1167)
+ - IF4 Protocol에 PDA를 위한 Attribute 추가-요청에 대한 응답 압축 사용 여부
+ - Sensor Time Sync 로직 수정-과거로 시간변경시에도 timesync 하도록 (#1162)
+ - GSM Reset Code 수정 (#1161)
+ - sensorAlarmEvent에서 status Parameter Type 변경 (#1160)
+ - Alarm Event를 두번 전송하는 문제 수정
+ - copyright 문자열 통일 (#1159)
+ - sensorLimit에 의한 join 거부 조건 수정 (#1157)
+ - 정기검침전에 Coordinator를 SW Reset (#1156) ----- 기능 제거 되었음
+ - Binding 실패 시 Coordinator SW Reset Code 추가
+ - recovery previous 명령 시 데이터 깨지는 현상 수정 (#1156)
+ - CLI 명령어 등급 재조정 (#1155)
+ - GE Meter Event Log Schedule View/Set 기능 추가 (#1148)
+ - DM Agent Fimware Upgrade 시 ack에 대한 즉시 return 코드 추가
+ - Sensor Limit 기능 추가 (#1152)
+ - Flow Control을 위해 CODI_OPT_RTSCTS 를 Enable 시킴(#1151)
+ - Ondemand 시 retry delay를 100ms에서 1sec로 변경
+ - OTA를 위해서 Coordinator Reset time을 180sec로 수정
+ - RomRead 시 반복되는 bind로 에러나는 현상 수정
+ - GE Meter 오류 회피 코드 추가(#1150)
+ - Aidon Meter LP 읽기 수식 변경 (잘못된 Address Mapping)
+ - Sensor에서 전송하는 KeepAlive 처리 추가 (#1149)
+ - timesync 가 UTC로 값을 얻도록 수정
+ - 대량 정전 기능 활성화
+ - 대량 정전 대기시간을 10초로 변경
+ - cmdGetSensorRomData의 length가 63byte 제한이었던것을 제한없는것으로 처리 
+ - agent가 죽은경우 launcher는 집중기를 리부팅하도록 변경
+ - GSM 모드로 들어갔다가 30분후 집중기를 리셋하도록 변경 (#1147)
+ - 에이젼트는 SEGMENT FAULT가 발생하면 자체적으로 리부팅된다.
+ - Ping 테스트에서 지정된 타임아웃 이전에 타임아웃되는 문제 수정
+ - IF4API에서 이벤트 및 검침데이터 전송이 잘 안되는 문제 수정
+
+3.0.4
+ - Meter Timesync의 Default 값을 FALSE로 조정
+ - resolv.conf에 대한 link 추가(#1145)
+ - apn 기본 설정으로 usepeerdns 추가 (#1146)
+ - timesync 오류 수정 (#1146)
+ - Metering Data에 SType, SVC 정보 추가 (#1142)
+ - install script 수정
+ - ppp 디렉토리 아래에 있는 스크립트들 삭제
+ - DM Agent를 위해서 HW_MODEL_INDOOR, HW_MODEL_OUTDOOR를 추가
+ - 자동 시간 동기화 시 Timesynclog를 안쌓는 문제 해결 (#1141)
+
+3.0.3
+ - CLI 명령어 순서 조정
+ - Power Outage 기능 추가 (#1128)
+ - Event Level 조정 및 Default Event Level을 Critical에서 Major로 조정(#1139)
+ - GPRS 재접속시에 DTR을 HIGH - LOW로 처리해야 하는데 HIGH - HIGH로 처리하여
+   PPP가 접속이 안되는 문제 수정
+ - Event Level에 따른 전송 코드 오류 수정 (#1138)
+ - reset sensor 기능 복원
+ - Sensor time sync 시 timezone 정보 설정 (#1133)
+ - Aidon Meter Reading Data에 dateCount 추가(#1130)
+ - Aidon MCCB 기능 추가 (#1117)
+ - Aidon Meter에 대한 정기 검침 시 당일/전일 LP를 읽도록 수정(#1125)
+ - Sensor ROM에 대한 읽기 기능 추가(#1119)
+ - CLI Copyright 수정
+ - hwtest에 GPS 검사 기능 추가(#1120)
+ - 이벤트 별 등급, 전송 여부 설정 기능 추가
+ - 이벤트 전송 딜레이 설정 기능 추가 (대량 이벤트 발생시)
+ - ping meter에서 AIDON의 경우 정상 출력이 안되는 문제 수정
+ - 검침 및 실패 검침시 마지막 검침 시간 업데이트가 잘못되는 문제 수정
+ - 주기적 시간동기화를 Polling.cpp에서 제거, 수동은 유지
+ - 센서 리스트에 마지막 이벤트로그 수집시간, 마지막 upload 시간 필드 추가
+
+3.0.2
+ - show sensor info에 잘못된 metering time이 나오는 문제 해결
+ - 설치 시간이 업데이트 안되는 문제 해결
+ - REPEATER 노드도 검침에 포함되는 문제 해결
+ - 센서 리스트에서 전기 노드, 배터리 노드, 리피터 노드 순으로 정렬되도록 수정
+ - hwtest 가 Coordinator Stackup을 120초까지 기다리도록 수정(#1118)
+
+3.0.1
+ - Socket Connection Error 문제 해결
+
+3.0.0
+ - Coordinator Stack 3.0.x 사용
+ - 호주 버전 집중기 기능을 수정
+

@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# 
+# Run Task
+#
+#
+
+DIR=/app/sw/script
+TASKLIST=task.list
+
+while getopts "d:" Option
+do
+    case $Option in
+        d   ) DIR=$OPTARG;;
+    esac
+done
+
+if [ ! -d $DIR ] 
+then
+    exit 1
+fi
+
+cat /dev/null > $DIR/$TASKLIST
+
+if [ -f $DIR/disable ]
+then
+    exit 2
+fi
+
+#
+ls $DIR/*.do | while read TASK
+do
+    case $TASK in
+        *Scheduler* | *Daemon* )
+            echo $TASK >> $DIR/$TASKLIST
+        ;;
+    esac
+    echo "execute $TASK"
+    $TASK &
+done

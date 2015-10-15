@@ -1,0 +1,14 @@
+
+include Shared.rules
+include Makefile.rules
+
+MAKE 	= make
+SUBDIRS = samples
+
+all: 
+	@set -e; for i in $(SUBDIRS); do echo $$i; $(MAKE) -C $$i ; done
+
+clean:
+	@set -e; for i in $(SUBDIRS); do $(MAKE) -C $$i clean; done
+	@rm -rf docs
+

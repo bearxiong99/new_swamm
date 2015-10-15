@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/reset
+END
+MobileClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/reset/MobileClient.cpp
+END
+MobileClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/reset/MobileClient.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/reset/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/reset/common.h
+END
+gsmnet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/3237/trunk/nazc/src/reset/gsmnet.cpp
+END

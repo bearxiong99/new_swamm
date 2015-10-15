@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi
+END
+Makefile.rules
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/Makefile.rules
+END
+CHANGES
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/CHANGES
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/codiapi/Makefile
+END
+Shared.rules
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/Shared.rules
+END
+doxygen.conf
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5176/branches/site/swamm/codiapi/doxygen.conf
+END

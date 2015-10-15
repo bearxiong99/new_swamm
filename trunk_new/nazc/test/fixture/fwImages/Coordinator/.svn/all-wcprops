@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/fixture/fwImages/Coordinator
+END
+NZM108_Coordi_SW_V23_B05.ebl.gz
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/fixture/fwImages/Coordinator/NZM108_Coordi_SW_V23_B05.ebl.gz
+END
+NZM108_Coordi_SW_V23_B06.ebl.gz
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/fixture/fwImages/Coordinator/NZM108_Coordi_SW_V23_B06.ebl.gz
+END
+NZM108_Coordi_SW_V23_B05.ebl.gz.sum
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/fixture/fwImages/Coordinator/NZM108_Coordi_SW_V23_B05.ebl.gz.sum
+END
+NZM108_Coordi_SW_V23_B06.ebl.gz.sum
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/fixture/fwImages/Coordinator/NZM108_Coordi_SW_V23_B06.ebl.gz.sum
+END
+NZM108_V23-05_V23-06.diff
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/fixture/fwImages/Coordinator/NZM108_V23-05_V23-06.diff
+END
+NZM108_V23-06_V23-05.diff
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/fixture/fwImages/Coordinator/NZM108_V23-06_V23-05.diff
+END
+NZM108_V23-05_V23-06.diff.sum
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/fixture/fwImages/Coordinator/NZM108_V23-05_V23-06.diff.sum
+END
+NZM108_V23-06_V23-05.diff.sum
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/fixture/fwImages/Coordinator/NZM108_V23-06_V23-05.diff.sum
+END

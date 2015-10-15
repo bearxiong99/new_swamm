@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/vendor_defns
+END
+hw_4758_cca.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/vendor_defns/hw_4758_cca.h
+END
+sureware.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/vendor_defns/sureware.h
+END
+atalla.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/vendor_defns/atalla.h
+END
+cswift.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/vendor_defns/cswift.h
+END
+hw_ubsec.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/vendor_defns/hw_ubsec.h
+END
+hwcryptohook.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/vendor_defns/hwcryptohook.h
+END
+aep.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/third/openssl-1.0.0a/engines/vendor_defns/aep.h
+END

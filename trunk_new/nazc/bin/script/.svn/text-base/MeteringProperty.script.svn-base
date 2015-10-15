@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# 
+# Initialize Metering Property
+#
+#
+export LD_LIBRARY_PATH=/usr/lib:/lib:/app/lib:/app/sw/lib
+
+#
+# Issue #930
+# Metering Property의 초기값을 설정한다
+#
+/app/sw/sqlite3 /app/sqlite/Property.db <<EOF
+
+INSERT OR IGNORE INTO MeterPropertyTbl (grp, property, type, key, value, lastUpdate)
+  VALUES('DLMS', 'SERVER_ADDR', 'NODE', 'NAMR-P111SR', X'0101', DATETIME('now','localtime'));
+INSERT OR IGNORE INTO MeterPropertyTbl (grp, property, type, key, value, lastUpdate)
+  VALUES('DLMS', 'CLIENT_ADDR', 'NODE', 'NAMR-P111SR', X'11', DATETIME('now','localtime'));
+
+INSERT OR IGNORE INTO MeterPropertyTbl (grp, property, type, key, value, lastUpdate)
+  VALUES('DLMS', 'SERVER_ADDR', 'NODE', 'NAMR-P115SR', X'017F', DATETIME('now','localtime'));
+INSERT OR IGNORE INTO MeterPropertyTbl (grp, property, type, key, value, lastUpdate)
+  VALUES('DLMS', 'CLIENT_ADDR', 'NODE', 'NAMR-P115SR', X'11', DATETIME('now','localtime'));
+
+.quit
+EOF
+

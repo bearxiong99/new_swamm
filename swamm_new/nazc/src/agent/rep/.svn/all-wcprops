@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5186/branches/site/swamm/nazc/src/agent/rep
+END
+GroupHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/GroupHelper.h
+END
+MeterSecurityHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/MeterSecurityHelper.cpp
+END
+DatabaseHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/DatabaseHelper.cpp
+END
+MeterSecurityHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/MeterSecurityHelper.h
+END
+DatabaseHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/DatabaseHelper.h
+END
+Repository.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/Repository.cpp
+END
+DbUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/DbUtil.cpp
+END
+Repository.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/Repository.h
+END
+MessageHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/MessageHelper.cpp
+END
+VariableHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/VariableHelper.cpp
+END
+DBRepository.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5186/branches/site/swamm/nazc/src/agent/rep/DBRepository.cpp
+END
+DbUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/DbUtil.h
+END
+MessageHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/MessageHelper.h
+END
+VariableHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/VariableHelper.h
+END
+DBRepository.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5186/branches/site/swamm/nazc/src/agent/rep/DBRepository.h
+END
+GroupHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/src/agent/rep/GroupHelper.cpp
+END

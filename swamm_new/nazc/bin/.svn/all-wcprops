@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5470/branches/site/swamm/nazc/bin
+END
+dhcpd
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/dhcpd
+END
+mkSharedRules.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/mkSharedRules.sh
+END
+bspatch
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/bspatch
+END
+dhcpcd
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/dhcpcd
+END
+server.pem
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/server.pem
+END
+calendar.ini
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/calendar.ini
+END
+load.sh
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/load.sh
+END
+sensor.type
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/sensor.type
+END
+freeze.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/freeze.sh
+END
+timezone
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/timezone
+END
+timesync
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5242/branches/site/swamm/nazc/bin/timesync
+END
+mkInstallScript.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/mkInstallScript.sh
+END
+ftp.script
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/ftp.script
+END
+bsdiff
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/bsdiff
+END
+relaunching
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/relaunching
+END
+startup
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/startup
+END
+mkChecksum.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/mkChecksum.sh
+END
+install
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5217/branches/site/swamm/nazc/bin/install
+END
+verify.script
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/verify.script
+END
+revision.sh
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5470/branches/site/swamm/nazc/bin/revision.sh
+END
+pkginstall
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/pkginstall
+END
+dump.script
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/dump.script
+END
+patch.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/bin/patch.sh
+END
+cert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/cert.pem
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5461/branches/site/swamm/nazc/bin/Makefile
+END
+dhcpcd-kill
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5199/branches/site/swamm/nazc/bin/dhcpcd-kill
+END

@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# 
+# Database Migration
+#
+#
+export LD_LIBRARY_PATH=/usr/lib:/lib:/app/lib:/app/sw/lib
+
+#
+# Table Create
+/app/sw/sqlite3 /app/sqlite/Property.db <<EOF
+CREATE TABLE IF NOT EXISTS MeterPropertyTbl 
+    ( _id INTEGER PRIMARY KEY AUTOINCREMENT, 
+      grp TEXT NOT NULL, 
+      property TEXT NOT NULL, 
+      type TEXT NOT NULL, 
+      key TEXT NOT NULL, 
+      value NOT NULL, 
+      lastUpdate DATETIME NOT NULL,  
+      UNIQUE ( grp, property, type, key )
+    );
+EOF
+
+#
+# Issue #930
+# MeterSecurityTbl, MeterOptionTbl 을 MeterPropertyTbl 로 통합
+#
+if [ -e /app/sqlite/Security.db ];
+then
+/app/sw/sqlite3 /app/sqlite/Property.db <<EOF
+ATTACH '/app/sqlite/Security.db' AS SE; 
+
+INSERT OR IGNORE INTO MeterPropertyTbl (grp, property, type, key, value, lastUpdate)
+  SELECT 'SECURITY', 'METER_SECURITY', type, name, key, lastUpdate 
+  FROM SE.MeterSecurityTbl;
+
+.quit
+EOF
+
+rm -f /app/sqlite/Security.db 2> /dev/null
+fi
+
+if [ -e /app/sqlite/Options.db ];
+then
+/app/sw/sqlite3 /app/sqlite/Property.db <<EOF
+ATTACH '/app/sqlite/Options.db' AS OP; 
+
+INSERT OR IGNORE INTO MeterPropertyTbl (grp, property, type, key, value, lastUpdate)
+  SELECT 'METERING_PARAM', 'METERING_OPTION', type, name, option, lastUpdate 
+  FROM OP.MeteringOptionTbl;
+INSERT OR IGNORE INTO MeterPropertyTbl (grp, property, type, key, value, lastUpdate)
+  SELECT 'METERING_PARAM', 'METERING_OFFSET', type, name, offset, lastUpdate 
+  FROM OP.MeteringOptionTbl;
+INSERT OR IGNORE INTO MeterPropertyTbl (grp, property, type, key, value, lastUpdate)
+  SELECT 'METERING_PARAM', 'METERING_COUNT', type, name, count, lastUpdate 
+  FROM OP.MeteringOptionTbl;
+
+.quit
+EOF
+
+rm -f /app/sqlite/Options.db 2> /dev/null
+fi
+

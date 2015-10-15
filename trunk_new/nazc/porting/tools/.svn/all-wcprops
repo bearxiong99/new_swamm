@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/rep0/mcu/!svn/ver/3945/trunk/nazc/porting/tools
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/3696/trunk/nazc/porting/tools/Makefile
+END
+endianCheck.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/3345/trunk/nazc/porting/tools/endianCheck.c
+END

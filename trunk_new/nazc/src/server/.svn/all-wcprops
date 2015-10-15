@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/server
+END
+Utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/server/Utils.cpp
+END
+CommandHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/3945/trunk/nazc/src/server/CommandHandler.h
+END
+ServiceController.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/server/ServiceController.cpp
+END
+McuService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/server/McuService.cpp
+END
+Utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/rep0/mcu/!svn/ver/3945/trunk/nazc/src/server/Utils.h
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/1990/trunk/nazc/src/server/Variable.cpp
+END
+server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/3945/trunk/nazc/src/server/server.cpp
+END
+ServiceController.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/server/ServiceController.h
+END
+McuService.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/server/McuService.h
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/1990/trunk/nazc/src/server/Variable.h
+END
+CommandHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/server/CommandHandler.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5182/trunk/nazc/src/server/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/rep0/mcu/!svn/ver/5/trunk/nazc/src/server/common.h
+END

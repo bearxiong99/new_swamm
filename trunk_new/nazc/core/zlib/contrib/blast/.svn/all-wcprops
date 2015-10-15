@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/zlib/contrib/blast
+END
+blast.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/blast/blast.c
+END
+test.pk
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/blast/test.pk
+END
+blast.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/blast/blast.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/blast/Makefile
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/blast/README
+END
+test.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/blast/test.txt
+END

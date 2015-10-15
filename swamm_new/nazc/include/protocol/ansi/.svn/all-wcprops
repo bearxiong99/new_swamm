@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/ansi
+END
+ansiUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/ansi/ansiUtils.h
+END
+ansiType.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/ansi/ansiType.h
+END
+ansiDataStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/ansi/ansiDataStream.h
+END
+ansiSessions.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/ansi/ansiSessions.h
+END
+ansiFunctions.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/ansi/ansiFunctions.h
+END
+ansiError.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/ansi/ansiError.h
+END
+ansiDefine.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/ansi/ansiDefine.h
+END
+ansiFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/include/protocol/ansi/ansiFrame.h
+END

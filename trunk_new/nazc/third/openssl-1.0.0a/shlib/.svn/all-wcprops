@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib
+END
+sco5-shared-installed
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/sco5-shared-installed
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/README
+END
+win32dll.bat
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/win32dll.bat
+END
+svr5-shared-gcc.sh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/svr5-shared-gcc.sh
+END
+win32.bat
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/win32.bat
+END
+svr5-shared.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/svr5-shared.sh
+END
+solaris-sc4.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/solaris-sc4.sh
+END
+sun.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/sun.sh
+END
+svr5-shared-installed
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/svr5-shared-installed
+END
+sco5-shared-gcc.sh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/sco5-shared-gcc.sh
+END
+hpux10-cc.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/hpux10-cc.sh
+END
+irix.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/irix.sh
+END
+Makefile.hpux10-cc
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/Makefile.hpux10-cc
+END
+solaris.sh
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/solaris.sh
+END
+sco5-shared.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5182/trunk/nazc/third/openssl-1.0.0a/shlib/sco5-shared.sh
+END

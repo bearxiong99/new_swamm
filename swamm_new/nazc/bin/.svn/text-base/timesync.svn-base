@@ -1,0 +1,66 @@
+#/bin/bash
+#
+# AiMiR RF Concentrator Time Sync Script
+#
+# Issue #811 Memo ~1912
+#  - remove pool.ntp.org lookup
+#  - use hwclock
+#  - use /app/conf/ntp.timeout
+#  - site : SWAMM
+#    * svn://~/mcu/branches/site/swamm r5187 
+#
+# Returen value
+#  - 0 : normal exit
+#  - 1 : FEP File not found
+#  - 2 : time synch fail
+# 
+
+DATE=/bin/date
+RTC=/dev/rtc
+NTPDATE=/usr/sbin/ntpdate
+FEPFILE=/app/conf/server.addr
+NTPTIMEOUT=3
+TIMEOUTFILE=/app/conf/ntp.timeout
+LOGFORMAT="+%Y%m%d"
+LOGFILE="/app/log/TSL"`$DATE -u "$LOGFORMAT"`".log"
+
+#
+# Read FEP Server Address
+if [ ! -f $FEPFILE ]; then
+    exec >&2; echo "$FEPFILE not found"; exit 1
+fi
+FEPSERVER=`cat $FEPFILE | head -1`
+
+#
+# Read NTP Timeout
+if [ -f $TIMEOUTFILE ]; then
+    TMP=`cat $TIMEOUTFILE | head -1`
+    if  expr "$TMP" : '[0-9]\+$' > /dev/null; then
+        NTPTIMEOUT=$TMP
+    fi
+fi
+
+#
+# Check RTC Driver 
+if [ ! -c $RTC ]; then
+    mknod $RTC c 10 135
+fi
+
+#
+# Excute ntpdate
+if $NTPDATE -t $NTPTIMEOUT $FEPSERVER 2>> $LOGFILE 1>&2 
+then
+  if [ -x /etc/init.d/S01setup ]; then
+# Ramdisk version 2.2 
+# Local Time Setting
+    hwclock -w -l
+  else
+# Ramdisk version 1.3 
+# UTC Time Setting
+    hwclock -w -u
+  fi
+else
+  exit 2
+fi
+
+exit 0

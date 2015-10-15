@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/action/Oid_111_5_cmdPollMessage
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/action/Oid_111_5_cmdPollMessage/Variable.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/action/Oid_111_5_cmdPollMessage/Makefile
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/action/Oid_111_5_cmdPollMessage/common.h
+END
+cmdPollMessage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/action/Oid_111_5_cmdPollMessage/cmdPollMessage.cpp
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/action/Oid_111_5_cmdPollMessage/Variable.cpp
+END

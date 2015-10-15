@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/external
+END
+aimirTestReporter.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/aimirTestReporter.h
+END
+Variable.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/Variable.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/external/Makefile
+END
+AidonMeter.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/4155/trunk/nazc/test/external/AidonMeter.h
+END
+GeMeter.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/GeMeter.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/external/common.h
+END
+TestOperation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/external/TestOperation.cpp
+END
+Utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/external/Utils.cpp
+END
+Doxyfile
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/Doxyfile
+END
+Utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/Utils.h
+END
+TestSensor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/external/TestSensor.cpp
+END
+TestMetering.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/external/TestMetering.cpp
+END
+TestIf4Api.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/TestIf4Api.cpp
+END
+CommandHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/CommandHandler.cpp
+END
+TestSetting.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/TestSetting.cpp
+END
+TestShow.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/TestShow.cpp
+END
+CommandHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/CommandHandler.h
+END
+TestCoordinator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/TestCoordinator.cpp
+END
+aimirTestReporter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/aimirTestReporter.cpp
+END
+testMain.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/external/testMain.cpp
+END
+TestOndemand.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5182/trunk/nazc/test/external/TestOndemand.cpp
+END
+TestVersion.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/TestVersion.cpp
+END
+Variable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/Variable.cpp
+END
+TestUpgrade.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/rep0/mcu/!svn/ver/3237/trunk/nazc/test/external/TestUpgrade.cpp
+END

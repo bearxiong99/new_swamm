@@ -1,0 +1,36 @@
+
+
+/** Small Page CSS */
+
+.tbl_style ul {
+    clear: left;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 120%;
+}
+.tbl_style .tbl_header {
+    display: none;
+}
+.tbl_style ul.query_row li {
+    padding-top: 4px;
+}
+.tbl_style ul.result_row {
+    padding-top: 10px;
+}
+.tbl_style ul.result_row button {
+    font-weight: bold;
+}
+.tbl_style ul li#resultLen {
+    text-align: right;
+}
+.tbl_style ul li#resultArea { 
+    border:1px solid #FFA0A0; 
+    padding: 10px;
+    font-weight: bold;
+    word-break: break-all;
+}
+.tbl_style ul li#resultArea span#smsmsgTxt{ 
+    display: none;
+}
+

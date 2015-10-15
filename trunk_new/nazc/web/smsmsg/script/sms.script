@@ -1,0 +1,146 @@
+
+/**
+ * SMS Command Message Generate Script
+ *
+ */
+
+var selectedGroup="";
+var selectedCmd="";
+var selectedParams="";
+var phoneNumber="";
+
+var initMessage="SMS Command Message here!";
+
+function requestQuery()
+{
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            document.getElementById("resultLen").innerHTML=xmlhttp.responseText.length + " Bytes";
+            document.getElementById("smsmsgTxt").innerHTML=xmlhttp.responseText;
+
+            phoneNumber = document.getElementById("PhoneNum").value;
+            if(phoneNumber != null && phoneNumber.length >= 10)
+            {
+                var phNum = phoneNumber.replace("-","");
+                document.getElementById("smsmsgSms").innerHTML=
+                    "<a href=\"sms://" + phNum + "?body=" + xmlhttp.responseText + "\">" + xmlhttp.responseText + "</a>";
+            }
+            else
+            {
+                document.getElementById("smsmsgSms").innerHTML=xmlhttp.responseText;
+            }
+        }
+    }
+    xmlhttp.open("POST","smsmsg.do?key=00" 
+            + "&cmd=" + selectedGroup + selectedCmd
+            + selectedParams,true);
+    xmlhttp.send();
+}
+
+function addOption(s, str, v)
+{
+    var opt = document.createElement('option');
+    opt.value = v;
+    opt.innerHTML = str;
+    s.appendChild(opt);
+}
+
+function changeCmdOption(options)
+{
+    var s = document.getElementById("Cmd");
+    var len = options.length;
+
+    s.innerHTML = "";
+    addOption(s, "Select commnad", "");
+
+    for (var i = 0; i < len; i+=2) {
+        addOption(s, options[i], options[i+1]);
+    }
+}
+
+function selectGroup(g)
+{
+    selectedGroup = g;
+    selectedCmd = "";
+    selectedParams = "";
+
+    resetResult();
+
+    switch (g)
+    {
+        case "E":
+            changeCmdOption([   "DCU Install", "01", 
+                                "DCU Startup", "02"]);
+            break;
+        case "F":
+            changeCmdOption([   "Remove All Data", "01"]); 
+            break;
+        case "M":
+            changeCmdOption([   "Metering", "01", 
+                                "Upload", "02",
+                                "Upload Date", "03",
+                                "Refresh Network", "04",
+                                "Meter Time Sync", "05"]);
+            break;
+        case "N":
+            changeCmdOption([   "Reconnect Reverse Connection", "01", 
+                                "Remove All Connection", "02"]);
+            break;
+        case "R":
+            changeCmdOption([   "Reset System", "01", 
+                                "Reset Master Modem", "02",
+                                "Reset Mobile", "03"]);
+            break;
+        case "S":
+            changeCmdOption([   "OID Set", "01", 
+                                "FEP Address", "11"]);
+            break;
+    }
+}
+
+function selectCmd(c)
+{
+    selectedCmd = c;
+    selectedParams = "";
+
+    resetResult();
+}
+
+function addParam()
+{
+    var v = document.getElementById("Param");
+
+    if(v.value != "")
+    {
+        var po = document.getElementById("paramOutput");
+        selectedParams = selectedParams+"&param="+v.value;
+        po.innerHTML = po.innerHTML + v.value + "<br/>";
+        v.value = "";
+    }
+}
+
+function resetParam()
+{
+    selectedParams = "";
+    document.getElementById("paramOutput").innerHTML="";
+}
+
+function resetResult()
+{
+    document.getElementById("smsmsgTxt").innerHTML=initMessage;
+    document.getElementById("smsmsgSms").innerHTML=initMessage;
+    document.getElementById("resultLen").innerHTML="0 Byte";
+    document.getElementById("paramOutput").innerHTML="";
+}
+

@@ -1,0 +1,322 @@
+#!/bin/bash
+
+BASENAME=$0
+
+CROSS_NAME=arm-xscale-linux-gnu
+CROSS_COMPILER=${CROSS_NAME}-
+CROSS_COMPILER_AR=${CROSS_COMPILER}
+CROSS_LIB=-${CROSS_NAME}
+ADDRESS_SIZE=32
+ENDIAN=little
+NZC_TYPE=NZC2
+GPIO_INCLUDE=-D__INCLUDE_GPIO__
+DISABLE_GPIO=
+NETWORK_NODE=-D__COORDINATOR__
+NO_BATTERY=
+NO_BATTERY_FLAG=
+OPT_NOUNUSED_RESULT=-Wno-unused-result
+OPT_FPIC=-fPIC
+COMPILE_DEF=
+LIB_EXT=so
+
+DISABLE_SSL=
+
+FILE=`which file`
+RM=`which rm`
+CONFTEST=conftest
+SHAREDRULES=Shared.rules
+
+CC=gcc
+CPP=g++
+LD=ld
+AR=ar
+RANLIB=ranlib
+STRIP=strip
+
+function usage
+{
+    cat <<_USGEOF
+Usage: $BASENAME [OPTIONS]...
+
+Options:
+  --target[=ARG]        Target system [ARG=arm-xscale-linux-gnu]
+  --nzc-type[=ARG]      NZC type [ARG=NZC2] (NZC4, NZC2, NZC1)
+  --device-type[=ARG]   Device type [ARG=codi] (codi, node)
+  --static-library      Using static library
+  --disable-gpio        Disable GPIO service
+  --disable-low-battery Disable low battery signal
+
+_USGEOF
+
+    exit 1
+}
+
+function displayConfigure
+{
+    cat <<_OPTEOF
+Configurations:
+    target              ${CROSS_NAME}
+    cross compiler      ${CROSS_COMPILER}{${CC},${CPP}}
+    address size        ${ADDRESS_SIZE}-bit
+    endian              ${ENDIAN}
+    library ext         ${LIB_EXT}
+    nzc type            ${NZC_TYPE}
+    device define       ${NETWORK_NODE}
+    gpio                ${GPIO_INCLUDE}
+    no battery          ${NO_BATTERY}
+    
+    disable
+        ssl             ${DISABLE_SSL}
+_OPTEOF
+}
+
+function applyOption
+{
+    OPT=$1
+    ARG=$2
+
+    case $OPT in
+        target)
+            if [ "x$ARG" = "x" ]; then
+#                CROSS_NAME=`uname -s | tr [:upper:] [:lower:]`
+                CROSS_NAME=
+                CROSS_LIB=
+                CROSS_COMPILER=
+                CROSS_COMPILER_AR=
+                GPIO_INCLUDE=-D__EXCLUDE_GPIO__
+                DISABLE_GPIO=TRUE
+            elif [ "$ARG" = "windows" ]; then
+                CROSS_NAME="i686-pc-mingw32"
+#                CROSS_NAME="mingw32"
+                CROSS_LIB=-${CROSS_NAME}
+                CROSS_COMPILER="${CROSS_NAME}-"
+                CROSS_COMPILER_AR=
+                GPIO_INCLUDE=-D__EXCLUDE_GPIO__
+                DISABLE_GPIO=TRUE
+
+                LIB_EXT="a"
+                OPT_FPIC=
+
+                DISABLE_SSL=-D__DISABLE_SSL__
+            else
+                CROSS_NAME=$ARG
+                CROSS_LIB=-${CROSS_NAME}
+                CROSS_COMPILER="${ARG}-"
+                CROSS_COMPILER_AR=${CROSS_COMPILER}
+            fi
+            ;;
+        nzc-type)
+            case $ARG in
+                NZC1 ) NZC_TYPE=NZC1
+                    ;;
+# TI AM335X NZC 4.x
+                NZC4) NZC_TYPE=NZC4
+                    CROSS_NAME="arm-linux-gnueabihf"
+                    CROSS_LIB=-${CROSS_NAME}
+                    CROSS_COMPILER="arm-linux-gnueabihf-"
+                    CROSS_COMPILER_AR=${CROSS_COMPILER}
+# TI AM335X NZC 4.x 의 경우 SSL Library를 포함하고 있다
+                    DISABLE_SSL=-D__DISABLE_SSL__
+                    ;;
+            esac
+            ;;
+        static-library)
+            LIB_EXT="a"
+            OPT_FPIC=
+            ;;
+        disable-gpio)
+            GPIO_INCLUDE=-D__EXCLUDE_GPIO__
+            DISABLE_GPIO=TRUE
+            ;;
+        disable-low-battery)
+            NO_BATTERY=-D__EXCLUDE_LOW_BATTERY__
+            NO_BATTERY_FLAG="YES"
+            ;;
+        device-type)
+            case $ARG in
+                node* ) NETWORK_NODE=-D__NETWORK_NODE__
+                    ;;
+            esac
+            ;;
+        h* | H* )
+            usage
+            ;;
+    esac
+}
+
+function confTest
+{
+    cat >${CONFTEST}.c<<_TCEOF
+#include <stdio.h>
+int main(void) { return 0; }
+_TCEOF
+
+    if ${CROSS_COMPILER}gcc -o ${CONFTEST}.exe ${CONFTEST}.c > /dev/null 2>&1; then
+        res=`${FILE} -b ${CONFTEST}.exe`
+        ADDRESS_SIZE=`expr "${res}" : '[a-zA-Z ]*\([0-9]*\)'`
+        case $res in
+            MSG) ENDIAN='big' 
+                ;;
+        esac
+    else
+        ${RM} -f ${CONFTEST}.*
+        displayConfigure
+        exit 1
+    fi
+    ${RM} -f ${CONFTEST}.*
+}
+
+function optionTest
+{
+    OPT_UNUSED=`${CROSS_COMPILER}gcc -v --help 2> /dev/null | grep unused-result | wc -l`
+    if [ $OPT_UNUSED -eq 0 ]; then
+        OPT_NOUNUSED_RESULT=
+    fi
+}
+
+function writeSharedRules
+{
+    if [ $ENDIAN = "big" ]; then emsg=-D__BIG_ENDIAN_SYSTEM__; else emsg=-D__LITTLE_ENDIAN_SYSTEM__; fi
+    if [ $ADDRESS_SIZE = "64" ]; then amsg=-D__PTR64__; else amsg=-D__PTR32__; fi
+    case $NZC_TYPE in
+        NZC1) nmsg=-D__SUPPORT_NZC1__
+            ;;
+# TI AM335X NZC 4.x
+        NZC4) nmsg=-D__TI_AM335X__
+            ;;
+          * ) nmsg=-D__SUPPORT_NZC2__
+            ;;
+    esac
+
+    cat >${SHAREDRULES}<<_SREOF
+# Nuritelecom AiMiR System
+# Zigbee Concentrator
+# Shared Configuration File
+
+CFLAGS  +=$nmsg
+CFLAGS  +=$emsg
+CFLAGS  +=$amsg
+CFLAGS  +=${GPIO_INCLUDE}
+
+CFLAGS  +=${OPT_NOUNUSED_RESULT}
+CFLAGS  +=${NETWORK_NODE}
+CFLAGS  +=${NO_BATTERY}
+CFLAGS  +=${COMPILE_DEF}
+CFLAGS  +=${OPT_FPIC}
+
+NO_BATTERY=${NO_BATTERY_FLAG}
+LIB_EXT=${LIB_EXT}
+
+DISABLE_GPIO=${DISABLE_GPIO}
+DISABLE_SSL=${DISABLE_SSL}
+
+#
+# Functions
+#
+
+# Old Issue
+CFLAGS  +=-D__SUPPORT_ADVANCED_LEAVE__      # Issue #1286
+CFLAGS  +=-D__SUPPORT_ENDDEVICE__           # Issue #1131
+CFLAGS  +=-D__SUPPORT_SOURCE_ROUTING__      # Issue #1151
+CFLAGS  +=-D__SUPPORT_SUPER_PARENT__        # Issue #1638
+CFLAGS  +=-D__SUPPORT_ASYNCHRONOUS__        # Issue #1502
+CFLAGS  +=-D__SUPPORT_IF4_V11__             # Issue #2049
+CFLAGS  +=-D__SUPPORT_SOLAR_NAZC__          # Issue #2421
+CFLAGS  +=-D__SUPPORT_HASH_KEY_TABLE__      # Issue #2490
+CFLAGS  +=-D__SUPPORT_ENCRYPTED_PASSWD__    # Issue #2479
+CFLAGS  +=-D__SUPPORT_DEVICE_NODE__         # Issue #2443
+CFLAGS  +=-D__SUPPORT_REMOTE_DEBUG__        # Issue #1426
+CFLAGS  +=-D__SUPPORT_SENSOR_LAST_VALUE__   # Issue #2571
+#CFLAGS  +=-D__SUPPORT_SITE_KETI__          # Issue #2570
+
+# Jira Issue
+CFLAGS  +=-D__SUPPORT_KEPCO_DLMS__          # RF-2
+
+# New Issue
+CFLAGS  +=-D__SUPPORT_PUSH_METERING__       # Issue #84
+CFLAGS  +=-D__SUPPORT_KUKDONG_METER__       # Issue #1037
+
+# SSL
+CFLAGS  +=${DISABLE_SSL}
+
+NZC_TYPE        = ${NZC_TYPE}
+CROSS_NAME      = ${CROSS_LIB}
+CROSS_COMPILE   = ${CROSS_COMPILER}
+CC              = \${CROSS_COMPILE}${CC}
+CPP             = \${CROSS_COMPILE}${CPP}
+LD              = \${CROSS_COMPILE}${LD}
+AR              = \${CROSS_COMPILE_AR}${AR}
+RANLIB          = \${CROSS_COMPILE}${RANLIB}
+STRIP           = \${CROSS_COMPILE}${STRIP}
+ECHO            = /bin/echo
+
+_SREOF
+
+    echo "Ok"
+}
+
+function thirdPartySetup()
+{
+    echo ""
+    echo "3rd party library setup"
+# sqlite3
+        if [ "x$NZC_TYPE" != "NZC4" ]; then
+            cd third/sqlite-autoconf-3070500
+            echo -n "SQLite3 configuration setup ... "
+            if [ "x$CROSS_NAME" = "x" ]; then
+                ./configure > /dev/null 2>&1
+            else
+                ./configure --host=${CROSS_NAME} > /dev/null 2>&1
+            fi
+            echo "done"
+            cd ../..
+        fi
+# openssl
+        if [ "x$DISABLE_SSL" = "x" -a "x$NZC_TYPE" != "NZC4" ]; then
+            cd third/openssl-1.0.0a
+            echo -n "OpenSSL configuration setup ... "
+            if [ "x$LIB_EXT" = "xso" ]; then
+            ./Configure linux-arm --prefix=/usr/local/openssl-arm --openssldir=/usr/local/openssl-arm -L../../lib shared no-threads no-asm > /dev/null & 2>&1
+            else
+            ./Configure linux-arm --prefix=/usr/local/openssl-arm --openssldir=/usr/local/openssl-arm -L../../lib no-shared no-threads no-asm > /dev/null & 2>&1
+            fi
+            echo "done"
+            cd ../..
+        fi
+}
+
+while test $# != 0
+do
+    case $1 in
+        --*=*)
+            optStr=`expr "x$1" : 'x--\([^=]*\)='`
+            optArg=`expr "x$1" : 'x[^=]*=\(.*\)'`
+            ;;
+        --*)
+            optStr=`expr "x$1" : 'x--\(.*\)'`
+            optArg=
+            ;;
+        *)
+            usage
+            ;;
+    esac
+    shift
+    applyOption $optStr $optArg
+done
+
+confTest
+optionTest
+displayConfigure
+
+echo
+echo -n "generate '${SHAREDRULES}' file? [y/N] "
+read opt
+
+case $opt in
+    y* | Y* ) 
+        writeSharedRules
+        thirdPartySetup
+        ;;
+esac
+
+exit 0

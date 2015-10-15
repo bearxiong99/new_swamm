@@ -1,0 +1,88 @@
+10
+
+dir
+5483
+http://tauran.nuritelecom.com/rep0/mcu/trunk/nazc/test/src
+http://tauran.nuritelecom.com/rep0/mcu
+
+
+
+2013-05-06T06:36:52.994789Z
+5182
+rewriter
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+0c8fb18d-62cf-4f29-9844-4f4e0438761a
+
+sysmon
+dir
+
+send
+dir
+
+gsmnet
+dir
+
+agent
+dir
+
+multiupload
+dir
+
+launcher
+dir
+
+utility
+dir
+
+hwtester
+dir
+
+server
+dir
+
+install
+dir
+
+cli
+dir
+
+mibc
+dir
+
+updator
+dir
+
+sample
+dir
+
+reset
+dir
+
+monet
+dir
+
+external
+dir
+
+mserver
+dir
+
+mterm
+dir
+
+upload
+dir
+

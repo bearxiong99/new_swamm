@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rep0/mcu/!svn/ver/5186/branches/site/swamm/nazc/bin/script
+END
+UploadScheduler.do
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/script/UploadScheduler.do
+END
+DeleteInvalidMeter.do
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/script/DeleteInvalidMeter.do
+END
+DatabaseCleaner.do
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/script/DatabaseCleaner.do
+END
+ShowLp.script
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/script/ShowLp.script
+END
+ShowMeter.script
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/script/ShowMeter.script
+END
+ResetLp.script
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/script/ResetLp.script
+END
+ResetMeter.script
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/script/ResetMeter.script
+END
+CheckTask.script
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rep0/mcu/!svn/ver/5186/branches/site/swamm/nazc/bin/script/CheckTask.script
+END
+RunAllTask.script
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/rep0/mcu/!svn/ver/5184/branches/site/swamm/nazc/bin/script/RunAllTask.script
+END
+disable
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5185/branches/site/swamm/nazc/bin/script/disable
+END

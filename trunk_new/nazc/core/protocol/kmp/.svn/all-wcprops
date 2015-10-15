@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/rep0/mcu/!svn/ver/5467/trunk/nazc/core/protocol/kmp
+END
+KmpUtils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rep0/mcu/!svn/ver/5467/trunk/nazc/core/protocol/kmp/KmpUtils.cpp
+END
+KmpDataFrame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/kmp/KmpDataFrame.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/kmp/Makefile
+END
+KmpCrcCheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/kmp/KmpCrcCheck.cpp
+END
+KmpDataStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/kmp/KmpDataStream.cpp
+END
+KmpUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5429/trunk/nazc/core/protocol/kmp/KmpUtils.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/kmp/common.h
+END
+KmpFunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5429/trunk/nazc/core/protocol/kmp/KmpFunctions.cpp
+END
+KmpDataFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/kmp/KmpDataFrame.h
+END
+KmpCrcCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/rep0/mcu/!svn/ver/4155/trunk/nazc/core/protocol/kmp/KmpCrcCheck.h
+END

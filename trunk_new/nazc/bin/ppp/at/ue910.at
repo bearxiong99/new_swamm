@@ -1,0 +1,15 @@
+INIT        ATE0
+SIMINIT     AT+CPIN=0000
+MANF        AT+CGMI
+MODEL       AT+CGMM
+REV         AT+CGMR
+SERIAL      AT+CGSN
+NUMBER      AT+CNUM
+READANSW    ATS0?
+SETANSW     ATS0=1
+STORE       AT&W
+IMSI        AT+CIMI
+SIM         AT+CCID
+PIN         AT+CPIN?
+NET         AT+CREG?
+CSQ         AT+CSQ

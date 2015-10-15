@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/cli
+END
+CLIInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/cli/CLIInterface.h
+END
+CLIUtility.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/cli/CLIUtility.h
+END
+clitypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/cli/clitypes.h
+END
+climime.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/rep0/mcu/!svn/ver/5177/branches/site/swamm/nazc/include/cli/climime.h
+END

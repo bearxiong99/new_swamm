@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rep0/mcu/!svn/ver/3237/trunk/nazc/core/zlib/contrib/testzlib
+END
+testzlib.sln
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/testzlib/testzlib.sln
+END
+testzlib.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/testzlib/testzlib.c
+END
+testzlib.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/rep0/mcu/!svn/ver/5/trunk/nazc/core/zlib/contrib/testzlib/testzlib.vcproj
+END

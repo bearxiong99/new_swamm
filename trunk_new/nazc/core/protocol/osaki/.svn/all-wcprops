@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki
+END
+OsakiCheckCode.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki/OsakiCheckCode.h
+END
+OsakiUtils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki/OsakiUtils.cpp
+END
+OsakiDataFrame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki/OsakiDataFrame.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki/Makefile
+END
+OsakiUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki/OsakiUtils.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki/common.h
+END
+OsakiCheckCode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki/OsakiCheckCode.cpp
+END
+OsakiFunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki/OsakiFunctions.cpp
+END
+OsakiDataFrame.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rep0/mcu/!svn/ver/5182/trunk/nazc/core/protocol/osaki/OsakiDataFrame.h
+END

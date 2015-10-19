@@ -1,0 +1,106 @@
+root@nuri-aimir-dcu:/app/sw# ./agent -d
+AIMIR MCU Agent 4.3 sweden
+(c)Copyright 1992-2011 NURI TELECOM Co., Ltd. All rights reserved.
+ Update Variable: sysID [0]
+ Update Variable: sysServer [0.0.0.0]
+ Update Variable: sysServerPort [8000]
+ Update Variable: dataSaveDay [14]
+ Update Variable: sysID [0]
+ Update Variable: sysServer [0.0.0.0]
+ Update Variable: sysServerPort [8000]
+ Update Variable: dataSaveDay [14]
+
+** GPIO Initialize Start
+ GP_GSM_SYNC_INPUT ................ 20
+ GP_LOW_BATT_INPUT ................ 29
+ GP_CASE_OPEN_INPUT ............... 60
+ GP_PWR_FAIL_INPUT ................ 63
+ GP_BATT_CHG_STATUS_INPUT ......... 64
+ GP_STA_GREEN_OUT ...... LOW  ..... 65
+ GP_CODI_PCTL_OUT ...... HIGH ..... 86
+ GP_CODI_RST_OUT ....... HIGH ..... 98
+ GP_NPLC_PCTL_OUT ...... HIGH ..... 87
+ GP_NPLC_RST_OUT ....... HIGH ..... 89
+ GP_GSM_PCTL_OUT ....... HIGH ..... 88
+ GP_GSM_RST_OUT ........ LOW  ..... 110
+ GP_GSM_INIT_PCTL_OUT .. LOW  ..... 113
+ GP_RF_SIG_OUT ......... LOW  ..... 111
+ GP_BATT_CHG_EN_OUT .... LOW  ..... 115
+ GP_BATT_SW_OUT ........ HIGH ..... 112
+ GP_485_TX_EN_OUT ...... HIGH ..... 114
+ GP_DEBUG_LED1_OUT ..... LOW  ..... 116
+ GP_DEBUG_LED2_OUT ..... LOW  ..... 117
+ GP_DEBUG_LED3_OUT ..... LOW  ..... 97
+** GPIO Initialize End
+ #######################################debug sungyeung IF4API_Initialize : IF4API.cpp : 20
+create OS WATCHDOG service
+Check Battery ADC Value 4095
+RealTimeClock: /proc/driver/ds1340 is Not installed.
+CSerialInterface: StartDevice
+CDeviceClass: StartDevice
+Patch_9_2567 : id=[9], issue=[2567], bApply=[FALSE], descr=[Remove Link Procedure]
+Coordinator Option Setting : 0x0101
+COORDINATOR AUTO RESET #########################
+01:01:04.871 MCU<-CODI(): SEQ=0, Receive 24 byte(s)
+ 87 98 C0 00 00 10 DC 01 D0 03 00 6F 0D 00 00 00 31 03 33 33 01 03 8A F0     ...........o....1.33....
+ INFORMATION (ACCESS=Read, FLOW=Response, TYPE=BOOT[0x00], LENGTH=16)
+--------------------------------------------------------------
+    EUI64 ID                     = 000D6F0003D001DC
+    Firmware version             = 3.1
+    Hardware version             = 0.3
+    Application Device Interface = 3.3
+    ZigBee Interface             = 3.3
+    Build number                 = 1
+    Reset kind                   = 0x03
+    Super Parent                 = FALSE
+--------------------------------------------------------------
+01:01:04.895 MCU<-CODI(000D6F0003D001DC): SEQ=0, Receive 9 byte(s)
+ 87 98 C0 01 00 01 90 11 00                                                  .........
+ INFORMATION (ACCESS=Read, FLOW=Response, TYPE=STACK STATUS[0x01], LENGTH=1)
+--------------------------------------------------------------
+    Stack Status (status=0x90)
+--------------------------------------------------------------
+01:01:04.896 MCU->CODI(000D6F0003D001DC): SEQ=1, Send 8 byte(s)
+ 87 98 81 00 01 00 AC 29                                                     .......)
+ COMMAND (ACCESS=Read, FLOW=Request, TYPE=MODULE PARAM[0x00], LENGTH=0)
+-------- COORDINATOR STATE = 0 -------
+Transaction Integrity Check .........
+ Integrity Check Start
+ Read Transaction ID List
+ Sort Transaction ID List
+ EndDevice Information Check
+ Transaction Mapping Check
+ Transaction Result Check
+ Integrity Check Terminate
+01:01:07.000 MCU->CODI(000D6F0003D001DC): SEQ=2, Send 8 byte(s)
+ 87 98 81 20 02 00 96 28                                                     ... ...(
+ COMMAND (ACCESS=Read, FLOW=Request, TYPE=ROUTE DISCOVERY[0x20], LENGTH=0)
+01:01:10.000 MCU<-CODI(000D6F0003D001DC): SEQ=1, Receive 24 byte(s)
+ 87 98 C1 00 01 10 DC 01 D0 03 00 6F 0D 00 00 00 31 03 33 33 01 03 A7 9C     ...........o....1.33....
+ COMMAND (ACCESS=Read, FLOW=Response, TYPE=MODULE PARAM[0x00], LENGTH=16)
+    EUI64 ID                     = 000D6F0003D001DC
+    Firmware version             = 3.1
+    Hardware version             = 0.3
+    Application Device Interface = 3.3
+    ZigBee Interface             = 3.3
+    Build number                 = 0.1
+    Reset kind                   = 0x03
+01:01:10.000 MCU<-CODI(000D6F0003D001DC): SEQ=2, Receive 9 byte(s)
+ 87 98 C1 20 02 01 00 41 96                                                  ... ...A.
+ COMMAND (ACCESS=Read, FLOW=Response, TYPE=ROUTE DISCOVERY[0x20], LENGTH=1)
+    ROUTE_DISCOVERY           = OFF
+SENSOR-TIMESYNC: Many to one network (LOW RAM)
+01:01:10.001 MCU->CODI(000D6F0003D001DC): SEQ=3, Send 10 byte(s)
+ 87 98 01 10 03 02 01 00 06 60                                               .........`
+ COMMAND (ACCESS=Write, FLOW=Request, TYPE=MANY TO ONE NETWORK[0x10], LENGTH=2)
+01:01:10.016 MCU<-CODI(000D6F0003D001DC): SEQ=3, Receive 9 byte(s)
+ 87 98 41 10 03 01 00 5F C9                                                  ..A...._.
+ COMMAND (ACCESS=Write, FLOW=Response, TYPE=MANY TO ONE NETWORK[0x10], LENGTH=1)
+SENSOR-TIMESYNC: Multicast time (TIME=2015/10/16 01:01:20) (LONG) (M)
+01:01:20.017 MCU->ENDI(1111111111111111): SEQ=255, Send 32 byte(s)
+ 87 98 02 07 FF 18 11 11 11 11 11 11 11 11 00 00 00 00 07 DF 0A 10 01 01 14  .........................
+ 00 00 00 00 00 35 6E                                                        .....5n
+ DATA (ACCESS=Write, FLOW=Request, TYPE=TIMESYNC[0x07], LENGTH=16)
+01:01:20.993 MCU<-ENDI(1111111111111111): SEQ=255, Receive 17 byte(s)
+ 87 98 42 07 FF 09 11 11 11 11 11 11 11 11 00 CB 48                          ..B.............H
+ DATA (ACCESS=Write, FLOW=Response, TYPE=TIMESYNC[0x07], LENGTH=1)

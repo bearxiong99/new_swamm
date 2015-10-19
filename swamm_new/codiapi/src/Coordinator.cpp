@@ -547,9 +547,13 @@ int CCoordinator::EndiConnect(ENDDEVICE *endi, WORD shortid, BYTE hops, WORD *pa
 		BYTE	nHops = 0;
 		WORD	arPath[CODI_MAX_ROUTING_PATH];
 
+		XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung ((shortid == 0) && (hops == 0) && (path == NULL) && (bDirect == FALSE)) : %s : %d \n", __FILE__, __LINE__);
+
 		codiOnQueryRouteRecord(endi->codi, &endi->id, &nShortID, &nHops, arPath);
 		return ConnectEndDevice(endi, nShortID, nHops, arPath, nTimeout, bExtenedTimeout, bDirect, bEndDevice);		
 	}
+
+	XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinator::EndiConnect : %s : %d \n", __FILE__, __LINE__);
 
 	return ConnectEndDevice(endi, shortid, hops, path, nTimeout, bExtenedTimeout, bDirect, bEndDevice);		
 }

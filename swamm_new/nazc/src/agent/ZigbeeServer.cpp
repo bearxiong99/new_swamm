@@ -53,6 +53,7 @@ CZigbeeServer::~CZigbeeServer()
 
 BOOL CZigbeeServer::Initialize()
 {
+
 	int		i;
 
 	// Worker를 생성한다.
@@ -63,6 +64,8 @@ BOOL CZigbeeServer::Initialize()
 	if (!CTimeoutThread::StartupThread(1))
 		return FALSE;
 
+
+	XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CZigbeeServer::Initialize() : %s : %d \n", __FILE__, __LINE__);
 	return TRUE;
 }
 

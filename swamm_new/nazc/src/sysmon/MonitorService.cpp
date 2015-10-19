@@ -15,6 +15,10 @@
 #include "if4api.h"
 #include "gpiomap.h"
 
+//sungyeung
+extern int	m_nDebugLevel;
+
+
 //////////////////////////////////////////////////////////////////////
 // CMonitorService Construction/Destruction
 //////////////////////////////////////////////////////////////////////
@@ -27,6 +31,10 @@ CMonitorService		*m_pService = NULL;
 
 CMonitorService::CMonitorService()
 {
+
+	m_nDebugLevel = 0;
+
+
 	m_pService = this;
 	m_bExitSignalPending = FALSE;
 
@@ -111,11 +119,15 @@ void CMonitorService::DisplaySplash()
 
 void CMonitorService::WatchSystem()
 {
+
 	time_t	now;
 
     now = uptime();
 	if ((now-m_tmLastCheck) < 60)
+	{
+//		XDEBUG(ANSI_COLOR_GREEN " #######################################debug sungyeung this is not check time yet : %s : %d \n" ANSI_NORMAL, __FILE__, __LINE__);
 		return;
+	}
 
 	if (!CheckMemory())
 	{
@@ -125,6 +137,7 @@ void CMonitorService::WatchSystem()
 	
 	if (!CheckFlash())
 	{
+		XDEBUG(ANSI_COLOR_RED " #######################################debug sungyeung WatchSystem().!CheckFlash() : %s : %d \n", __FILE__, __LINE__);
 		ReduceFileSystem();
 		UpdateLogFile(LOG_DIR, EVENT_LOG_FILE, 0, TRUE, "SYSMON::FLASH FULL\xd\xa");
 		RebootSystem();
@@ -153,13 +166,24 @@ void CMonitorService::WatchSystem()
 BOOL CMonitorService::CheckMemory()
 {
 	UINT	nTotal, nUse, nFree, nCache, nBuffer;
-	UINT	nFlashTotal, nFlashUse, nFlashFree;
+	UINT	nFlashTotal=0, nFlashUse, nFlashFree;
 	double	fSize, fFlashSize;
     BOOL    bReturn = TRUE;
 
 	GetMemoryInfo(&nTotal, &nUse, &nFree, &nCache, &nBuffer);
+	
+#if defined(__TI_AM335X__)
+    /** TI Multi boot 를 위해 두가지 검사를 한다.
+      * SPI boot일 경우 /dev/root 를 검사하고
+      * NAND boot일 경우에는 ubi1:rootfs 를 검사해야 한다
+      */
 	GetFlashInfo("/dev/root", &nFlashTotal, &nFlashUse, &nFlashFree);
-
+    if(nFlashTotal <= 0)
+    {
+	    GetFlashInfo("ubi1:rootfs", &nFlashTotal, &nFlashUse, &nFlashFree);
+    }    
+    
+#endif
 	fSize = (double)nFree / (double)(1024*1024);
 	fFlashSize = (double)nFlashFree / (double)(1024*1024);
 
@@ -180,7 +204,9 @@ BOOL CMonitorService::CheckFlash()
 	double	fSize;
     BOOL    bReturn;
 
-	GetFlashInfo("/dev/mtdblock2", &nTotal, &nUse, &nFree);
+	#if defined(__TI_AM335X__)
+	GetFlashInfo("ubi0:filestore", &nTotal, &nUse, &nFree);
+#endif
 	fSize = (double)nFree / (double)(1024*1024);
 	bReturn = (nFree < (200*1024)) ? FALSE : TRUE;
 

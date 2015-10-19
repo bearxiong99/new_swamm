@@ -67,6 +67,8 @@ LISTS = $(SOURCES:.cpp=.lst)
 all: $(TARGET)
 package: $(TARGET)
 
+dev: all
+	@sudo cp $(TARGET) /home/gloscom/nfs/new_sweden_151013/
 $(TARGET): $(SOURCES) $(OBJECTS)
 ifeq ($(strip $(LIB_EXT)),so)
 	$(CPP) $(LDFLAGS) $(OBJECTS) $(LIB_PATH) $(LIBS) -Wl,-export-dynamic -Wl,-rpath,./lib -o $@ 

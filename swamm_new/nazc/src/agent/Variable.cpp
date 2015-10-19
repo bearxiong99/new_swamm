@@ -44,7 +44,10 @@ int     m_nLocalPort                = IF4_DEFAULT_PORT;
 int     m_nCircuitMode              = FALSE;
 int     m_nSensorLimit              = -1;
 int     m_nJoinNodeCount            = 0;
-BYTE    m_nOpMode                   = OP_MODE_NORMAL;
+//sungyeung
+BYTE    m_nOpMode                   = OP_MODE_TEST;
+//BYTE    m_nOpMode                   = OP_MODE_NORMAL;
+
 
 BOOL    m_bEnableAutoMetering       = TRUE;
 BOOL    m_bEnableKeepaliveEvent     = FALSE;

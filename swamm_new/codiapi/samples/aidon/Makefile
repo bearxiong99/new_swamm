@@ -39,6 +39,7 @@ TARGET      =$(TOP)/bin/aidon
 INCLUDES    =-I.
 INCLUDES   +=-I$(TOP)/include
 INCLUDES   +=-I$(TOP)/include/common
+INCLUDES   +=-I$(TOP)/include/gpio
 
 ifeq ($(ARM),1)
 INCLUDES   +=-I$(TOP)/include/gpio
@@ -99,3 +100,6 @@ clean:
 	@if [ -f "$(TARGET)" ]; then rm -f $(TARGET); fi
 	@rm -f *.o
 
+#sungyeung "tap" charactoer  is always located front of @sudo
+dev: all
+	@sudo cp $(TARGET) /home/gloscom/nfs/new_sweden_151013/

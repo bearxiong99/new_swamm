@@ -163,7 +163,7 @@ BOOL CAgentService::OnStartService()
 	theMeterFileWriter.Initialize();
 	theLpWriter.Initialize();
 	theMalfMonitor.Initialize();
-	theMeterUploader.Initialize();
+	theMeterUploader.Initialize();     //to server
 	theTimeoutHash.Initialize();
 	theAutoReset.Initialize();
 	theEndDeviceList.Initialize();
@@ -230,7 +230,7 @@ BOOL CAgentService::OnStartService()
     {
         usleep(200000);
         nState = codiGetState(m_codiHandle);
-        XDEBUG("-------- COORDINATOR STATE = %d -------\r\n", nState);
+//        XDEBUG("-------- COORDINATOR STATE = %d -------\r\n", nState);
         if ((nState != CODISTATE_NOT_CONNECTED) && (nState != CODISTATE_NO_RESPONSE))
             break;
 
@@ -252,7 +252,7 @@ BOOL CAgentService::OnStartService()
 	theMeterReader.Initialize();
 	theRecovery.Initialize();
 	thePolling.Initialize();
-	theTimesync.Initialize();
+	theTimesync.Initialize(); // SENSOR-TIMESYNC: Many to one network (LOW RAM)
 	theBatchJob.Initialize();
     theBypassQueue.Initialize();
 

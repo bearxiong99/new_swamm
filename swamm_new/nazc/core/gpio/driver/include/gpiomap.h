@@ -1,6 +1,9 @@
 #ifndef __GPIOMAP_H__
 #define __GPIOMAP_H__
 
+//sungyeung
+#define __TI_AM335X__
+
 #include "gpio.h"
 
 #ifdef __TI_AM335X__
@@ -43,7 +46,7 @@
 #define GP_TEMP_OS_INPUT			14		// 히터 동작 상태 신호
 #define GP_DOOR_OPEN_INPUT			17		// DOOR Open 신호
 #define GP_PWR_FAIL_INPUT			19		// Power Fail 신호
-#define GP_INT_ETH_INPUT			21		// CS8900의 IRQ 신호 
+#define GP_INT_ETH_INPUT			21		// CS8900의 IRQ 신호
 #define GP_UART_INT1_INPUT			22		// 16C2550의 UART1 IRQ신호 (미사용)
 #define GP_SSP_RXD_INPUT			26		// SPI 기능 (미사용)
 #define GP_SSP_EXTCLK_INPUT			27		// SPI 기능 (미사용)
@@ -86,7 +89,7 @@
 #define GP_SSP_SFRM_OUT				24		// SPI 기능 (미사용)
 #define GP_SSP_TXD_OUT				25		// SPI 기능 (미사용)
 #define GP_LED_READY_OUT			29		// LED READY 신호 (미사용)
-#define GP_GSM_IGT_OUT				30		// MC55 모듈의 IGT 신호 
+#define GP_GSM_IGT_OUT				30		// MC55 모듈의 IGT 신호
 #define GP_GSM_RXD_OUT				39		// MC55 모듈의 RXD 신호
 #define GP_GSM_DTR_OUT				40		// MC55 모듈의 DTR 신호
 #define GP_GSM_CTS_OUT				41		// MC55 모듈의 CTS 신호

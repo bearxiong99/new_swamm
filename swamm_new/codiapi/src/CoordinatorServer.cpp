@@ -474,6 +474,7 @@ int CCoordinatorServer::DisconnectParentDevice(COORDINATOR *codi, EUI64 *id, WOR
 int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nHops, WORD *pRoutePath, int nTimeout, 
             BOOL bExtendedTimeout, BOOL bDirect, BOOL bEndDevice)
 {
+	XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
 	CODI_COMMAND_FRAME	frame;
 	CODI_BIND_PAYLOAD	bindPayload;	
 	CODI_DIRECTCOMM_PAYLOAD directPayload;	
@@ -507,12 +508,15 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
 		        memcpy(path, pRoutePath, sizeof(WORD)*hops);
             }
 	    }
-
-        if(hops > CODI_MAX_ROUTING_PATH) hops = CODI_MAX_ROUTING_PATH;
+	    XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
+        if(hops > CODI_MAX_ROUTING_PATH)
+        	hops = CODI_MAX_ROUTING_PATH;
 
         endi->bDirect = bDirect;
-        if(shortid) endi->nShortId = shortid;
+        if(shortid)
+        	endi->nShortId = shortid;
 
+        XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
         /** Parent Node가 존재한다고 모두 End Device 가 되는건 아니다.
          *  따라서 End Device 여부를 검사할 수 있게 해야 한다.
          */
@@ -538,6 +542,7 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
 				return nError;
             }
 #endif
+            XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
 
 			nError = SetChildDevice(endi->codi, &parent, seq, ENDI_SPTYPE_SET_REQUEST, shortid, &endi->id, 3000); seq++;
 			if (nError != CODIERR_NOERROR)
@@ -556,6 +561,7 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
             }
 #endif
 
+            XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
 			DisconnectParentDevice(endi->codi, &parent, parentid, parenthop, parentpath);
 			endi->bParentBinding = TRUE;
 
@@ -563,6 +569,7 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
         	USLEEP(100000);
 		}	 
 
+		XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
 	    // Binding을 수행한다.
         if(!bDirect) {
 	        memset(&bindPayload, 0, sizeof(CODI_BIND_PAYLOAD));
@@ -570,6 +577,7 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
 	        bindPayload.type	= CODI_BIND_SET_BIND;
 	        bindPayload.shortid = BigToHostShort(shortid);
 	        bindPayload.hops 	= hops;
+	        XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
 	        for(i=0; i<hops; i++)
 		        bindPayload.routingPath[i] = BigToHostShort(path[i]);		  
 
@@ -589,6 +597,7 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
 	        directPayload.type	= CODI_BIND_SET_BIND;
 	        directPayload.shortid = BigToHostShort(shortid);	  
 
+	        XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
             nSize = sizeof(CODI_DIRECTCOMM_PAYLOAD);
 	        len = MakeCommandFrame(&frame, CODI_ACCESS_WRITE, CODI_CMD_DIRECT_COMM, (BYTE *)&directPayload, nSize);
 	        if (nTimeout == 0)
@@ -600,6 +609,7 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
 	        nError = WaitingForCommandReply(endi->codi, CODI_ACCESS_WRITE, CODI_CMD_DIRECT_COMM, frame.hdr.seq,
 						(BYTE *)&frame, len, NULL, NULL, nTimeout);
         }
+        XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
 
 	    if ((nError != CODIERR_NOERROR) && (nError != CODIERR_PROGRESS)) {
             endi->nLastError = nError;
@@ -610,6 +620,8 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
         endi->bBinding = TRUE;
 
 		EUI64ToStr(&endi->id, szGUID);
+
+		XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
 
 #ifndef __NETWORK_NODE__
 		XDEBUG("EXTENDED TIMEOUT SET TRY(%s:%s)\r\n", szGUID, bExtendedTimeout ? "T" : "F");
@@ -629,6 +641,7 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
 #endif
     }
 
+    XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
 	if ((nError == CODIERR_NOERROR) || (nError == CODIERR_PROGRESS))
 	{
 		// Link를 재전송 할 수 있으므로 SEQUENCE를 0으로 환원한다.
@@ -652,6 +665,7 @@ int CCoordinatorServer::ConnectEndDevice(ENDDEVICE *endi, WORD nShortID, BYTE nH
 		}
 #endif
 	}
+	XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorServer::ConnectEndDevice( : %s : %d \n", __FILE__, __LINE__);
 
     endi->nLastError = nError;
 	return nError;
@@ -1907,6 +1921,7 @@ BOOL CCoordinatorServer::OnActiveThread()
 		if (pStream == NULL)
 			break;
 	
+//		XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung BOOL CCoordinatorServer::OnActiveThread() : %s : %d \n", __FILE__, __LINE__);
 		ReceiveStreamWorker(pStream->codi, (CODI_GENERAL_FRAME *)pStream->pBuffer, pStream->nLength);
 
 		if(pStream->pBuffer) FREE(pStream->pBuffer);
@@ -1948,7 +1963,7 @@ void CCoordinatorServer::CheckCoordinatorState()
 			{
 				// 30초간 아무런 통신이 없음
 				TimeStringMilli(szTime);
-				XDEBUG("\033[1;40;31m%s: ---------- NO RESPONSE -----------\033[0m\r\n", szTime);
+				XDEBUG("\033[1;40;31m%s: CheckCoordinatorState():---------- NO RESPONSE -----------\033[0m\r\n", szTime);
 				codi->nNoResCount++;
 				codi->bNoResponse = TRUE;
 

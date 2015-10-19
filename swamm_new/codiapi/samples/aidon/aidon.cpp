@@ -42,7 +42,7 @@ void signal_handler(int nSignal);
 CODIDEVICE	codiDevice =
 {
 	CODI_COMTYPE_RS232,								// 디바이스
-	"/dev/ttyS01",									// 디바이스명
+	"/dev/ttyO2",									// 디바이스명
 	115200,											// 속도
 	8,												// 데이터 비트
 	1,												// 스톱 비트
@@ -51,7 +51,7 @@ CODIDEVICE	codiDevice =
 };
 
 static BOOL m_bCodiExitPending = FALSE;
-static char szSensorID[17] = "000B12000000273B";
+static char szSensorID[17] = "000D6F00001A874B";
 //static char szSensorID[17] = "000D6F00000E5E29";
 
 int main(int argc, char **argv)
@@ -100,7 +100,11 @@ int main(int argc, char **argv)
 		return 0;
 	}
 
-	// 사용자 프로그램을 여기에 코딩한다.
+    XDEBUG("COORDINATOR MANUAL RESET ######################### \r\n");
+ //   CoordinatorPowerControl(TRUE);
+    usleep(1000000);
+
+	// 사용자 프로그램을 여기에 코딩한다. ++++++++++sungyeung : MainProcedure
 	MainProcedure(codi);
 
 	// Coordinator 서비스를 종료한다.
@@ -192,61 +196,85 @@ void MainProcedure(HANDLE codi)
 
                if (nError != CODISTATE_NORMAL)
                {
-                   USLEEP(1000000); 
+                   USLEEP(1000000);    //100 * 1000millisec = 1sec
                    break;           
                }
                nState = STATE_MODULE_PARAM;
                break;               
 
 		  case STATE_MODULE_PARAM :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_MODULE_PARAM :\r\n");
+			   printf("--------------------------------\r\n");
 			   nError = codiGetProperty(codi, CODI_CMD_MODULE_PARAM, (BYTE *)szBuffer, &nLength, 3000);
 			   if (nError != CODIERR_NOERROR) ReportError(NULL, nError);
 			   nState = STATE_SERIAL_PARAM;
 			   break;
 
 		  case STATE_SERIAL_PARAM :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_SERIAL_PARAM :\r\n");
+			   printf("--------------------------------\r\n");
 			   nError = codiGetProperty(codi, CODI_CMD_SERIAL_PARAM, (BYTE *)szBuffer, &nLength, 3000);
 			   if (nError != CODIERR_NOERROR) ReportError(NULL, nError);
 			   nState = STATE_NETWORK_PARAM;
 			   break;
 
 		  case STATE_NETWORK_PARAM :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_NETWORK_PARAM :\r\n");
+			   printf("--------------------------------\r\n");
 			   nError = codiGetProperty(codi, CODI_CMD_NETWORK_PARAM, (BYTE *)szBuffer, &nLength, 3000);
 			   if (nError != CODIERR_NOERROR) ReportError(NULL, nError);
 			   nState = STATE_SECURITY_PARAM;
 			   break;
 
 		  case STATE_SECURITY_PARAM :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_SECURITY_PARAM :\r\n");
+			   printf("--------------------------------\r\n");
 			   nError = codiGetProperty(codi, CODI_CMD_SECURITY_PARAM, (BYTE *)szBuffer, &nLength, 3000);
 			   if (nError != CODIERR_NOERROR) ReportError(NULL, nError);
 			   nState = STATE_STACK_MEMORY;
 			   break;
 
 		  case STATE_STACK_MEMORY :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_STACK_MEMORY :\r\n");
+			   printf("--------------------------------\r\n");
 			   nError = codiGetProperty(codi, CODI_CMD_STACK_MEMORY, (BYTE *)szBuffer, &nLength, 3000);
 			   if (nError != CODIERR_NOERROR) ReportError(NULL, nError);
 			   nState = STATE_PERMIT;
 			   break;
 		
 		  case STATE_PERMIT :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_PERMIT :\r\n");
+			   printf("--------------------------------\r\n");
 			   nError = codiGetProperty(codi, CODI_CMD_PERMIT, (BYTE *)szBuffer, &nLength, 3000);
 			   if (nError != CODIERR_NOERROR) ReportError(NULL, nError);
 			   nState = STATE_METERING;
 			   break;
 		
 		  case STATE_METERING :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_METERING :\r\n");
+			   printf("--------------------------------\r\n");
 			   atoeui64(szSensorID, &id);
 			   nState = STATE_AIDON;
 			   break;
 		
 		  case STATE_AIDON :
 			   printf("----------------------\r\n");
-			   printf(" AIDON Metering Start\r\n");
+			   printf(" case STATE_AIDON :\r\n");
 			   printf("----------------------\r\n");
 			   nState = STATE_OPEN;
 			   break;
 
 		  case STATE_OPEN :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_OPEN :\r\n");
+			   printf("--------------------------------\r\n");
 			   printf("STATE_OPEN(ID=%s)\r\n", szSensorID);
 			   m_chunk.Flush();
 			   nError = endiOpen(codi, &endi, &id);
@@ -260,11 +288,14 @@ void MainProcedure(HANDLE codi)
 			   break;
 		
 		  case STATE_CONNECT :
+			   printf("\n\n--------------------------------\r\n");
+			   printf("  case STATE_CONNECT :\r\n");
+			   printf("--------------------------------\r\n");
 			   printf("STATE_CONNECT(ID=%s)\r\n", szSensorID);
 			   nError = endiConnect(endi, 3000, TRUE);
 			   if (nError != CODIERR_NOERROR)
 			   {
-			  	   ReportError("STATE_CONNECT", nError);
+			  	   ReportError("\n\n STATE_CONNECT", nError);
 				   endiClose(endi);
 				   nState = STATE_METERING_ERROR;
 				   break;	
@@ -276,6 +307,9 @@ void MainProcedure(HANDLE codi)
 			   break;
 		
 		  case STATE_AIDON_SEND :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_AIDON_SEND :\r\n");
+			   printf("--------------------------------\r\n");
 			   printf("STATE_AIDON_SEND(ID=%s, COMMAND=%d)\r\n", szSensorID, nCommand);
 			   if (nCommand == AIDON_METERINFO)
 			   {
@@ -299,6 +333,9 @@ void MainProcedure(HANDLE codi)
 			   break;
 		
 		  case STATE_AIDON_REPLY :
+			   printf("--------------------------------\r\n");
+			   printf("   case STATE_AIDON_REPLY :\r\n");
+			   printf("--------------------------------\r\n");
 			   printf("STATE_AIDON_REPLY(ID=%s, COMMAND=%d)\r\n", szSensorID, nCommand);
 			   USLEEP(1000000);
 			   nCommand = AIDON_DATA;
@@ -306,6 +343,9 @@ void MainProcedure(HANDLE codi)
 			   break;
 		
 		  case STATE_DISCONNECT :
+			   printf("--------------------------------\r\n");
+			   printf(" case STATE_DISCONNECT :\r\n");
+			   printf("--------------------------------\r\n");
 			   printf("STATE_DISCONNECT(ID=%s)\r\n", szSensorID);
 			   nError = endiDisconnect(endi);
 			   if (nError != CODIERR_NOERROR)
@@ -320,6 +360,9 @@ void MainProcedure(HANDLE codi)
 			   break;
 		
 		  case STATE_CLOSE :
+			   printf("--------------------------------\r\n");
+			   printf("  case STATE_CLOSE : :\r\n");
+			   printf("--------------------------------\r\n");
 			   printf("STATE_CLOSE(ID=%s)\r\n", szSensorID);
 			   nError = endiClose(endi);
 			   if (nError != CODIERR_NOERROR)
@@ -351,10 +394,10 @@ void MainProcedure(HANDLE codi)
 			   break;
 
 		  case STATE_WAIT :
-			   printf("STATE_WAIT\r\n");
+			   printf("STATE_WAIT = 30 sec\r\n");
 			   m_chunk.Flush();
 
-			   USLEEP(3000000);
+			   USLEEP(60000000);  // wait 30 sec when state=wait
 			   nState = STATE_MODULE_PARAM;
 			   break;
 		}

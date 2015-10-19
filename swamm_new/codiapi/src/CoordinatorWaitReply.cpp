@@ -80,16 +80,8 @@ void CCoordinatorWaitReply::DeleteWaitReply(CODIWAITREPLY *pReply)
 
 int CCoordinatorWaitReply::WaitForReply(CODIWAITREPLY *pReply, int nTimeout)
 {
-#ifdef _WIN32
-	DWORD	dwReturn;
+	XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CCoordinatorWaitReply::WaitForReply : %s : %d \n", __FILE__, __LINE__);
 
-	if (pReply->replied)
-		return CODIERR_NOERROR;
-
-	dwReturn = WaitForSingleObject(pReply->hEvent, nTimeout);
-	if (dwReturn == WAIT_OBJECT_0)
-		return CODIERR_NOERROR;
-#else
 	int		rc, t;
 
 	if (pReply->replied)
@@ -101,7 +93,7 @@ int CCoordinatorWaitReply::WaitForReply(CODIWAITREPLY *pReply, int nTimeout)
 	rc = WaitForSingleObject(pReply->hEvent, t);
 	if (rc == 0)
 		return CODIERR_NOERROR;
-#endif
+
 	return CODIERR_REPLY_TIMEOUT;
 }
 

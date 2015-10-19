@@ -99,3 +99,7 @@ clean:
 	@if [ -f "$(TARGET)" ]; then rm -f $(TARGET); fi
 	@rm -f *.o
 
+#sungyeung "tap" charactoer  is always located front of @sudo
+dev: all
+	@sudo cp $(TARGET) /home/gloscom/nfs/new_sweden_151013/
+

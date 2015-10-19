@@ -142,6 +142,10 @@ revision:
 	@$(TOP)/bin/revision.sh > revision.h
 regrevision:
 	@touch Variable.cpp
+	
+dev: all
+	@sudo cp $(TARGET) /home/gloscom/nfs/new_sweden_151013/
+
 
 clean:
 	@if [ -f "$(TARGET)" ]; then rm -f $(TARGET); fi

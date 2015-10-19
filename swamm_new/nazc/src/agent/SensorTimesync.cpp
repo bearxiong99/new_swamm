@@ -341,6 +341,7 @@ BOOL CSensorTimesync::OnActiveThread()
 
     switch(m_nTimeSyncStrategy) {
         case TIMESYNC_STRATEGY_HIBRID_SLEEPY_MESH:
+        	XDEBUG(" +++++++++++++++++++++++++++++TIMESYNC_STRATEGY_HIBRID_SLEEPY_MESH : %s : %d \n", __FILE__, __LINE__);
             switch(when.tm_min % 15) {
                 case 0:
                 case 2:
@@ -359,66 +360,14 @@ BOOL CSensorTimesync::OnActiveThread()
                     if(wait_time(&when, 25)) MtorSensor(codi);
                     if(wait_time(&when, 27)) TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_SHORT);
                     if(wait_time(&when, 30) && IsUserRequest()) break;
+
                     /** Issue #2411 : 35초에 RenewNetwork을 검사하던것을 37초까지 Ondemand을 하는 것으로 수정 */
                     if(wait_time(&when, 37)) {
                             m_pTransactionManager->ResolveTimeoutTransaction();
                             MtorSensor(codi);
                             if(wait_time(&when, 39)) TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_SHORT);
                     }
-#if 0  // Issue #2411 : Battery 소모량 때문에 더이상 RenewNetwork을 수행하지 않는다 
-                    if(wait_time(&when,35)) {
-                        /*-- 35초에 검사했을 때 TransactionQueue에 대기하고 있는 작업이 있을 경우
-                         *-- Network Time을 23초 연장한다
-                         --*/
-                        if(m_pBatchJob->GetQueueingTransaction()) {
-                            m_bTrActive = TRUE;
-                            RenewNetwork(RENEW_TIME);
-                        }else {
-                            m_pTransactionManager->ResolveTimeoutTransaction();
-                            MtorSensor(codi);
-                            if(wait_time(&when, 37)) TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_SHORT);
-                        }
-                    }
-                    if(m_bTrActive && wait_time(&when,45) && IsNeedBroadcastTime()) BroadcastTime(codi); else if(IsUserRequest()) break;
-                    if(m_bTrActive && wait_time(&when,55)) {
-                        if(!m_pBatchJob->GetQueueingTransaction()) {
-                            m_bTrActive = FALSE;
-                            m_pTransactionManager->ResolveTimeoutTransaction();
-                            MtorSensor(codi);
-                            if(wait_time(&when, 57)) TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_SHORT);
-                        } else {
-                            RenewNetwork(RENEW_TIME);
-                        }
-                    }
-                    break;
-                case 1:
-                case 3:
-                    if(!m_bDiscovery) 
-                    {
-                        RouteDiscoveryControl(TRUE);
-                        SyncDiscovery();
-                    }
-                    if(m_bTrActive && wait_time(&when, 5) && IsNeedBroadcastTime()) BroadcastTime(codi); else if(IsUserRequest()) break;
-                    if(m_bTrActive && wait_time(&when,15)) {
-                        if(!m_pBatchJob->GetQueueingTransaction()) {
-                            m_bTrActive = FALSE;
-                            m_pTransactionManager->ResolveTimeoutTransaction();
-                            MtorSensor(codi);
-                            if(wait_time(&when, 17)) TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_SHORT);
-                        } else {
-                            RenewNetwork(RENEW_TIME);
-                        }
-                    }
-                    if(m_bTrActive && wait_time(&when,25) && IsNeedBroadcastTime()) BroadcastTime(codi); else if(IsUserRequest()) break;
-                    if(m_bTrActive && wait_time(&when,35) && IsNeedBroadcastTime()) BroadcastTime(codi); else if(IsUserRequest()) break;
-                    if(m_bTrActive && wait_time(&when,39)) {
-                        m_bTrActive = FALSE;
-                        m_pBatchJob->RemoveAllTransaction();
-                        m_pTransactionManager->ResolveTimeoutTransaction();
-                        MtorSensor(codi);
-                        if(wait_time(&when, 37)) TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_SHORT);
-                    }
-#endif
+
                     break;
                 case 4:
                     if(m_bDiscovery) 
@@ -485,38 +434,7 @@ BOOL CSensorTimesync::OnActiveThread()
                     MtorSensor(codi);
                     if(wait_time(&when, 39)) TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_SHORT);
                 }
-#if 0  // Issue #2411 : Battery 소모량 때문에 더이상 RenewNetwork을 수행하지 않는다 
-                if(wait_time(&when, 35)) {
-                    if(m_pBatchJob->GetQueueingTransaction()) {
-                        m_bTrActive = TRUE;
-                        RenewNetwork(RENEW_TIME);
-                    }else {
-                        m_pTransactionManager->ResolveTimeoutTransaction();
-                    }
-                }
-                if(m_bTrActive && wait_time(&when, 55)) {
-                    if(!m_pBatchJob->GetQueueingTransaction()) {
-                        m_bTrActive = FALSE;
-                        m_pTransactionManager->ResolveTimeoutTransaction();
-                    } else {
-                        RenewNetwork(RENEW_TIME);
-                    }
-                }
-            } else {
-                if(m_bTrActive && wait_time(&when, 15)) {
-                    if(!m_pBatchJob->GetQueueingTransaction()) {
-                        m_bTrActive = FALSE;
-                        m_pTransactionManager->ResolveTimeoutTransaction();
-                    } else {
-                        RenewNetwork(RENEW_TIME);
-                    }
-                }
-                if(m_bTrActive && wait_time(&when, 39)) {
-                    m_bTrActive = FALSE;
-                    m_pBatchJob->RemoveAllTransaction();
-                    m_pTransactionManager->ResolveTimeoutTransaction();
-                }
-#endif
+
             }
             break;
         case TIMESYNC_STRATEGY_HIBRID_MESH:
@@ -525,18 +443,35 @@ BOOL CSensorTimesync::OnActiveThread()
                 case 0:
                 case 15:
                 case 30:
-                    if(m_nOpMode == OP_MODE_TEST && wait_time(&when, 4)) {
+                    if(m_nOpMode == OP_MODE_TEST && wait_time(&when, 4))
+                    {
+                    	XDEBUG(" +++++++++++++++++++++++++++++m_nOpMode == OP_MODE_TEST && wait_time(&when, 4) : %s : %d \n",__FILE__, __LINE__);
                         TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_LONG);
                     }
                     break;
-                case 45:
-                    if(wait_time(&when, 2)) MtorSensor(codi);
-                    if(m_nOpMode == OP_MODE_TEST) {
-                        if(wait_time(&when, 4)) TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_LONG);
-                    }else {
-                        if(wait_time(&when, 12)) TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_LONG);
-                    }
-                    break;
+		case 45:
+			if (wait_time(&when, 2))
+			{
+			XDEBUG(" +++++++++++++++++++++++++++++(wait_time(&when, 2)) : %s : %d \n",__FILE__, __LINE__);
+			MtorSensor(codi);
+			}
+			if (m_nOpMode == OP_MODE_TEST)
+			{
+				if (wait_time(&when, 4))
+				{
+					XDEBUG(" +++++++++++++++++++++++++++++(m_nOpMode == OP_MODE_TEST) : %s : %d \n",__FILE__, __LINE__);
+					TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_LONG);
+				}
+			}
+			else
+			{
+				if (wait_time(&when, 12))
+				{
+					XDEBUG(" +++++++++++++++++++++++++++++(wait_time(&when, 12)) : %s : %d \n",__FILE__, __LINE__);
+					TimesyncSensor(codi, bDirect, TIMESYNC_TYPE_LONG);
+				}
+			}
+			break;
             }
             break;
     }

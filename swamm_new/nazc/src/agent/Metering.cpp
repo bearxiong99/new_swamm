@@ -104,6 +104,8 @@ BOOL CMetering::Initialize()
 
 	m_bInitialized = TRUE;
     m_nScheduler = m_nSchedulerType;
+
+	XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CMetering::Initialize() : %s : %d \n", __FILE__, __LINE__);
 	return TRUE;
 }
 

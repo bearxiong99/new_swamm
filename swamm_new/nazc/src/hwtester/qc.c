@@ -249,7 +249,7 @@ void _coordiTest(void)
     CODIDEVICE	codiDevice =
     {
 	    CODI_COMTYPE_RS232,								// 디바이스
-	    "/dev/ttyS01",									// 디바이스명
+	    "/dev/ttyO2",									// 디바이스명
 	    115200,											// 속도
 	    8,												// 데이터 비트
 	    1,												// 스톱 비트

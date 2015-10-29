@@ -86,3 +86,6 @@ clean:
 	@rm -f $(TARGET)
 	@rm -f *.o *.lst
 
+#"tap" charactoer  is always located front of @sudo
+dev: all
+	@sudo cp $(TARGET) /home/gloscom/nfs/new_sweden_151013/

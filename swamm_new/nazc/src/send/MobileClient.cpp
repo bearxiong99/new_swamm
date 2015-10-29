@@ -63,7 +63,11 @@ BOOL CMobileClient::Initialize()
 {
 	m_pQueue = new CQueue(4096);
 	CSerialServer::DisableSendFail(TRUE);
+#if 0	
 	return CSerialServer::Startup("/dev/ttyS00", 1, 5*60, B9600, NONE_PARITY, HUPCL | CRTSCTS);
+#else
+	return CSerialServer::Startup("/dev/ttyO1", 1, 5*60, B115200, NONE_PARITY, HUPCL ); //2015-10-27 sungyeung : ? is this available?
+#endif
 }
 
 void CMobileClient::Destroy()

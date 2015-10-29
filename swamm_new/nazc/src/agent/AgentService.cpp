@@ -151,19 +151,19 @@ BOOL CAgentService::OnStartService()
 	IF4API_SetID(m_nSystemID);
 
 	// Watchdog initialize
-	theWatchdog.Initialize();
+	theWatchdog.Initialize();  //software watch dog
 
-	theStatusMonitor.Initialize();
-	theRealTimeClock.Initialize();
-	theUserManager.LoadUser();
-	theTempManager.Initialize();
+	theStatusMonitor.Initialize(); //hardware watchdog
+	theRealTimeClock.Initialize();  //external RTC circuit
+	theUserManager.LoadUser();  //user management -> CLI
+	theTempManager.Initialize(); //external Temperature Sensor
 	theEventManager.Initialize();
     // 사용하지 않는 AlarmManager 삭제
 	//theAlarmManager.Initialize();
 	theMeterFileWriter.Initialize();
 	theLpWriter.Initialize();
 	theMalfMonitor.Initialize();
-	theMeterUploader.Initialize();     //to server
+	theMeterUploader.Initialize();     //upload metering data file to server(through GSM interface)
 	theTimeoutHash.Initialize();
 	theAutoReset.Initialize();
 	theEndDeviceList.Initialize();

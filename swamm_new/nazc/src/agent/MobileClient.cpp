@@ -44,7 +44,13 @@ BOOL CMobileClient::Initialize(int nType)
 	CSerialServer::DisableSendFail(TRUE);
 
 	nSpeed = (nType == MOBILE_TYPE_CDMA) ? B115200 : B9600;
-	return CSerialServer::Startup("/dev/ttyS00", 1, 5*60, nSpeed, NONE_PARITY, 0);
+
+	//2015-10-26 modified by sungyeung, naju
+#if 0
+       return CSerialServer::Startup("/dev/ttyS00" , 1, 5*60, B9600, NONE_PARITY, HUPCL | CRTSCTS);
+#else
+       return CSerialServer ::Startup( "/dev/ttyS01", 1, 5*60, B115200, NONE_PARITY, HUPCL );
+#endif
 }
 
 void CMobileClient::Destroy()

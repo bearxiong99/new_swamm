@@ -87,3 +87,10 @@ clean:
 	@rm -f *.o *.exe *.lst
 	@rm -rf docs
 
+#inserted by sungyeung
+#"tap" charactoer  is always located front of @sudo
+dev: all
+	@sudo cp $(TARGET) /home/gloscom/nfs/new_sweden_151013/
+
+	
+	

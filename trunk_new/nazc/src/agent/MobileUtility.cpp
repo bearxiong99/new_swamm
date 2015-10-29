@@ -98,6 +98,8 @@ void _update_state_map(const char* pState, const char* pCommand)
     }
 }
 
+
+//2015-10-27 sungyeung : init ->Get manufacturere -> get model -> .... -> get CSQ
 void MOBILE_LoadState()
 {
     _init_state_map();

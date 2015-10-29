@@ -73,7 +73,7 @@ int main(int argc, char **argv)
     srandom((unsigned int)t);
 
     GetVersionString(szVersionString);
-    printf("AIMIR MCU Agent 4.3 sweden %s\r\n", szVersionString);
+    printf("AIMIR MCU Agent 4.3 2015-10-28 for SWAMM %s\r\n", szVersionString);
     printf(COPYRIGHT "\r\n");
 
     no_cld_wait();

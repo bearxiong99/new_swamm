@@ -32,6 +32,7 @@
 #include "mcudef.h"
 #include "CommonUtil.h"
 #include "Variable.h"
+#include "if4invoke.h"
 
 #endif  // __MCU_COMMON_H__
 

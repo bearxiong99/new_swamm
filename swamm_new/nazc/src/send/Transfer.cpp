@@ -60,6 +60,10 @@
 
 extern	BOOL	m_bExitSignalPending;
 
+//inserted by sungyeung naju 2015-10-26
+extern int m_nDebugLevel;
+
+
 BOOL	m_nMobileType = MOBILE_GSM;
 int		m_nPhoneCount = 0;
 char	szCPIN[100]	  = "";
@@ -74,6 +78,11 @@ char	m_szPhoneList[20][32];
 
 CTransfer::CTransfer()
 {
+	//inserted by sungyeung naju 2015-10-26
+	m_nDebugLevel=0;
+
+
+
 	m_bEOF			= FALSE;
 	m_bCompress		= FALSE;
 	m_nNzcNumber	= 0;

@@ -390,6 +390,7 @@ void CMeterUploader::UploadMeteringData()
                 }else if(strlen(dp->d_name) > DATE_TIME_LEN) continue;
 
 				sprintf(szFileName, "/app/data/%s", dp->d_name);
+				XDEBUG(" +++++++++++++++++++++++++++++debug sungyeung CMeterUploader::UploadMeteringData() : %s : %d  /app/data : /%s \n", __FILE__, __LINE__,szFileName);
 				m_pList[nFileCount] = strdup(szFileName);
 				nFileCount++;
 				if (nFileCount >= MAX_UPLOAD_FILE_COUNT)
@@ -408,7 +409,7 @@ void CMeterUploader::UploadMeteringData()
 			}
 		}
 	}
-	else
+	else //is -> m_bGprsPerfTestMode=TRUE
 	{
 		printf("UPLOAD: GPRS Backhaul latency test . . .\r\n");
 		UploadFile("/app/sw/test.dat");

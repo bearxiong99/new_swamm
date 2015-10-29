@@ -8,6 +8,8 @@
 #include "common.h"
 #include "DebugUtil.h"
 
+//void GETTIMESTAMP(TIMESTAMP *pStamp, time_t *pNow);
+
 /** IF4API 초기화.
  * IF4API를 이용하기 위해서는 반드시 초기화 절차를 거쳐야 한다.
  *
@@ -136,7 +138,7 @@ BOOL SendEvent(char *szOid, CIF4Invoke *pInvoke)
     if (pInvoke == NULL)
         return TRUE;
 
-    GETTIMESTAMP(&tmEvent, NULL);
+    GetTimestamp(&tmEvent, NULL);
 
     for(i=0; i<3; i++)
     {
@@ -200,7 +202,7 @@ int if4timestamp(char * ipaddr, int port)
     SET_DEBUG_MODE(0);
     CIF4Invoke  invoke(ipaddr, port, 3);
 
-    GETTIMESTAMP(&tmEvent, NULL);
+    GetTimestamp(&tmEvent, NULL);
 
     invoke.AddParamFormat("1.16", VARSMI_TIMESTAMP, &tmEvent, sizeof(TIMESTAMP));
 

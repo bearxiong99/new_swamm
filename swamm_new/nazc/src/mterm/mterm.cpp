@@ -25,17 +25,17 @@
 
 BOOL	m_bExitSignalPending = FALSE;
 
-char	m_szDevice[32] 	= "/dev/ttyS00";
+char	m_szDevice[32] 	= "/dev/ttySO1";
 int		m_nDeviceType 	= DEVICE_TYPE_GSM;
 int		m_nDisplayMode 	= DISPLAY_MODE_ASCII;
-int		m_nSpeed 		= B9600;
+int		m_nSpeed 		= B115200;
 int		m_nOption 		= 0;
 
 void Usage()
 {
 	printf("Usage: mterm [<option> <device> <speed>]\r\n");
-	printf("     device      Device name (ex, /dev/ttyS00, /dev/ttyS01, ..)\r\n");
-	printf("     speed       Communication speed (ex, 1200, .., 38400, 115200)\r\n");
+	printf("     device      Device name (default =/dev/ttySO1) ex), /dev/ttyS00, /dev/ttySO1, ..)\r\n");
+	printf("     speed       Communication serial baud rate ((default =115200   ex, 1200, .., 38400, 115200)\r\n");
 	printf("\r\n");
 	printf("     -gsm        Mobile GSM setting.\r\n");
 	printf("     -cdma       Mobile CDMA setting.\r\n");
@@ -59,7 +59,7 @@ void Usage()
 void Splash()
 {
 	printf("\033[H\033[J");
-	printf("Welcome to mterm 1.1.0\r\n");
+	printf("Welcome to mterm for SWAMM sungyeung 1.1.1 2015-10-28\r\n");
 	printf(COPYRIGHT "\r\n");
     if(m_nDeviceType != DEVICE_TYPE_SINK) {
 	    printf("\r\n"); 
@@ -108,9 +108,14 @@ int Terminal(CMobileClient *pClient)
     newset.c_lflag &= (~ICANON);
 	tcsetattr(0, TCSANOW, &newset);
 
+	// sungyeung 2015-10-28
+	//
 	if ((m_nDeviceType == DEVICE_TYPE_CDMA) || (m_nDeviceType == DEVICE_TYPE_GSM))
-		pClient->WriteToModem(const_cast<char *>("ATZ\r\n"), 5);
+		pClient->WriteToModem(const_cast<char *>("ATZ\r\n"), 5); // ATZ for rest GSM module
 
+
+
+	//modified by sungyeung
 	for(;!m_bExitSignalPending;)
 	{
 	   n = read(0, szBuffer, 255);
@@ -119,63 +124,63 @@ int Terminal(CMobileClient *pClient)
 		   if ((szBuffer[0] == 0x1b) && (szBuffer[1] == 0x4F))
 		   {
 			   switch(szBuffer[2]) {
-				 case 0x50 :
-					  printf("\r\n------------ AT COMMAND TEST ----------\r\n");
-					  printf("\r\n--- Display additional identification information\r\n");
+				 case 0x50 : // if hit F1 key
+					  printf("\r\n------------ AT COMMAND TEST ----------for GE910\r\n");
+					  printf("\r\n--- Display additional identification information : ATI ???\r\n");
 					  if (m_nDeviceType != DEVICE_TYPE_CDMA)
 					  {
 						  pClient->WriteToModem(const_cast<char *>("ATI\r\n"), 4);
 						  usleep(500000);
 
-						  printf("\r\n--- Display SIM card identification number\r\n");
-						  pClient->WriteToModem(const_cast<char *>("AT^SCID\r\n"), 9);
+						  printf("\r\n--- Display SIM card identification number : AT+CCID\r\n");
+						  pClient->WriteToModem(const_cast<char *>("AT+CCID\r\n"), 9);
 						  usleep(500000);
 
-						  printf("\r\n--- Enter PIN (SIM PIN authentication)\r\n");
+						  printf("\r\n--- Enter PIN (SIM PIN authentication) : AT+CPIN?\r\n");
 						  pClient->WriteToModem(const_cast<char *>("AT+CPIN?\r\n"), 10);
 						  usleep(500000);
 
-						  printf("\r\n--- Enter PIN2\r\n");
+						  printf("\r\n--- Enter PIN2 : AT+CPIN2?\r\n");
 						  pClient->WriteToModem(const_cast<char *>("AT+CPIN2?\r\n"), 11);
 						  usleep(500000);
 
-						  printf("\r\n--- Request international mobile subscriber identity\n");
+						  printf("\r\n--- Request international mobile subscriber identity : AT+CIMI\n");
 						  pClient->WriteToModem(const_cast<char *>("AT+CIMI\r\n"), 9);
 						  usleep(500000);
 
-						  printf("\r\n--- Real Time Clock\n");
+						  printf("\r\n--- Real Time Clock : AT+CCLK?\n");
 						  pClient->WriteToModem(const_cast<char *>("AT+CCLK?\r\n"), 10);
 						  usleep(500000);
 
-						  printf("\r\n--- Operator selection\n");
+						  printf("\r\n--- Operator selection : AT+COPS?\n");
 						  pClient->WriteToModem(const_cast<char *>("AT+COPS?\r\n"), 10);
 						  usleep(500000);
 
-						  printf("\r\n--- Network registration\n");
+						  printf("\r\n--- Network registration : AT+CREG?\n");
 						  pClient->WriteToModem(const_cast<char *>("AT+CREG?\r\n"), 10);
 						  usleep(500000);
 
-						  printf("\r\n--- Signal quality(0=-113dBm, 1=-111dBm, .. 30:-53dBm, ~99)\n");
+						  printf("\r\n--- Signal quality(0=-113dBm, 1=-111dBm, .. 30:-53dBm, ~99) : AT+CSQ\n");
 						  pClient->WriteToModem(const_cast<char *>("AT+CSQ\r\n"), 8);
 						  usleep(500000);
 
-						  printf("\r\n--- Monitoring power supply\n");
+						  printf("\r\n--- Monitoring power supply : AT^SBV\n");   //??? unqualified AT Command
 						  pClient->WriteToModem(const_cast<char *>("AT^SBV\r\n"), 8);
 						  usleep(500000);
 
-						  printf("\r\n--- Monitor idle mode and dedicated mode\n");
+						  printf("\r\n--- Monitor idle mode and dedicated mode : AT^MONI\n");
 						  pClient->WriteToModem(const_cast<char *>("AT^MONI\r\n"), 9);
 						  usleep(1000000);
 
-						  printf("\r\n--- Monitor neighbour cells\n");
+						  printf("\r\n--- Monitor neighbour cells : AT^MONP\n");
 						  pClient->WriteToModem(const_cast<char *>("AT^MONP\r\n"), 9);
 						  usleep(1000000);
 
-						  printf("\r\n--- Cell Monitoring\n");
+						  printf("\r\n--- Cell Monitoring : AT^SMONC\n");
 						  pClient->WriteToModem(const_cast<char *>("AT^SMONC\r\n"), 10);
 						  usleep(1000000);
 
-						  printf("\r\n--- GPRS Monitor\n");
+						  printf("\r\n--- GPRS Monitor : AT^SMONG\n");
 						  pClient->WriteToModem(const_cast<char *>("AT^SMONG\r\n"), 10);
 					  }
 					  else
@@ -211,10 +216,10 @@ int Terminal(CMobileClient *pClient)
 					  usleep(1000000);
 					  break;
 
-				 case 0x51 :
+				 case 0x51 :  //if hit F2 key
 					  if (m_nDeviceType != DEVICE_TYPE_CDMA)
 					  {
-						  printf("\r\n------------ PPP Try ----------\r\n");
+						  printf("\r\n------------ PPP Try ----------for GE910\r\n");
 						  pClient->WriteToModem(const_cast<char *>("AT+CGDCONT=1,\"IP\",\"mdamip\",,0,0\r\n"), 33);
 						  usleep(500000);
 						  pClient->WriteToModem(const_cast<char *>("ATD*99***1#\r\n"), 13);
@@ -228,7 +233,7 @@ int Terminal(CMobileClient *pClient)
 					  }
 					  break;
 
-				 case 0x52 :
+				 case 0x52 :  // if hit F3 key
                       printf("\r\n-------- PPP Disconnect -------\r\n");
                       /** TODO TI 에서 이 부분에 대한 Code가 추가되어야 한다 */
 #if !defined(__TI_AM335X__)

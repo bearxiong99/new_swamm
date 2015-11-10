@@ -444,9 +444,12 @@ void CAgentService::CheckBattery()
     unsigned int batteryAdcValue = 0;
 
     // Battery Charging resgiter off
-    GPIOAPI_WriteGpio(GP_BATT_CHG_EN_OUT, 1); USLEEP(500000);
+    GPIOAPI_WriteGpio(GP_BATT_CHG_EN_OUT, 1);
+    USLEEP(500000);
+
     // Read Battery ADC Value
     batteryAdcValue = GPIOAPI_ReadAdc(ADC_BATT_VOL_INPUT);
+
     // Battery Charging resgiter on
     GPIOAPI_WriteGpio(GP_BATT_CHG_EN_OUT, 0);
     XDEBUG("Check Battery ADC Value %d\r\n", batteryAdcValue);
@@ -457,5 +460,6 @@ void CAgentService::CheckBattery()
         mcuBatteryFailEvent();
         USLEEP(1000000*10); // Event 전송을 위해 10초간 대기
     }
+    XDEBUG(ANSI_COLOR_RED "Batrry OK!\r\n" ANSI_NORMAL);
 }
 #endif

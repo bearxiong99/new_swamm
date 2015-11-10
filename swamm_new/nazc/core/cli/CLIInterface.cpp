@@ -14,9 +14,13 @@
 #include "CLIInterface.h"
 #include "ShellCommand.h"
 
+
+
 extern	CLIHANDLER  *m_pCommandHandlers;
 extern  CLIPARAMCHECKER m_CliParameters[];
 char	m_szUpdateFileName[128] = "";
+
+#define DEBUG
 
 void CLIAPI_Startup(CLICONSTRUCT *pConstruct, int argc, char **argv)
 {
@@ -68,9 +72,9 @@ BOOL CLIAPI_Command(CLISESSION *pSession, IF4Invoke *pInvoke, const char *pszCom
 	BYTE	nAttr;
 
 #ifdef DEBUG
-//	OUTTEXT(pSession, "\nCOMMAND(%s:%0d): CMD=%s, PARAM-CNT=%0d.\xd\xa",
-//						pInvoke->szAddress, pInvoke->port,
-//						pszCommand, pInvoke->nParamCount);
+	OUTTEXT(pSession, "\nCOMMAND(%s:%0d): CMD=%s, PARAM-CNT=%0d.\xd\xa",
+						pInvoke->szAddress, pInvoke->port,
+						pszCommand, pInvoke->nParamCount);
 #endif
     GetTimeTick(&tmStart);
 	nAttr  = IF4_CMDATTR_REQUEST | IF4_CMDATTR_MCUIPC | IF4_CMDATTR_RESPONSE;
@@ -80,8 +84,8 @@ BOOL CLIAPI_Command(CLISESSION *pSession, IF4Invoke *pInvoke, const char *pszCom
 	fElapse = (double)nElapse / (double)1000;
 
 #ifdef DEBUG
-//	OUTTEXT(pSession, "RESPONSE: ERRCODE=%0d, RESULT-CNT=%0d, Elapse %.3f ms.\xd\xa",
-//						pInvoke->nError, pInvoke->nResultCount, fElapse);
+	OUTTEXT(pSession, "RESPONSE: ERRCODE=%0d, RESULT-CNT=%0d, Elapse %.3f ms.\xd\xa",
+						pInvoke->nError, pInvoke->nResultCount, fElapse);
 #endif
 
 	if (nError != IF4ERR_NOERROR)
